@@ -1,0 +1,87 @@
+<p>section works!</p>
+
+
+
+<section>
+    <!-- start: form -->
+    <fieldset style="width: 500px;">
+        <legend>Registration</legend>
+        <form method="post" autocomplete="on" style="width: 500px;">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required autofocus />
+            </div>
+  
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required />
+            </div>
+  
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+  
+            <div>
+                <label for="mobile">Mobile Number:</label>
+                <input type="number" id="mobile" name="mobile" maxlength="10" />
+            </div>
+  
+            <div>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+  
+            <div>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd" required />
+            </div>
+  
+            <div>
+                <label for="propic">Profile Picture:</label>
+                <input type="file" id="files" name="files" />
+            </div>
+  
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="female" name="female" value="Female" checked />
+                <label for="female">Female</label>
+                <input type="radio" id="male" name="male" value="Male" />
+                <label for="male">Male</label>
+            </div>
+  
+            <div>
+                <label for="interest:">Interested in:</label>
+                <input type="checkbox" id="html" name="html" value="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="css" value="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="javascript" name="javascript" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </div>
+  
+            <div>
+                <label for="country">Country:</label>
+                <select name="country" id="country">
+                    <option value="india">India</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
+  
+            <div>
+                <label for="txtarea">Enter Your Comment:</label><br>
+                <textarea name="txtarea" id="txtarea" cols="30" rows="5" placeholder="Write Here..."></textarea>
+            </div>
+  
+            <div>
+                <input type="reset">
+                <input type="submit" name="submit" value="Submit">
+                <input type="submit" formtarget="_blank" value="Submit to a new window">
+            </div>
+        </form>
+    </fieldset>
+    <!-- end: form -->
+  </section>
+  
