@@ -16,5 +16,13 @@ export class AppComponent {
     console.log('Hello')
   }
 
+  train = '';
+
+  parentfunction(fname: any)
+  {
+    // console.log('Shreya');
+    this.train = fname;
+    
+  }
   data: any;
 }

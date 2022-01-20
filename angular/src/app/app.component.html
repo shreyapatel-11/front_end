@@ -3,7 +3,7 @@
 <app-aside></app-aside>
 <app-footer></app-footer> -->
 
-<app-section [childname] = "Myname"></app-section>
+<app-section [childname] = "Myname" (childfunction)="parentfunction($event)"></app-section>
 <p>
     My Name is {{Myname}}
 </p>
@@ -17,4 +17,6 @@
 <p>
     <input type="text" [(ngModel)]= "data" />
 </p>
+
 <h3>{{data}}</h3>
+<h3>{{train}}</h3>

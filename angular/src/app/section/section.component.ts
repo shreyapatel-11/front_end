@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-section',
@@ -8,9 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SectionComponent implements OnInit {
 
   @Input () childname = 'childHere';
+  @Output () childfunction: EventEmitter<String> = new EventEmitter();
+
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+  senddata() {
+    
+    let fname = 'sdpatel';
+    this.childfunction.emit(fname);
+
+  }
+
 
 }
