@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first';
+
+  Myname = 'Shreya Patel';
+  Image = '../assets/img/download.png';
+
+  // ngonInit(): void{}
+  onClick(){
+    console.log('Hello')
+  }
+
+  data: any;
 }

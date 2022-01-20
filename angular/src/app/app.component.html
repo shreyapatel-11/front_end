@@ -1,4 +1,20 @@
-<app-header></app-header>
-<app-section></app-section>
+<!-- <app-header></app-header>
+
 <app-aside></app-aside>
-<app-footer></app-footer>
+<app-footer></app-footer> -->
+
+<app-section [childname] = "Myname"></app-section>
+<p>
+    My Name is {{Myname}}
+</p>
+<p>
+    <img [src]="Image">
+</p>
+
+
+<button (click)="onClick()">Submit</button>
+
+<p>
+    <input type="text" [(ngModel)]= "data" />
+</p>
+<h3>{{data}}</h3>
