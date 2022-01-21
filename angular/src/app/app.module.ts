@@ -8,13 +8,17 @@ import { AsideComponent } from './aside/aside.component';
 import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ProgramComponent } from './program/program.component';
+import { DirectivesDirective } from './directives.directive';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AsideComponent,
     SectionComponent,
-    FooterComponent
+    FooterComponent,
+    ProgramComponent,
+    DirectivesDirective
   ],
   imports: [
     BrowserModule,

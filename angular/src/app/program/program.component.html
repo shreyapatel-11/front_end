@@ -1,0 +1,54 @@
+<p>program works!</p>
+
+<style>
+    table,tr,td{
+        border-collapse: collapse; 
+        border: 1px solid black;
+    }
+</style>
+<!-- start: pipe -->
+<p>Today is {{today | date: 'dd/mm/yyyy hh:mm:ss'}}</p>
+<p>currency code {{amount | currency: 'INR'}}</p>
+
+<table appDirectives>
+    <thead>       
+        <th>amount</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of crlist">
+            
+            <td>{{data.amount | currency: data.currencyCode}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<!-- <p *ngFor="let setdata of crlist">
+    {{setdata.currencyCode | currency:setdata.currencyCode}}
+</p> -->
+<!-- end: pipe -->
+
+<!-- start: directive -->
+<table>
+    <thead>       
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataarray">
+            
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.body}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="name">
+    Hello {{name}}
+</div>
+<div *ngIf="fname ? lname : 2">hello{{lname}}</div>
+
+<!-- end: directive -->
