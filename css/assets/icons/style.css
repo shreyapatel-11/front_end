@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'app';
+  src:  url('fonts/app.eot?c4blj2');
+  src:  url('fonts/app.eot?c4blj2#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?c4blj2') format('truetype'),
+    url('fonts/app.woff?c4blj2') format('woff'),
+    url('fonts/app.svg?c4blj2#app') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'app' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before {
+  content: "\e900";
+}
+.icon-cart:before {
+  content: "\e901";
+}
+.icon-compare_arrows:before {
+  content: "\e902";
+}
+.icon-dot-circle-o:before {
+  content: "\e903";
+}
+.icon-enter:before {
+  content: "\e904";
+}
+.icon-grid:before {
+  content: "\e905";
+}
+.icon-question:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e907";
+}
+.icon-shield:before {
+  content: "\e908";
+}
+.icon-user:before {
+  content: "\e909";
+}

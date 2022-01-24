@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/icons/style.css">
     <title>CSS</title>
     <style>
       * {
@@ -39,10 +40,89 @@
         padding: 50px;
       } */
       html,body{
-        display: flex;
+        
         height: 100%;
+        width: 100%;
 
       }
+      .test{
+        display: flex;
+        height: 100%;
+      }
+      aside{
+        display: flex;
+        flex: 0 0 200px;
+        border: 1px solid;
+        flex-direction: column;
+        height: 100%;
+      }
+      figure{
+        border-bottom: 1px solid ; 
+        margin: 0; 
+        height: 80px;
+        /* justify-content: center; */
+        text-align: center;
+        padding: 30px;
+      }
+      section{
+        display: flex;
+        border: 1px solid black;
+        flex-grow: 1;
+        flex-direction: column;
+        height: 100%;
+      }
+      header{
+        display: flex;
+        justify-content: space-between;
+        height:80px;
+        border-bottom: 1px solid;
+      }
+      nav{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        height: 100%;
+        margin: 10px auto;
+      }
+      .list1{
+        padding: 10px;
+        list-style-type: none;
+      
+      }
+      .list2{
+        padding: 10px;
+        list-style-type: none;
+
+      }
+      /* .d-flex{
+        display: flex;
+      } */
+      .nav-list{
+        display: flex;
+        color: black;
+        padding: 10px;
+      
+      }
+      #searchbar{
+        display: flex;
+        /* flex-grow: 1; */
+        width: 70%;
+        border: 1px solid; 
+        padding: 10px 10px;
+        margin: 20px;
+        border-radius: 5px;
+      }
+      #button{
+        width: 20%;
+        /* padding: 10px; */
+        margin: 20px;
+        right: 0;
+        border-radius: 5px;
+        color: white;
+        background-color: #18dca1;
+      }
+      
+
     </style>
   </head>
   <body>
@@ -51,13 +131,31 @@
 
       <aside>
         <figure>
-          1
+          POLKA
         </figure>
+        <nav>
+          <ul  class="list1" style="border-bottom: 1px solid;">
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-dot-circle-o"></span>Meeting</a></li>
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-calendar"></span> Calendar</a></li>
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-compare_arrows"></span> Compare</a></li>
+            
+          </ul>
+          <ul class="list2">
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-user"></span> Account</a></li>
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-question"></span>Faq</a></li>
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-cart"></span>Product</a></li>
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-shield"></span>Security</a></li>
+            <li> <a class="d-flex nav-list" href="#"><span class="icon-enter"></span>Sign out</a></li>
+          </ul>
+        </nav>
       </aside>
 
       <section>
-        <header>2</header>
-        <main>3</main>
+        <header>
+          <input type="search" id="searchbar" placeholder="Enter a keyword here">
+          <button id="button">Upload a Meeting</button>
+        </header>
+        <main>main</main>
       </section>
     </div>
     
