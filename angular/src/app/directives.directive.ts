@@ -9,10 +9,10 @@ export class DirectivesDirective {
   @HostBinding('style.backgroundColor') bgcolor:string="";
   @HostBinding('style.color') color:string="";
 
-  @HostListener('click') setMouseEnter() {
+  @HostListener('mouseenter') setMouseEnter() {
     this.bgcolor = "red";
     this.color = "white";
-    alert(this.color)
+    
   }
 
   @HostListener('mouseleave') setMouseLeave() {

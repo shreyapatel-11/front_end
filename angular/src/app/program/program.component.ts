@@ -373,4 +373,10 @@ export class ProgramComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  indexClick(i: number) {
+    alert(this.crlist[i].amount);
+  }
+  trackByid(index: number, crlist: any) {
+    return crlist.id;
+  }
 }
