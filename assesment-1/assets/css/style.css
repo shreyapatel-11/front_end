@@ -306,8 +306,9 @@ body{
     width: 500px;
 }
 .form .form-detail{
-    flex-direction: row;
     align-items: center;
+    width: 35%;
+    
 }
 .form-detail .a-service{
     text-decoration: none;
