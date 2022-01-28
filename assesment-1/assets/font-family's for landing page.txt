@@ -1,0 +1,2 @@
+1. Playfair Display (For headings) : https://fonts.google.com/specimen/Playfair%20Display
+2. Roboto(For text ,ex: paragraphs) : https://fonts.google.com/specimen/Roboto

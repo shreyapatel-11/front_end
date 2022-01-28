@@ -1,0 +1,352 @@
+@import url("https://fonts.google.com/specimen/Playfair%20Display");
+@import url("https://fonts.google.com/specimen/Playfair%20Display");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+}
+body{
+    line-height: 1.5;
+    
+    font-family: 'Roboto', sans-serif;
+}
+.font-playfair{
+    font-family: 'Playfair Display', serif;
+}
+.d-flex{
+    display: flex;
+}
+.container{
+    width: 100%;
+    margin: 0 10px;
+}
+.hero-section{
+    background: url("../images/pexels-photo-3218467.jpeg") no-repeat center/cover;
+    height: 100vh;
+    
+}
+.justify-content{
+    justify-content: center;
+}
+.a-item{
+    align-items: center;
+}
+.humburger{
+    position: relative;
+    height: 60px;
+    width: 100%;
+}
+.line1{
+    position: absolute;
+    top: 8px;
+    height: 2px;
+    width: 20px;
+    background-color: white;
+}
+.line2{
+    position: absolute;
+    top: 16px;
+    height: 2px;
+    width: 20px;
+    background-color: white;
+}
+.line3{
+    position: absolute;
+    top: 24px;
+    height: 2px;
+    width: 20px;
+    background-color: white;
+}
+.hero-container{
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    
+}
+.logo{
+    margin: 3rem 0;
+}
+.home-content{
+    margin: 3rem;
+}
+.header{
+    font-size: 4rem;
+}
+.info{
+    font-size: 16px;
+    padding: 0 14rem;
+}
+/* end: hero-section */
+
+/* start: about restaurant */
+.about-rest{
+    height: 400px;
+}
+.rest-data{
+    flex-direction: column;
+    text-align: center;
+}
+.about-head{
+    padding-top: 4rem;
+    letter-spacing: 2px;
+}
+.rest-data-1{
+    padding: 2rem 4rem ;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+.rest-data-1 .italic{
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* start: content-images */
+
+.cards{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+    /* height: 400px; */
+    
+}
+.item-image{
+    width: 30%;
+    
+}
+.image-content{
+    max-width: 100%;
+}
+.description{
+    
+    text-align: center;
+    max-width: 30%;
+    
+}
+.desc-title{
+    letter-spacing: 2px;
+    padding: 5px;
+}
+.desc-main{
+    font-size: 1.75rem;
+    padding: 1rem;
+}
+.desc-detail{
+    padding-bottom: 1rem;
+}
+.description .link-a{
+    color: black;
+    
+}
+/* end:content-img */
+
+/* start: events */
+.events{
+    padding: 1rem;
+    text-align: center;
+   
+}
+.event-head{
+   
+    letter-spacing: 3px;
+}
+.sub-heading{
+    font-size: 4rem;
+}
+.event-desc{
+    justify-content: center;
+}
+.specific-content{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+    padding: 2rem;
+    flex-direction: column;
+}
+.date{
+    font-size: 4rem;
+}
+.date-info{
+    padding-top: 1rem;
+}
+.button{
+    height: 50px;
+    width: 250px;
+    background-color: white;
+    margin: 2rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+/* end: event */
+
+/* start: our menu */
+.our-menu{
+    text-align: center;
+    
+}
+.menu-head{
+    letter-spacing: 3px;
+}
+.menu{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu-item{
+    flex-direction: column;
+    width: 40%;
+    padding: 2rem;
+}
+.item-title{
+    padding: .25rem;
+}
+/* end: .our-menu */
+
+/* start: photo-gallary */
+.photo-gallary{  
+    margin: 0;  
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+}
+.card-img{
+    max-width: 100%;
+}
+.photo1{
+   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.gallary{
+    flex-grow: 1;
+    flex-direction: column;
+}
+.photo2{
+    max-width: 100%;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.child-gallary{
+    width: 50%;
+}
+.photo3{
+    max-width: 100%;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.photo4{
+    width: 50%;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* start: svg-img */
+.svg-card{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+}
+.svg-block{
+    position: relative;
+    flex-direction: column;
+    padding: 4rem;
+    align-items: center;
+    margin: 2rem;
+}
+.icon{
+    font-size: 3.5rem;
+}
+.price{
+    padding-top: 10px;
+    font-size: 3rem;
+}
+.box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid black;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+/* end: svg-img */
+
+/* start: contact-us */
+.contact-us{
+    text-align: center;
+    flex-direction: column;
+}
+.contact-head{
+    letter-spacing: 3px;
+}
+.form{
+    /* text-align: center; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.input-text{
+    margin: 5px;
+    height: 50px;
+    width: 500px;
+}
+.form .form-detail{
+    flex-direction: row;
+    align-items: center;
+}
+.form-detail .a-service{
+    text-decoration: none;
+}
+
+footer{
+    position: relative;
+    text-align: center;
+    background-color: rgb(51, 49, 49);
+    color: white;
+    height: 200px;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.p-footer{
+    padding: 2rem;
+   
+}
+.footer-text .a-footer{
+    color: rgb(77, 203, 212);
+}
+
+.footer-text{
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    left: 0;
+}
+ .button-submit{
+    height: 50px;
+    width: 150px;    
+    background-color: white;
+    margin: 2rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:768px) {
+    .info{
+        width: 100%;
+    }
+}
