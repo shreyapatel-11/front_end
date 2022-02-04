@@ -1,0 +1,65 @@
+
+<form class="form-data" *ngIf="userForm" [formGroup]="userForm" (ngSubmit)="saveForm()">
+    <div class="form-field">
+        <label for="firstName" class="form-lable">First Name:</label>
+        <div>
+            <input type="text" name="fName" id="firstName" formControlName='firstName' class="form-input">
+            <div *ngIf="formControl['firstName'].touched && userForm.controls['firstName'].errors?.['required']">This Field is Required</div>     
+        </div>
+    </div>
+    <div class="form-field">
+        <label for="lastName" class="form-lable">Last Name:</label>
+        <div>
+            <input type="text" name="lastName" id="lastName" formControlName='lastName' class="form-input">
+            <div *ngIf="formControl['lasttName'].touched && userForm.controls['lastName'].errors?.['required']">This Field is Required</div>
+        </div>
+    </div>
+    <div class="form-field">
+        <label for="email" class="form-lable">Email:</label>
+        <div>
+            <input type="email" name="fName" id="email" formControlName='email' class="form-input">
+            <div *ngIf="formControl['email'].touched || formControl['email'].pristine && userForm.controls['email'].errors?.['required']">This Field is Required</div>
+        </div>
+    </div>
+    <div class="form-field">
+        <label for="mobileNum" class="form-lable">Mobile Number:</label>
+        <div>
+            <input type="number" name="mobile" id="mobieNo"  formControlName='mobile' class="form-input">
+            <div *ngIf="formControl['mobile'].touched && userForm.controls['mobile'].errors?.['required']">This Field is Required</div>
+        </div>
+        
+    </div>
+    <div class="form-field">
+        <label for="gender" class="form-lable">Gender:</label>
+        <div>
+            <input type="radio" name="radio" id="male" value="option1" formControlName='gender' class="">
+            <label class="form-check-label" for="male">Male</label>
+    
+            <input type="radio" name="radio" id="female" value="option2" formControlName='gender' class="">
+            <label class="form-check-label" for="female">Female</label>
+        </div>
+       
+    </div>
+    <div class="form-field">
+        <label for="date" class="form-lable">Date of Employment:</label>
+        <div>
+            <input type="date" name="dateofEmployment" id="date" formControlName='date' class="form-input">
+        </div>
+    </div>
+    <div class="form-field">
+        <label for="department" class="form-lable">Department:</label>
+        <div>
+            <select id="department" class="form-input" formControlName='department'>
+                <option *ngFor="let department of Department" [value]="department.id"> {{department.name}}</option>
+               
+            </select>
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" (click)="resetForm()">Reset</button>
+    </div>
+   
+</form>
+
+
