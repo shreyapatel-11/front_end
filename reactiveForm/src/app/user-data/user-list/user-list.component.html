@@ -1,26 +1,34 @@
 <p>user-list works!</p>
 
 <div class="">
-    <input type="search" value="search">
-    <button routerLink="add">ADD</button>
+    <input type="search" [(ngModel)]="search">
+    <button routerLink="/user/add">ADD</button>
 
     <table class="table table-hover">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Mobile Number</th>
                 <th>Gender</th>
                 <th>Date of Employment</th>
                 <th>Department</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-
+            <tr *ngFor="let emp of employee;">
+                <td>{{emp.id}}</td>
+                <td>{{emp.firstName + "  " + emp.lastName}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.mobile}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.date | date:'MM/dd/YYYY'}}</td>
+                <td>{{emp.department | custom: dpt }}</td>
+                <td><button class="btn" (click)="this.editEmployee(emp)">Edit</button></td>
+                <td><button class="btn" (click)="deleteRecord(emp.id)">Delete</button></td>
             </tr>
         </tbody>
     </table>
     
 </div>
-
-<router-outlet></router-outlet>

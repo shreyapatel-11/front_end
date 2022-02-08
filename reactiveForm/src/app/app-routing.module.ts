@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', pathMatch: 'full', redirectTo: 'user-list'
+    path: '', pathMatch: 'full', redirectTo: 'user'
   },
   {
-    path: 'user-list',
+    path: 'user',
     loadChildren: () => import('./user-data/user-data.module').then(m => m.UserDataModule)
   }
 ];

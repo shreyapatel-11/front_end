@@ -1,4 +1,5 @@
 export interface Department{
+    find: any;
     id: number,
     name: string
 }
@@ -9,6 +10,6 @@ export interface Employee{
     email: string,
     mobile: number,
     gender: boolean,
-    date: number,
-    department: string
+    date: string,
+    department: number
 }
