@@ -6,7 +6,7 @@ import { Employee } from '../model/user.model';
 })
 export class SearchPipe implements PipeTransform {
 
- 
+
   transform(emp: Employee[], search: string): Employee[] {
     return emp.filter((data: Employee) => {
       return data.firstName.toLocaleLowerCase().match(search.toLocaleLowerCase())

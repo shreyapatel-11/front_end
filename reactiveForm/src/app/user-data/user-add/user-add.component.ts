@@ -37,7 +37,7 @@ export class UserAddComponent implements OnInit {
 
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['',[ Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
       mobile: ['', Validators.required],
       gender: [null, Validators.required],
       date: [null, Validators.required],
@@ -47,28 +47,28 @@ export class UserAddComponent implements OnInit {
   getUSerdata() {
     this.us.getDepartment().subscribe((data) => {
       this.department = data;
-      
+
     }, (errors) => {
       console.log(errors)
     })
   }
- 
+
 
   saveForm() {
     console.log(this.userForm)
-    if (this.userForm.valid){
-      if(this.uidToEdit){
+    if (this.userForm.valid) {
+      if (this.uidToEdit) {
         this.us.updateEmployeeList(this.uidToEdit, this.userForm.value).subscribe(
-          (data) =>{
-           alert("Data Updated Succesfully");
-           this.route.navigate(['/user/list']);
-         }
-       )
+          (data) => {
+            //  alert("Data Updated Succesfully");
+            this.route.navigate(['/user/list']);
+          }
+        )
       }
-      else{
+      else {
         this.us.saveEmployee(this.userForm.value).subscribe(
-           (data) =>{
-            alert("Data Submitted Succesfully");
+          (data) => {
+            // alert("Data Submitted Succesfully");
             this.route.navigate(['/user/list']);
           }
         )

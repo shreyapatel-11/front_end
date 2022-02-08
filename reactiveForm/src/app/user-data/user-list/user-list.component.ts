@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../service/user-service.service';
-import {  Department, Employee } from '../model/user.model';
+import { Department, Employee } from '../model/user.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class UserListComponent implements OnInit {
   employee: Employee[];
-  search: string='';
+  searchData: string = '';
   dpt: Department[];
-  constructor(private us:UserServiceService, private router: Router) { }
- 
+  constructor(private us: UserServiceService, private router: Router) { }
+
 
   ngOnInit(): void {
     this.getEmployeeData()
@@ -26,7 +26,7 @@ export class UserListComponent implements OnInit {
     })
   }
   getEmployeeData() {
-    this.us.getEmployeeList().subscribe((data:Employee[]) => {
+    this.us.getEmployeeList().subscribe((data: Employee[]) => {
       this.employee = data;
     })
   }
@@ -36,9 +36,9 @@ export class UserListComponent implements OnInit {
     this.router.navigate([`/user/edit/${emp.id}`]);
   }
 
-  deleteRecord(id: number){
-    this.us.deleteUser(id).subscribe((data) =>{
-      alert("delete succesfully")
+  deleteRecord(id: number) {
+    this.us.deleteUser(id).subscribe((data) => {
+      // alert("delete succesfully")
       this.getEmployeeData()
     });
   }

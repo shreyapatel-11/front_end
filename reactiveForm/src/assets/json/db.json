@@ -63,14 +63,14 @@
       "id": 4
     },
     {
-      "firstName": "poty",
-      "lastName": "patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": "female",
-      "date": "2022-01-31",
-      "department": 5,
-      "id": 5
+      "firstName": "Panth",
+      "lastName": "Patel",
+      "email": "p@gmail.com",
+      "mobile": 999999998,
+      "gender": "male",
+      "date": "2022-02-01",
+      "department": "3",
+      "id": 6
     }
   ]
 }
