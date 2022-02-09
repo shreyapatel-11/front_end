@@ -1,5 +1,5 @@
-<div class="form">
-    <h3>Build Your Resume:</h3>
+<div class="form d-flex">
+  <h3 class="heading">Build Your Resume:</h3>
   <form [formGroup]="resumeForm" (ngSubmit)="saveData()">
     <div class="form-field">
       <label for="firstName" class="form-lable">Name: </label>
@@ -8,23 +8,23 @@
 
     <div class="form-field">
       <label for="profile" class="form-lable">Profile: </label>
-      <input type="text" id="profile" formControlName="profile" class="form-input"/>
+      <input type="text" id="profile" formControlName="profile" class="form-input" />
     </div>
 
-    <div class="form-field">
+    <!-- <div class="form-field">
       <label for="skills" class="form-lable">Skills: </label>
-      <!-- <button type="button">Add Skill +</button> -->
-    </div>
+      <button type="button">Add Skill +</button>
+    </div> -->
 
     <div class="form-field">
       <label for="techSkill" class="form-lable">Technical Skills: </label>
-      
+
       <button type="button" (click)="addTechSkill()">Add Technical Skill +</button>
 
-      <div formArrayName="techSkill" *ngFor="let tskill of technicalSkill.controls; let i = index">
+      <div formArrayName="techSkill" *ngFor="let tskill of techSkill.controls; let i = index">
         <div [formGroupName]="i" class="">
-            <input type="text" formControlName="techSkill" class="" placeholder="Technical Skill">
-            <button class="btn-warn" (click)="deleteSkill(i)"></button>
+          <input type="text" formControlName="techSkill" class="" placeholder="Technical Skill">
+          <button class="btn-warn" (click)="deleteSkill(i)">Delete</button>
         </div>
       </div>
     </div>
@@ -32,23 +32,21 @@
     <div class="form-field">
       <label for="experience" class="form-lable">Experience: </label>
       <button type="button" (click)="addExperience()">Add Experience +</button>
-      <div formArrayName="experience" *ngFor="let exp of experience['controls']; let i = index"> 
+      <div formArrayName="experience" *ngFor="let exp of experience['controls']; let i = index">
         <div [formGroupName]="i" class="">
-            <input type="text" formControlName="name" class="" placeholder="Company Name">
-            <input type="text" formControlName="position" class="" placeholder="Position">
-            <input type="text" formControlName="description" class="" placeholder="Description">
-            <input type="text" formControlName="year" class="" placeholder="Year">
-            <button class="btn-warn" (click)="deleteSkill(i)"></button>
+          <input type="text" formControlName="name" class="" placeholder="Company Name">
+          <input type="text" formControlName="position" class="" placeholder="Position">
+          <input type="text" formControlName="description" class="" placeholder="Description">
+          <input type="text" formControlName="year" class="" placeholder="Year">
+          <button class="btn-warn" (click)="deleteExperience(i)">Delete</button>
         </div>
       </div>
     </div>
 
     <div class="form-field">
       <label for="education" class="form-lable">Education: </label>
-      <input
-        type="text" id="education" formControlName="education" class="form-input"
-      />
-      <input type="text" id="cgpa" formControlName="cgpa" />
+      <input type="text" id="university" formControlName="university" class="form-input" placeholder="University" />
+      <input type="text" id="cgpa" formControlName="cgpa" placeholder="CGPA" />
     </div>
 
     <div>

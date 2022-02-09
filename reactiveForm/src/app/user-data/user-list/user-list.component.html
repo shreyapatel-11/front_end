@@ -1,4 +1,4 @@
-<div>
+<div class="d-flex ">
     <input class="search" type="search" placeholder="Search" [(ngModel)]="searchData">
     <button class="btn" routerLink="/user/add">ADD</button>
     <div *ngIf="employee?.length">
@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let emp of employee | search: searchData as result" >
+                <tr *ngFor="let emp of employee | search: searchData as result">
                     <td>{{emp.id}}</td>
                     <td>{{emp.firstName + " " + emp.lastName}}</td>
                     <td>{{emp.email}}</td>

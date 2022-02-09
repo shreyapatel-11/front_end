@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { resumeData } from './model/resume.model';
 import { ResumeService } from './service/resume.service';
 
 @Component({
@@ -10,18 +12,27 @@ import { ResumeService } from './service/resume.service';
 export class ResumeFormComponent implements OnInit {
 
   resumeForm: FormGroup;
-  
-  techSkill: FormArray;
+  uidToEdit: number;
+  resume: resumeData[];
+  // techSkill: FormArray;
 
-  constructor(private fb: FormBuilder, private rs: ResumeService) { }
+  constructor(private fb: FormBuilder, private rs: ResumeService, private route: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.buildForm()
+    this.buildForm();
+    this.getData();
+    if (this.activeRoute.snapshot.params['id']) {
+      this.rs.getUserToEdit().subscribe((data) => {
+        this.resumeForm.patchValue(data);
+        this.uidToEdit = this.activeRoute.snapshot.params['id'];
+      })
+    }
   }
 
   buildForm() {
     this.resumeForm = this.fb.group({
-      name: ['',[Validators.required,Validators.minLength(4), Validators.maxLength(8)]],
+      name: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],
+      profile: [''],
       skills: [''],
       techSkill: this.fb.array([
         this.techField()
@@ -29,9 +40,8 @@ export class ResumeFormComponent implements OnInit {
       experience: this.fb.array([
         this.experienceField()
       ]),
-      education: this.fb.group([
-        this.educationField()
-      ])  
+      university: ['', Validators.required],
+      cgpa: ['', Validators.required]
     })
   }
 
@@ -40,21 +50,21 @@ export class ResumeFormComponent implements OnInit {
   }
 
   // skills
-  techField() : FormGroup {
+  techField(): FormGroup {
     return this.fb.group({
       techSkill: ['', Validators.required]
     })
   }
 
-  get technicalSkill() {
+  get techSkill() {
     return this.getValue['techSkill'] as FormArray;
   }
 
   addTechSkill() {
     this.techSkill.push(this.techField());
   }
-  deleteSkill(index: number){
-    if(this.techSkill.length != 1){
+  deleteSkill(index: number) {
+    if (this.techSkill.length != 1) {
       this.techSkill.removeAt(index);
     }
   }
@@ -75,25 +85,47 @@ export class ResumeFormComponent implements OnInit {
   addExperience() {
     this.experience.push(this.experienceField())
   }
+  deleteExperience(index: number) {
+    if (this.experience.length != 1) {
+      this.experience.removeAt(index);
+    }
+  }
 
   // education
-  educationField(): FormGroup{
-    return this.fb.group({
-      university: ['', Validators.required],
-      cgpa: ['',Validators.required]
+  // educationField(): FormGroup {
+  //   return this.fb.group({
+  //     university: ['', Validators.required],
+  //     cgpa: ['', Validators.required]
+  //   })
+  // }
+
+  // get education() {
+  //   return this.getValue['education'] as FormArray
+  // }
+
+  // addEducation() {
+  //   this.education.push(this.educationField())
+  // }
+
+  getData() {
+    this.rs.getUserData().subscribe((data) => {
+      this.resume = data;
     })
   }
-
-  get education() {
-    return this.getValue['education'] as FormArray
-  }
-
-  addEducation() {
-    this.education.push(this.educationField())
-  }
-
   saveData() {
-    console.log(this.resumeForm)
+    if (this.resumeForm.valid) {
+      if (this.uidToEdit) {
+        this.rs.updateUserData(this.uidToEdit, this.resumeForm.value).subscribe((data) => {
+          this.route.navigate(['/resume/view'])
+        })
+      }
+      else {
+        this.rs.saveUserData(this.resumeForm.value).subscribe((data) => {
+          this.route.navigate(['./resume/view'])
+        })
+      }
+      console.log(this.resumeForm);
+    }
   }
 }
 
