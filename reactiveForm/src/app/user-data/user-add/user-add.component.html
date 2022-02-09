@@ -2,9 +2,7 @@
     <div class="form-field">
         <label for="firstName" class="form-lable">First Name:</label>
         <input type="text" id="firstName" formControlName='firstName' class="form-input">
-        <div *ngIf="formControl['firstName'].touched && userForm.controls['firstName'].errors?.['required']"><small>This
-                Field
-                is Required</small> </div>
+        <div *ngIf="formControl['firstName'].touched && userForm.controls['firstName'].errors?.['required']"><small>This Field is Required</small> </div>
     </div>
     <div class="form-field">
         <label for="lastName" class="form-lable">Last Name:</label>
@@ -13,6 +11,7 @@
             class="validation"><small>This
                 Field is
                 Required</small> </div>
+        
     </div>
     <div class="form-field">
         <label for="email" class="form-lable">Email:</label>

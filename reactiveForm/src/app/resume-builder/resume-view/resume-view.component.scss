@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Source Serif Pro';
+}
+table,
+td,
+tr {
+    text-align: left;
+    margin: 20px 0;
+    border-collapse: collapse;
+    vertical-align: top;
+
+}
+table{
+    width: 100%; 
+    border-bottom: 1px solid #9d9d9d; 
+    padding-bottom: 20px;
+
+    .lable-data{
+        width: 200px; 
+        padding-bottom: 20px;
+
+        .exp{
+            vertical-align: top;
+        }
+    }
+}

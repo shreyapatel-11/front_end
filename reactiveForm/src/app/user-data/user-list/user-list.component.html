@@ -16,8 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let emp of employee | search: searchData">
-
+                <tr *ngFor="let emp of employee | search: searchData as result" >
                     <td>{{emp.id}}</td>
                     <td>{{emp.firstName + " " + emp.lastName}}</td>
                     <td>{{emp.email}}</td>
@@ -27,6 +26,9 @@
                     <td>{{emp.department | custom: dpt }}</td>
                     <td><button class="btn edit-btn" (click)="this.editEmployee(emp)">Edit</button></td>
                     <td><button class="btn delete-btn" (click)="deleteRecord(emp.id)">Delete</button></td>
+                </tr>
+                <tr>
+                    <!-- <td *ngIf="result?.length == 0">No Record Found</td> -->
                 </tr>
             </tbody>
         </table>

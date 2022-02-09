@@ -9,7 +9,10 @@ const routes: Routes = [
     path: 'user',
     loadChildren: () => import('./user-data/user-data.module').then(m => m.UserDataModule)
   },
-  { path: 'src/app/core', loadChildren: () => import('./core/core.module').then(m => m.CoreModule) }
+  {
+    path: 'resume',
+    loadChildren: () => import('./resume-builder/resume-builder.module').then(m => m.ResumeBuilderModule)
+  }
 ];
 
 @NgModule({

@@ -1,12 +1,14 @@
+
 .form-data {
     width: 500px;
-    margin: auto;
+    margin: 0 auto;
+    margin-top: 150px;
 
     .form-field {
         margin: 1.25rem;
         height: 2rem;
-        display: flex;
-        justify-content:left;
+        // display: flex;
+        // justify-content:left;
 
         .form-input {
             width: 300px;   
