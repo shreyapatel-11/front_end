@@ -20,7 +20,7 @@ export class ResumeFormComponent implements OnInit {
 
   ngOnInit(): void {
    this.buildForm();
-    this.getData();
+    // this.getData();
     // if (this.activeRoute.snapshot.params['id']) {
     //   this.rs.getUserToEdit().subscribe((data) => {
     //     this.resumeForm.patchValue(data);
@@ -36,9 +36,9 @@ export class ResumeFormComponent implements OnInit {
       // techSkill: this.fb.array([
       //   this.techField()
       // ]), 
-      techSkill: this.fb.array([]),
+      techSkill: this.fb.array([this.techField()]),
       experience: this.fb.array([this.experienceField()]),
-      education: this.fb.array([this.addEducation()])
+      education: this.fb.array([this.educationField()])
     })
   }
 
@@ -55,17 +55,11 @@ export class ResumeFormComponent implements OnInit {
 
   get techSkill() {
     return this.resumeForm.get('techSkill') as FormArray
-  }
-
-  createSkill(): FormGroup {  
-    return this.fb.group({  
-      skill: ''
-    });  
-  }   
+  } 
 
   addSkills(): void {  
     this.items = this.resumeForm.get('techSkill') as FormArray;  
-    this.items.push(this.createSkill());  
+    this.items.push(this.techField());
   } 
   deleteSkill(index: number) {
     if (this.techSkill.length != 1) {
@@ -114,12 +108,6 @@ export class ResumeFormComponent implements OnInit {
     if(this.education.length != 1) {
       this.education.removeAt(index)
     }
-  }
-
-  getData() {
-    this.rs.getUserData().subscribe((data) => {
-      this.resume = data;
-    })
   }
 
   saveData() {

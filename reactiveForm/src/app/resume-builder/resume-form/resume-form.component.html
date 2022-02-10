@@ -21,26 +21,24 @@
     <!-- <div class="form-field">
       <label for="techSkill" class="form-lable">Technical Skills: </label>
 
-      <button type="button" (click)="addTechSkill()">Add Technical Skill +</button>
+      <button type="button" (click)="addSkills()">Add Technical Skill +</button>
 
       <div formArrayName="techSkill" *ngFor="let tskill of techSkill.controls let i = index" [formGroupName]="i">
-        <div  class="">
-          <input type="text" formControlName="techSkill" class="" placeholder="Technical Skill">
+        <div>
+          <input type="text" formControlName="techskill" placeholder="Technical Skill">
           <button class="btn-warn" (click)="deleteSkill(i)">Delete</button>
         </div>
         <small *ngIf="getValue['techSkill'].touched && getValue['techSkill'].errors?.['required']">This Field is Required</small>
       </div>
     </div> -->
   
-    <div formArrayName="items"  
+    <div formArrayName="techSkill"  
       *ngFor="let item of techSkill.controls ; let i = index;">  
       <div [formGroupName]="i">  
-        <input formControlName="name" placeholder="Item name">  
-        <input formControlName="description" placeholder="Item description">  
-        <input formControlName="price" placeholder="Item price">  
+        <input formControlName="techskill" placeholder="Item name">
       </div>  
     </div> 
-    <button (click)="addSkills()">Add</button>
+    <button type="button" (click)="addSkills()">Add</button>
    
 
     <div class="form-field">
