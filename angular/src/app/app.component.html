@@ -1,10 +1,10 @@
-<!-- <app-header></app-header>
+<!-- 
 
 <app-aside></app-aside>
 <app-footer></app-footer> -->
-<app-program></app-program>
-
-<app-section [childname] = "Myname" (childfunction)="parentfunction($event)"></app-section>
+<!-- <app-program></app-program> -->
+<!-- <app-header></app-header> -->
+<!-- <app-section [childname] = "Myname" (childfunction)="parentfunction($event)"></app-section>
 <p>
     My Name is {{Myname}}
 </p>
@@ -20,4 +20,13 @@
 </p>
 
 <h3>{{data}}</h3>
-<h3>{{train}}</h3>
+<h3>{{train}}</h3> -->
+
+<nav>
+    <ul>
+        <li class="nav-item"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/header">Header</a></li>
+        <li class="nav-item"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="aside">Aside</a></li>
+        <li class="nav-item"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="section">Section</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

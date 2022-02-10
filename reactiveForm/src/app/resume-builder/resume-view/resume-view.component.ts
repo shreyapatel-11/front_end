@@ -10,7 +10,7 @@ import { ResumeService } from '../resume-form/service/resume.service';
 })
 export class ResumeViewComponent implements OnInit {
 
-  resume: resumeData[];
+  resume: resumeData;
 
   constructor(private rs: ResumeService, private route: Router) { }
 
@@ -19,17 +19,17 @@ export class ResumeViewComponent implements OnInit {
   }
 
   getData() {
-    this.rs.getUserData().subscribe((data: resumeData[]) => {
+    this.rs.getUserData().subscribe((data) => {
       this.resume = data;
     })
   }
-  editUser(sendUser: resumeData) {
-    this.rs.sendUserToEdit(sendUser);
-    this.route.navigate([`/resume/form/${sendUser.id}`])
-  }
-  deleteRecord(id: number) {
-    this.rs.deleteUserData(id).subscribe((data) => {
-      this.getData()
-    })
-  }
+  // editUser(sendUser: resumeData) {
+  //   this.rs.sendUserToEdit(sendUser);
+  //   this.route.navigate([`/resume/form/${sendUser.id}`])
+  // }
+  // deleteRecord(id: number) {
+  //   this.rs.deleteUserData(id).subscribe((data) => {
+  //     this.getData()
+  //   })
+  // }
 }

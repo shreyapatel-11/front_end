@@ -74,6 +74,10 @@
     }
   ],
   "resumeData": [
-    {}
+    {
+      "id":1,
+      "name": " ",
+      "profile":""
+    }
   ]
 }

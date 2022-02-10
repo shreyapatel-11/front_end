@@ -13,35 +13,32 @@ export class ResumeFormComponent implements OnInit {
 
   resumeForm: FormGroup;
   uidToEdit: number;
-  resume: resumeData[];
-  // techSkill: FormArray;
+  resume: resumeData;
+  items!: FormArray;  
 
   constructor(private fb: FormBuilder, private rs: ResumeService, private route: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.buildForm();
+   this.buildForm();
     this.getData();
-    if (this.activeRoute.snapshot.params['id']) {
-      this.rs.getUserToEdit().subscribe((data) => {
-        this.resumeForm.patchValue(data);
-        this.uidToEdit = this.activeRoute.snapshot.params['id'];
-      })
-    }
+    // if (this.activeRoute.snapshot.params['id']) {
+    //   this.rs.getUserToEdit().subscribe((data) => {
+    //     this.resumeForm.patchValue(data);
+    //     this.uidToEdit = this.activeRoute.snapshot.params['id'];
+    //   })
+    // }
   }
 
   buildForm() {
     this.resumeForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],
       profile: [''],
-      skills: [''],
-      techSkill: this.fb.array([
-        this.techField()
-      ]),
-      experience: this.fb.array([
-        this.experienceField()
-      ]),
-      university: ['', Validators.required],
-      cgpa: ['', Validators.required]
+      // techSkill: this.fb.array([
+      //   this.techField()
+      // ]), 
+      techSkill: this.fb.array([]),
+      experience: this.fb.array([this.experienceField()]),
+      education: this.fb.array([this.addEducation()])
     })
   }
 
@@ -52,17 +49,24 @@ export class ResumeFormComponent implements OnInit {
   // skills
   techField(): FormGroup {
     return this.fb.group({
-      techSkill: ['', Validators.required]
+      techskill: ['', Validators.required]
     })
   }
 
   get techSkill() {
-    return this.getValue['techSkill'] as FormArray;
+    return this.resumeForm.get('techSkill') as FormArray
   }
 
-  addTechSkill() {
-    this.techSkill.push(this.techField());
-  }
+  createSkill(): FormGroup {  
+    return this.fb.group({  
+      skill: ''
+    });  
+  }   
+
+  addSkills(): void {  
+    this.items = this.resumeForm.get('techSkill') as FormArray;  
+    this.items.push(this.createSkill());  
+  } 
   deleteSkill(index: number) {
     if (this.techSkill.length != 1) {
       this.techSkill.removeAt(index);
@@ -71,7 +75,7 @@ export class ResumeFormComponent implements OnInit {
   // experience
   experienceField(): FormGroup {
     return this.fb.group({
-      name: ['', Validators.required],
+      companyName: ['', Validators.required],
       position: ['', Validators.required],
       description: ['', Validators.required],
       year: [null],
@@ -92,43 +96,41 @@ export class ResumeFormComponent implements OnInit {
   }
 
   // education
-  // educationField(): FormGroup {
-  //   return this.fb.group({
-  //     university: ['', Validators.required],
-  //     cgpa: ['', Validators.required]
-  //   })
-  // }
+  educationField(): FormGroup {
+    return this.fb.group({
+      university: ['', Validators.required],
+      cgpa: ['', Validators.required]
+    })
+  }
 
-  // get education() {
-  //   return this.getValue['education'] as FormArray
-  // }
+  get education() {
+    return this.getValue['education'] as FormArray
+  }
 
-  // addEducation() {
-  //   this.education.push(this.educationField())
-  // }
+  addEducation() {
+    this.education.push(this.educationField())
+  }
+  deleteEducation(index: number) {
+    if(this.education.length != 1) {
+      this.education.removeAt(index)
+    }
+  }
 
   getData() {
     this.rs.getUserData().subscribe((data) => {
       this.resume = data;
     })
   }
+
   saveData() {
     if (this.resumeForm.valid) {
-      if (this.uidToEdit) {
-        this.rs.updateUserData(this.uidToEdit, this.resumeForm.value).subscribe((data) => {
-          this.route.navigate(['/resume/view'])
-        })
-      }
-      else {
-        this.rs.saveUserData(this.resumeForm.value).subscribe((data) => {
-          this.route.navigate(['./resume/view'])
-        })
-      }
-      console.log(this.resumeForm);
+      this.rs.saveUserData(this.resumeForm.value).subscribe((data) => {
+      })
     }
+      this.route.navigate(['./resume/view'])
+    console.log(this.resumeForm);
   }
 }
-
 
 
 

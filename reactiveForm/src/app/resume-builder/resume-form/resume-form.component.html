@@ -2,13 +2,15 @@
   <h3 class="heading">Build Your Resume:</h3>
   <form [formGroup]="resumeForm" (ngSubmit)="saveData()">
     <div class="form-field">
-      <label for="firstName" class="form-lable">Name: </label>
+      <label for="name" class="form-lable">Name: </label>
       <input type="text" id="name" formControlName="name" class="form-input" />
+      <small *ngIf="getValue['name'].touched && getValue['name'].errors?.['required']">This Field is Required</small>
     </div>
 
     <div class="form-field">
       <label for="profile" class="form-lable">Profile: </label>
       <input type="text" id="profile" formControlName="profile" class="form-input" />
+      <small *ngIf="getValue['profile'].touched && getValue['profile'].errors?.['required']">This Field is Required</small>
     </div>
 
     <!-- <div class="form-field">
@@ -16,38 +18,56 @@
       <button type="button">Add Skill +</button>
     </div> -->
 
-    <div class="form-field">
+    <!-- <div class="form-field">
       <label for="techSkill" class="form-lable">Technical Skills: </label>
 
       <button type="button" (click)="addTechSkill()">Add Technical Skill +</button>
 
-      <div formArrayName="techSkill" *ngFor="let tskill of techSkill.controls; let i = index">
-        <div [formGroupName]="i" class="">
+      <div formArrayName="techSkill" *ngFor="let tskill of techSkill.controls let i = index" [formGroupName]="i">
+        <div  class="">
           <input type="text" formControlName="techSkill" class="" placeholder="Technical Skill">
           <button class="btn-warn" (click)="deleteSkill(i)">Delete</button>
         </div>
+        <small *ngIf="getValue['techSkill'].touched && getValue['techSkill'].errors?.['required']">This Field is Required</small>
       </div>
-    </div>
+    </div> -->
+  
+    <div formArrayName="items"  
+      *ngFor="let item of techSkill.controls ; let i = index;">  
+      <div [formGroupName]="i">  
+        <input formControlName="name" placeholder="Item name">  
+        <input formControlName="description" placeholder="Item description">  
+        <input formControlName="price" placeholder="Item price">  
+      </div>  
+    </div> 
+    <button (click)="addSkills()">Add</button>
+   
 
     <div class="form-field">
       <label for="experience" class="form-lable">Experience: </label>
       <button type="button" (click)="addExperience()">Add Experience +</button>
-      <div formArrayName="experience" *ngFor="let exp of experience['controls']; let i = index">
+      <div formArrayName="experience" *ngFor="let exp of experience.controls; let i = index">
         <div [formGroupName]="i" class="">
-          <input type="text" formControlName="name" class="" placeholder="Company Name">
-          <input type="text" formControlName="position" class="" placeholder="Position">
-          <input type="text" formControlName="description" class="" placeholder="Description">
-          <input type="text" formControlName="year" class="" placeholder="Year">
+          <input type="text" formControlName="companyName" class="form-input" placeholder="Company Name">
+          <input type="text" formControlName="position" class="form-input" placeholder="Position">
+          <input type="text" formControlName="description" class="form-input" placeholder="Description">
+          <input type="text" formControlName="year" class="form-input" placeholder="Year">
           <button class="btn-warn" (click)="deleteExperience(i)">Delete</button>
         </div>
       </div>
     </div>
 
-    <div class="form-field">
+    <!-- <div class="form-field">
       <label for="education" class="form-lable">Education: </label>
-      <input type="text" id="university" formControlName="university" class="form-input" placeholder="University" />
-      <input type="text" id="cgpa" formControlName="cgpa" placeholder="CGPA" />
-    </div>
+      <button type="button" (click)="addExperience()">Add Education +</button>
+      <div formArrayName="education" *ngFor="let edu of education.controls; let i = index">
+        <div [formGroupName]="i">
+          <input type="text" id="university" formControlName="university" class="form-input" placeholder="University" />
+          <input type="text" id="cgpa" formControlName="cgpa" placeholder="CGPA" />
+          <button class="btn-warn  " (click)="deleteEducation(i)">Delete</button>
+        </div> 
+      </div>
+    </div> -->
 
     <div>
       <button type="submit" class="btn btn-primary">Submit</button>

@@ -374,9 +374,9 @@ export class ProgramComponent implements OnInit {
   }
 
   indexClick(i: number) {
-    alert(this.crlist[i].amount);
+    alert(this.dataarray[i].title);
   }
-  trackByid(index: number, crlist: any) {
-    return crlist.id;
+  trackByid(index: number, dataarray: any) {
+    return dataarray.id;
   }
 }

@@ -1,29 +1,34 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
+//---------------------------------------------------------------//
+import { AppRoutingModule, components } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { AsideComponent } from './aside/aside.component';
-import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProgramComponent } from './program/program.component';
 import { DirectivesDirective } from './directives.directive';
+import { ServicesService } from './services/services.service';
+
+
+const appRoutes: Routes=[
+  
+]
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    AsideComponent,
-    SectionComponent,
     FooterComponent,
     ProgramComponent,
-    DirectivesDirective
+    DirectivesDirective,
+    components
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

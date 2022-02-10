@@ -12,8 +12,8 @@ export class ResumeService {
   editUser: Subject<resumeData> = new Subject;
   constructor(private http: HttpClient) { }
 
-  getUserData(): Observable<resumeData[]> {
-    return this.http.get<resumeData[]>(`${this.apiLink}/resumeForm`)
+  getUserData(): Observable<resumeData> {
+    return this.http.get<resumeData>(`${this.apiLink}/resumeForm`)
   }
   saveUserData(resumeForm: resumeData): Observable<resumeData> {
     return this.http.post<resumeData>(`${this.apiLink}/resumeForm/`, resumeForm)

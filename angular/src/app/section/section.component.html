@@ -7,7 +7,7 @@
     <!-- start: form -->
     <fieldset style="width: 500px;">
         <legend>Registration</legend>
-        <form method="post" autocomplete="on" style="width: 500px;">
+        <form method="post" autocomplete="on" style="width: 500px;" (ngSubmit)="onSubmit()">
             <div>
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required autofocus />
@@ -23,7 +23,7 @@
                 <input type="email" id="email" name="email" required />
             </div>
   
-            <div>
+            <!-- <div>
                 <label for="mobile">Mobile Number:</label>
                 <input type="number" id="mobile" name="mobile" maxlength="10" />
             </div>
@@ -32,16 +32,16 @@
                 <label for="birthday">Birthday:</label>
                 <input type="date" id="birthday" name="birthday">
             </div>
-  
+   -->
             <div>
                 <label for="pwd">Password:</label>
                 <input type="password" id="pwd" name="pwd" required />
             </div>
   
-            <div>
+            <!-- <div>
                 <label for="propic">Profile Picture:</label>
                 <input type="file" id="files" name="files" />
-            </div>
+            </div> -->
   
             <div>
                 <label for="gender">Gender:</label>
@@ -71,19 +71,19 @@
                 </select>
             </div>
   
-            <div>
+            <!-- <div>
                 <label for="txtarea">Enter Your Comment:</label><br>
                 <textarea name="txtarea" id="txtarea" cols="30" rows="5" placeholder="Write Here..."></textarea>
-            </div>
+            </div> -->
   
             <div>
                 <input type="reset">
-                <input type="submit" name="submit" value="Submit">
-                <input type="submit" formtarget="_blank" value="Submit to a new window">
+                <input type="submit"  name="submit" value="Submit">
+                <!-- <input type="submit" formtarget="_blank" value="Submit to a new window"> -->
             </div>
         </form>
     </fieldset>
     <!-- end: form -->
-    <button (click)="senddata()">click me</button>
+    <button (click)='messageAlert()'>click me</button>
   </section>
   

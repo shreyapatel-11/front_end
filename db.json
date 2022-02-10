@@ -1,0 +1,67 @@
+{
+  "Department": [
+    {
+      "id": 1,
+      "name": "Front-End"
+    },
+    {
+      "id": 2,
+      "name": "QA"
+    },
+    {
+      "id": 3,
+      "name": "ML"
+    },
+    {
+      "id": 4,
+      "name": ".net"
+    },
+    {
+      "id": 5,
+      "name": "DataBase"
+    }
+  ],
+
+  "Employee": [
+    {
+        "id": 1,
+        "firstName": "shreya",
+        "lastName": "patel",
+        "email": "ab@gmail.com",
+        "mobile": "9999988888",
+        "gender": "female",
+        "date": "",
+        "department": "Front-End"
+    },
+    {
+        "id": 2,
+        "firstName": "Honey",
+        "lastName": "patel",
+        "email": "abc@gmail.com",
+        "mobile": "9999998888",
+        "gender": "female",
+        "date": "",
+        "department": "Front-End"
+    },
+    {
+        "id": 3,
+        "firstName": "shreya",
+        "lastName": "patel",
+        "email": "ab@gmail.com",
+        "mobile": "9999988888",
+        "gender": "female",
+        "date": "",
+        "department": "QA"
+    },
+    {
+        "id": 4,
+        "firstName": "alay",
+        "lastName": "patel",
+        "email": "abb@gmail.com",
+        "mobile": "999998888",
+        "gender": "female",
+        "date": "",
+        "department": "Front-End"
+    }
+  ]
+}

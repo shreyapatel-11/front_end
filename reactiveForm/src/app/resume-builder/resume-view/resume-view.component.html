@@ -1,10 +1,10 @@
 <div>
-    <div class=""
+    <div class="resume-view"
         style="width: 900px;border-block: 4px solid #9d9d9d; background-color: #f5f5f5;padding: 20px 30px; margin: auto;">
         <table>
             <tr>
                 <th>
-                    <h1 *ngFor="let resum of resume">{{resum.name}}</h1>
+                    <h1>{{resume.name}}</h1>
                     <p><em>WEB DESIGNER, DIRECTOR</em></p>
                 </th>
                 <th style="width: 200px; ">
@@ -16,9 +16,9 @@
             <tr>
 
                 <table>
-                    <tr *ngFor="let resum of resume">
+                    <tr>
                         <td class="lable-data"><em>Profile</em></td>
-                        <td style="padding-bottom: 20px;">{{resum.profile}}</td>
+                        <td style="padding-bottom: 20px;">{{resume.profile}}</td>
                     </tr>
                 </table>
             </tr>
@@ -42,8 +42,6 @@
                         </td>
                     </tr>
                 </table>
-
-
             </tr>
             <tr>
                 <table>
@@ -51,9 +49,9 @@
                         <td class="lable-data"><em>Technical</em></td>
                         <td>
                             <table style="width: 100%; padding-bottom: 20px;">
-                                <tr style=" border-bottom:1px solid #9d9d9d;" *ngFor="let resum of resume">
+                                <tr style=" border-bottom:1px solid #9d9d9d;" *ngFor="let resum of resume.skill">
                                     <td style="width: 200px;">{{resum.skill}}</td>
-                                    <td style="width: 200px;">{{resum.skill}}</td>
+                                    <!-- <td style="width: 200px;">CSS</td> -->
                                     <td>OS X</td>
                                 </tr>
                                 <tr style=" border-bottom:1px solid #9d9d9d;">
@@ -75,15 +73,14 @@
                 <table>
                     <tr>
                         <td class="lable-data exp" rowspan="2"><em>Experience</em></td>
-                        <td style="border-bottom:1px solid #9d9d9d;">
-                            <h3>Facebook</h3>
-                            <p>Senior Interface Designer</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ea doloremque sunt
-                                accusamus fugiat inventore eligendi, nobis ipsa explicabo deleniti!</p>
+                        <td style="border-bottom:1px solid #9d9d9d;" *ngFor="let resum of resume.experience">
+                            <h3>{{resum.companyName}}</h3>
+                            <p>{{resum.position}}</p>
+                            <p>{{resum.description}}</p>
                         </td>
-                        <td
+                        <td *ngFor="let resum of resume.experience"
                             style="vertical-align: top;text-align: center; width: 20%; border-bottom:1px solid #9d9d9d;">
-                            <p>2005-2007</p>
+                            <p>{{resum.year}}</p>
                         </td>
 
                     </tr>
@@ -105,8 +102,8 @@
                     <tr>
                         <td class="lable-data"><em>Education</em></td>
                         <td>
-                            <h3>Indiana University</h3>
-                            <p>Dual Major - 4.0 GPA</p>
+                            <!-- <h3>{{resume.university}}</h3>
+                            <p>{{resume.cgpa}}</p> -->
                         </td>
                     </tr>
                 </table>
@@ -125,7 +122,8 @@
         </table>
     </div>
     <div>
-        <button type="button" class="btn">Edit</button>
-        <button type="button" class="btn">Delete</button>
+        <!-- <button type="button" class="btn" (click)="this.editUser(resume[0].id)">Edit</button> -->
+        <button routerLink="/resume/form" type="button" class="btn">Form</button>
+        <!-- <button type="button" class="btn" (click)="deleteRecord(resume[0].id)">Delete</button> -->
     </div>
 </div>
