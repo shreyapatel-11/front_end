@@ -16,5 +16,27 @@
 // .form-input{
 //     margin: 5px;
 // }
-
+.form-lable{
+    margin: {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 0;
+    }
+}
+.form-input{
+        margin: {
+            top: 0;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+}
+.warn-msg{
+    color: red;
+    margin-left: 10px;
+}
+.btn{
+    margin: 10px;
+}
 

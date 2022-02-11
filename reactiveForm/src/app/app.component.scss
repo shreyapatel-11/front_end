@@ -1,4 +1,12 @@
-:host{
+.d-flex{
     display: flex;
+}
+.hero{
+    display: flex;
+}
+.sidebar{
+    flex-direction: column;
+    width: 250px;
+    flex-grow: 1;
     height: 100%;
 }

@@ -1,3 +1,12 @@
+.d-flex{
+    display: flex;
+}
+.user-list{
+    
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
 table,td,th{
     border-collapse: collapse;
     border: 1px solid;

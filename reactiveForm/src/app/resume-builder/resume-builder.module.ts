@@ -5,7 +5,7 @@ import { ResumeBuilderRoutingModule } from './resume-builder-routing.module';
 import { ResumeFormComponent } from './resume-form/resume-form.component';
 import { ResumeViewComponent } from './resume-view/resume-view.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ResumeService } from './resume-form/service/resume.service';
+import { ResumeService } from './service/resume.service';
 
 
 @NgModule({

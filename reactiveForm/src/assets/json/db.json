@@ -75,9 +75,160 @@
   ],
   "resumeData": [
     {
-      "id":1,
-      "name": " ",
-      "profile":""
+      "name": "Shreya Patel",
+      "profile": "qwejsdgfkjsdhfkshdkjfhjsdhjkfhsdjkhf",
+      "techSkills": [
+        {
+          "techSkills": "c++"
+        },
+        {
+          "techSkills": "HTML"
+        },
+        {
+          "techSkills": "Angular"
+        }
+      ],
+      "experience": [
+        {
+          "companyName": "1Rivet",
+          "position": "developer",
+          "description": "leojfiiccnsdcjhkcj",
+          "year": "2020"
+        }
+      ],
+      "education": [
+        {
+          "university": "utu",
+          "cgpa": "8.6"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Shreya Patel",
+      "profile": "qwejsdgfkjsdhfkshdkjfhjsdhjkfhsdjkhf",
+      "techSkills": [
+        {
+          "techSkills": "HTML"
+        },
+        {
+          "techSkills": "Angular"
+        },
+        {
+          "techSkills": "C#"
+        }
+      ],
+      "experience": [
+        {
+          "companyName": "c",
+          "position": "hfghbfg",
+          "description": "fghfgjfghfg",
+          "year": "2020"
+        }
+      ],
+      "education": [
+        {
+          "university": "utu",
+          "cgpa": "8.6"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Honey patel",
+      "profile": "qwejsdgfkjsdhfkshdkjfhjsdhjkfhsdjkhf",
+      "techSkills": [
+        {
+          "techSkills": "html"
+        }
+      ],
+      "experience": [
+        {
+          "companyName": "gj",
+          "position": "ghjhk",
+          "description": "ghjhk",
+          "year": "2020"
+        }
+      ],
+      "education": [
+        {
+          "university": "utu",
+          "cgpa": "8.6"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Honey patel",
+      "profile": "qwe",
+      "techSkills": [
+        {
+          "techSkills": "html"
+        }
+      ],
+      "experience": [
+        {
+          "companyName": "gj",
+          "position": "bjhh",
+          "description": "hbkjk",
+          "year": "2020"
+        }
+      ],
+      "education": [
+        {
+          "university": "utu",
+          "cgpa": "8.6"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "Honey patel",
+      "profile": "qwejsdgfkjsdhfkshdkjfhjsdhjkfhsdjkhf",
+      "techSkills": [
+        {
+          "techSkills": "rte"
+        }
+      ],
+      "experience": [
+        {
+          "companyName": "gj",
+          "position": "yrtuty",
+          "description": "tyjhkmhj",
+          "year": "2020"
+        }
+      ],
+      "education": [
+        {
+          "university": "utu",
+          "cgpa": "8.6"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Honey patel",
+      "profile": "qwejsdgfkjsdhfkshdkjfhjsdhjkfhsdjkhf",
+      "techSkills": [
+        {
+          "techSkills": "c#"
+        }
+      ],
+      "experience": [
+        {
+          "companyName": "gj",
+          "position": "dsc",
+          "description": "sdvsdv",
+          "year": "2020"
+        }
+      ],
+      "education": [
+        {
+          "university": "utu",
+          "cgpa": "8.6"
+        }
+      ],
+      "id": 7
     }
   ]
 }

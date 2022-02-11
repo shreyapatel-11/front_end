@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { resumeData } from '../resume-form/model/resume.model';
-import { ResumeService } from '../resume-form/service/resume.service';
+import { resumeData } from '../model/resume.model';
+import { ResumeService } from '../service/resume.service';
 
 @Component({
   selector: 'app-resume-view',
@@ -19,11 +19,12 @@ export class ResumeViewComponent implements OnInit {
   }
 
   getData() {
-    this.rs.getUserData().subscribe((data) => {
+    this.rs.getUserData(1).subscribe((data) => {
       this.resume = data;
     })
   }
-  // editUser(sendUser: resumeData) {
+}
+// editUser(sendUser: resumeData) {
   //   this.rs.sendUserToEdit(sendUser);
   //   this.route.navigate([`/resume/form/${sendUser.id}`])
   // }
@@ -32,4 +33,3 @@ export class ResumeViewComponent implements OnInit {
   //     this.getData()
   //   })
   // }
-}

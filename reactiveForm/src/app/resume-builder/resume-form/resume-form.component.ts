@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder,  FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { resumeData } from './model/resume.model';
-import { ResumeService } from './service/resume.service';
+import { resumeData } from '../model/resume.model';
+import { ResumeService } from '../service/resume.service';
 
 @Component({
   selector: 'app-resume-form',
@@ -14,13 +14,14 @@ export class ResumeFormComponent implements OnInit {
   resumeForm: FormGroup;
   uidToEdit: number;
   resume: resumeData;
-  items!: FormArray;  
+  items!: FormArray;
+ 
 
   constructor(private fb: FormBuilder, private rs: ResumeService, private route: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
    this.buildForm();
-    // this.getData();
+
     // if (this.activeRoute.snapshot.params['id']) {
     //   this.rs.getUserToEdit().subscribe((data) => {
     //     this.resumeForm.patchValue(data);
@@ -28,15 +29,11 @@ export class ResumeFormComponent implements OnInit {
     //   })
     // }
   }
-
   buildForm() {
     this.resumeForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],
-      profile: [''],
-      // techSkill: this.fb.array([
-      //   this.techField()
-      // ]), 
-      techSkill: this.fb.array([this.techField()]),
+      name: ['', Validators.required],
+      profile: ['',Validators.required],
+      techSkills: this.fb.array([this.techField()]),
       experience: this.fb.array([this.experienceField()]),
       education: this.fb.array([this.educationField()])
     })
@@ -45,26 +42,31 @@ export class ResumeFormComponent implements OnInit {
   get getValue() {
     return this.resumeForm.controls;
   }
+  
 
   // skills
   techField(): FormGroup {
     return this.fb.group({
-      techskill: ['', Validators.required]
+      techSkills: ['', Validators.required]
     })
   }
 
   get techSkill() {
-    return this.resumeForm.get('techSkill') as FormArray
+    return this.resumeForm.get('techSkills') as FormArray
   } 
 
   addSkills(): void {  
-    this.items = this.resumeForm.get('techSkill') as FormArray;  
+    this.items = this.resumeForm.get('techSkills') as FormArray;  
     this.items.push(this.techField());
   } 
   deleteSkill(index: number) {
     if (this.techSkill.length != 1) {
       this.techSkill.removeAt(index);
     }
+    console.log(this.techSkill.length)
+  }
+  getFormGroup(ac: AbstractControl): FormGroup{
+    return ac as FormGroup
   }
   // experience
   experienceField(): FormGroup {
@@ -72,7 +74,7 @@ export class ResumeFormComponent implements OnInit {
       companyName: ['', Validators.required],
       position: ['', Validators.required],
       description: ['', Validators.required],
-      year: [null],
+      year: ['',Validators.required],
     })
   }
 
@@ -111,11 +113,10 @@ export class ResumeFormComponent implements OnInit {
   }
 
   saveData() {
-    if (this.resumeForm.valid) {
-      this.rs.saveUserData(this.resumeForm.value).subscribe((data) => {
-      })
-    }
-      this.route.navigate(['./resume/view'])
+    this.rs.deleteUserData(1).subscribe(() => {
+      this.rs.saveUserData(this.resumeForm.value).subscribe();
+    })
+    this.route.navigate(['./resume/view']);
     console.log(this.resumeForm);
   }
 }

@@ -3,7 +3,7 @@ export interface resumeData{
     id: number,
     name: string,
     profile: string,
-    skill: Tech[],
+    techSkills: Tech[],
     experience: Experience[],
     education: Edu[]
 }
