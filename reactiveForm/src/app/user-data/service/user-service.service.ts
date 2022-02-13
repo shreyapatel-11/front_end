@@ -21,24 +21,24 @@ export class UserServiceService {
       "date": ''
     }
   );
-  
+
   constructor(private http: HttpClient) {
     this.apiLink = environment.baseURL;
   }
 
-  getDepartment(): Observable<Department[]>{
+  getDepartment(): Observable<Department[]> {
     return this.http.get<Department[]>(`${this.apiLink}/department`);
   }
 
-  getEmployeeList(): Observable<Employee[]>{
+  getEmployeeList(): Observable<Employee[]> {
     return this.http.get<Employee[]>(`${this.apiLink}/employee`);
   }
 
   saveEmployee(employee: Employee): Observable<Employee> {
-    return this.http.post<Employee>(`${this.apiLink}/employee`,employee)
+    return this.http.post<Employee>(`${this.apiLink}/employee`, employee)
   }
 
-  updateEmployeeList(id: number,employee: Employee) : Observable<Employee>{
+  updateEmployeeList(id: number, employee: Employee): Observable<Employee> {
     return this.http.put<Employee>(`${this.apiLink}/employee/${id}`, employee)
   }
 
@@ -46,7 +46,7 @@ export class UserServiceService {
     this.editEmployee.next(employee);
   }
 
-  getEmployeeToEdit(): Observable<Employee>{
+  getEmployeeToEdit(): Observable<Employee> {
     return this.editEmployee.asObservable();
   }
 

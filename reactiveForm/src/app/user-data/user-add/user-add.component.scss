@@ -1,8 +1,19 @@
-
+.d-flex{
+    display: flex;
+}
+.user-form{
+    background-color: rgba(1, 3, 8, 0.287);
+    border-radius: 5px;
+    // margin:100px auto;
+    justify-content: center;
+    align-items: center;
+}
 .form-data {
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
     margin: 0 auto;
-    margin-top: 150px;
 
     .form-field {
         margin: 1.25rem;

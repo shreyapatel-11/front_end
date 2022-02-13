@@ -3,10 +3,13 @@
 }
 .sidebar{
     display: flex;
-    flex: 0 0 250px;
-    flex-direction: column;
-    border: 1px solid rgb(156, 158, 163);
-    height: 100%;
+    flex: 1 0 250px;
+    //   max-width:200px;
+    //   flex-grow: 1;
+    //   flex-shrink: 0;
+      border: 1px solid rgb(156, 158, 163);
+      flex-direction: column;
+      height: 100%;
 
     .logo{
         border-bottom: 1px solid rgb(156, 158, 163);
@@ -32,7 +35,7 @@
         background-color: white;
         /* margin: 10px auto; */
 
-        .list1,.list2 {
+        .list1 {
             padding: 10px 10px;
             list-style-type: none;
 

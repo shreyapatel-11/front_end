@@ -1,10 +1,13 @@
-<div>
-    <div class="resume-view"
-        style="width: 900px;border-block: 4px solid #9d9d9d; background-color: #f5f5f5;padding: 20px 30px; margin: auto;">
+<div class="d-flex resume-view">
+    <div class="btn-create">
+        <button routerLink="/resume/form" type="button" class="btn">+ Create Resume</button>
+    </div>
+
+    <div class="template">
         <table>
             <tr>
                 <th>
-                   <h1>{{resume.name}}</h1>
+                    <h1>{{resume.name}}</h1>
                     <p><em>WEB DESIGNER, DIRECTOR</em></p>
                 </th>
                 <th style="width: 200px; ">
@@ -123,7 +126,7 @@
     </div>
     <div>
         <!-- <button type="button" class="btn" (click)="this.editUser(resume[0].id)">Edit</button> -->
-        <button routerLink="/resume/form" type="button" class="btn">Form</button>
+
         <!-- <button type="button" class="btn" (click)="deleteRecord(resume[0].id)">Delete</button> -->
     </div>
 </div>

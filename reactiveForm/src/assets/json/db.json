@@ -71,6 +71,16 @@
       "date": "2022-02-01",
       "department": "3",
       "id": 6
+    },
+    {
+      "firstName": "shreya",
+      "lastName": "patel",
+      "email": "ab@gmil.com",
+      "mobile": 9988776655,
+      "gender": "female",
+      "date": "2022-02-01",
+      "department": "2",
+      "id": 7
     }
   ],
   "resumeData": [
