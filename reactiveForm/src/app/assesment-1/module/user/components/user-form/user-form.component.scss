@@ -2,13 +2,10 @@
     display: flex;
 }
 .user-form{
-    background-color: rgba(1, 3, 8, 0.287);
-    border-radius: 5px;
-    // margin:100px auto;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-.form-data {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,23 +13,35 @@
     margin: 0 auto;
 
     .form-field {
-        margin: 1.25rem;
         height: 2rem;
 
         .form-input {
             width: 300px;   
         }
         small{
+            margin-bottom: 10px;
             color: red;
         }
     }
     .form-lable {
-        width: 200px;
+        width: 300px;
         font-size: 20px;
     }
-    .btn-primary {
+    .btn{
         width: 100px;
+        height: 40px;
         margin: 1.25rem;
+        font-size: 20px;
+        background-color: white;   
+        border-radius: 5px;
+    }  
+    .btn-add{
+        color: blue;
+        border-color: blue;
+    }
+    .btn-clear{
+        color: red;
+        border-color: red;
     }
 }
 

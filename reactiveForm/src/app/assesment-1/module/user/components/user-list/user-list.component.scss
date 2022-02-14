@@ -1,0 +1,95 @@
+.d-flex{
+    display: flex;
+}
+.user-list{
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+    .headind{
+       
+        align-items:center ;
+    }
+    .header{
+        justify-content: space-between;
+        padding: 20px ;
+
+        .search-btn{
+            margin: 0 20px;
+
+            .search{
+                width: 200px;
+                height: 30px;
+                border-radius: 5px;
+                margin: 10px;
+            }
+        }
+        
+        .create-btn{
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    }
+    .table-list{
+        border:1px solid rgb(100, 95, 95);
+        border-radius: 5px;
+        margin: 0 20px;
+        .table{
+            width: 100%;
+        }
+
+        table,td,th{
+            
+            border-collapse: collapse;
+            border-bottom: 1px solid rgb(100, 95, 95);
+            text-align: center;
+            padding: 10px;
+        }
+    }
+
+    // .pagination{
+        
+    //     .page{
+    //         width: 100%;
+    //     }
+    // }
+
+    .add-address{
+        margin: 10px 20px;
+        border: 1px solid rgb(100, 95, 95);
+        padding: 20px;
+
+        .input-field{
+            width: 300px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        .add-btn{
+            height: 30px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin: 0 20px;
+           
+        }
+    }
+}
+.btn{
+    background-color: #0d6efd;
+    color: white;
+}
+.edit-btn{
+    background-color:  #6c757d;
+}
+.delete-btn{
+    background-color: red;
+    // color: white;
+}
+.detail-btn{
+    background-color: #0dcaf0;
+    color: black;
+}

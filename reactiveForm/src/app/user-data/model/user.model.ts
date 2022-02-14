@@ -1,5 +1,5 @@
 export interface Department{
-    find: any;
+    // find: any;
     id: number,
     name: string
 }

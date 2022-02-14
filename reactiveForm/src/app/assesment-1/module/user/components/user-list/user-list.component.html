@@ -1,0 +1,55 @@
+<div class="d-flex user-list">
+    <h1 class="heading">User List</h1>
+    <div class="d-flex header">
+        <button class="btn create-btn" routerLink="/assesment/form">+Create</button>
+        <div class="search-btn">
+            <input class="search" type="search" placeholder="Search By Name" [(ngModel)]="searchData">
+            <input class="search" type="search" placeholder="Search By Department" [(ngModel)]="searchData">
+            <input class="search" type="search" placeholder="Search By City" [(ngModel)]="searchData">
+        </div>
+    </div>
+    <div class="table-list">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>City</th>    
+                    <th>Department</th>
+                    <th colspan="3"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employee">
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.mobile}}</td>
+                    <td>{{emp.city}}</td>
+                    <td>{{emp.department | departments: dept}}</td>
+                    <td><button class="btn edit-btn" (click)="this.editEmployee(emp)">Edit</button></td>
+                    <td><button class="btn delete-btn" (click)="deleteEmployeeData(emp.id)">Delete</button></td>
+                    <td><button class="btn detail-btn">Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <div *ngIf="!employee?.length">No Data Found</div> -->
+    <!-- <div class="pagination">
+        <table class="page">
+            <tr>
+                <td>Previous</td>
+                <td>1</td>
+                <td>Next</td>
+            </tr>
+        </table>
+
+    </div> -->
+    <footer>
+        <div class="add-address">
+            <h2 class="sub-heading">Add Address</h2>
+            <input type="text" class="input-field">
+            <button type="button" class="add-btn">Add</button>
+        </div>
+    </footer>
+</div>

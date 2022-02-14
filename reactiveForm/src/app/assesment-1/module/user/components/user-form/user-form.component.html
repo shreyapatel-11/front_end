@@ -1,0 +1,59 @@
+
+<div class="d-flex user-form">
+    <h1 class="heading">Add User</h1>
+    <form class="form" [formGroup]="userForm" (ngSubmit)="saveUserData()">
+        <label for="name" class="form-lable">Name:</label>
+        <div class="form-field">
+            <input type="text" formControlName='name' class="form-input"><br>
+            <small *ngIf="formControl['name'].touched && userForm.controls['name'].errors?.['required']">This filed is Required*</small>
+        </div>
+        
+        <label for="email" class="form-lable">Email</label>
+        <div class="form-field">
+            <input type="email" formControlName='email' class="form-input"><br>
+            <small *ngIf="formControl['email'].touched && userForm.controls['email'].errors?.['required']">This filed is Required*</small>
+        </div>
+        
+        <label for="mobile" class="form-lable">Mobile</label>
+        <div class="form-field">
+            <input type="text" formControlName='mobile' class="form-input"><br>
+            <small *ngIf="formControl['mobile'].touched && userForm.controls['mobile'].errors?.['required']">This filed is Required*</small>
+        </div>
+
+        <label for="name" class="form-lable">City</label>
+        <div class="form-field">
+            <input type="text" formControlName='city' class="form-input">
+        </div>
+
+        <div class="form-field">
+            <input type="radio" id="male" value="male" formControlName='gender'>
+            <label for="male">Male</label>
+            <input type="radio" id="female" value="female" formControlName='gender'>
+            <label for="female">Female</label>
+            <input type="radio" id="other" value="other" formControlName='gender'>
+            <label for="female">Other</label>
+        </div>
+
+        <label for="department" class="form-lable">Department</label>
+        <div class="form-field">
+            <select id="department" class="form-input" formControlName='department'>
+                <option *ngFor="let departments of department" [value]="departments.id">{{departments.name}}</option>
+            </select>
+        </div>
+
+        <label for="date" class="form-lable">Hire Date</label> 
+        <div class="form-field">
+            <input type="date" id="date" formControlName='date' class="form-input">
+        </div>
+
+        <div  class="form-field">
+            <input type="checkbox"  name="check">
+            <label for="check">Permenant Employee</label><br>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-add">Add</button>
+            <button type="reset" class="btn btn-clear">Clear</button>
+        </div>
+    </form>
+</div>

@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: 'resume',
     loadChildren: () => import('./resume-builder/resume-builder.module').then(m => m.ResumeBuilderModule)
+  },
+  {
+    path: 'assesment',
+    loadChildren: () => import('./assesment-1/module/user/user.module').then(m => m.UserModule)
   }
 ];
 

@@ -21,6 +21,48 @@
       "name": "Database"
     }
   ],
+  "EmployeeUser": [
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 1
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 2
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 3
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 4
+    }
+  ],
   "Employee": [
     {
       "firstName": "Alay",
@@ -29,7 +71,7 @@
       "mobile": "9999988888",
       "gender": "male",
       "date": "2022-02-01",
-      "department": "4",
+      "department": 1,
       "id": 1
     },
     {
@@ -81,6 +123,66 @@
       "date": "2022-02-01",
       "department": "2",
       "id": 7
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 8
+    },
+    {
+      "name": "Honey patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 9
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 10
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": null,
+      "department": "",
+      "date": null,
+      "id": 11
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": "",
+      "department": "3",
+      "date": "2022-02-02",
+      "id": 12
+    },
+    {
+      "name": "Shreya Patel",
+      "email": "ab@gmail.com",
+      "mobile": "9999988888",
+      "city": "valsad",
+      "gender": "",
+      "department": "2",
+      "date": "",
+      "id": 13
     }
   ],
   "resumeData": [
