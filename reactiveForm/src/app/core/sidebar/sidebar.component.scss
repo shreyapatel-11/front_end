@@ -1,44 +1,54 @@
 .d-flex {
     display: flex;
 }
-.sidebar{
-    display: flex;
-    flex: 1 0 250px;
-    //   max-width:200px;
-    //   flex-grow: 1;
-    //   flex-shrink: 0;
-      border: 1px solid rgb(156, 158, 163);
-      flex-direction: column;
-      height: 100%;
+.side{
+    border: 1px solid rgb(156, 158, 163);
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
 
-    .logo{
-        border-bottom: 1px solid rgb(156, 158, 163);
-        margin: 0;
-        min-height: 80px;
-        align-items: center;
-        flex-shrink: 0;
-        background-color: white;
+    aside{
+        flex-direction: column;
+
+        .main-logo{
+            border-bottom: 1px solid rgb(156, 158, 163);
+            justify-content: center;
+            min-height: 80px;
+            width: 200px;
+            align-items: center;
+    
+            .logo-a {
+                color: black;
+                text-decoration-line: none;
+                display: flex;
+                align-items: center;
+                font-size: 1.25rem;
+               
+            }
+            .heading{
+                text-decoration: none;
+                color: black;
+                margin-left: 10px;
+                overflow: hidden;
+            }
+        }
+
+
     }
-    .logo-a {
-        text-decoration-line: none;
-        display: flex;
-        color: black;
-        padding-left: 20px;
-        align-items: center;
-    }
+
+    
+   
 
     nav {
         display: flex;
         flex-grow: 1;
         flex-direction: column;
         height: 100%;
-        background-color: white;
-        /* margin: 10px auto; */
 
         .list1 {
             padding: 10px 10px;
             list-style-type: none;
-
+            
             .icon {
                 margin: auto 10px;
             }
@@ -46,6 +56,9 @@
                 text-decoration-line: none;
                 display: flex;
                 color: black;
+                &:hover{
+                    color: blue;
+                }
                 padding: 10px;
                 padding-left: 10px;
             }

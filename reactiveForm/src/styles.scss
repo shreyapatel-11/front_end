@@ -5,3 +5,11 @@ html,body{
     margin: 0;
     padding: 0;
 }
+
+#bar{
+    display: none;
+}
+
+#bar:checked ~ .sidebar .side aside nav ul li a{
+    transform: translateX(80px);
+}

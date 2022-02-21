@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'app';
+  src:  url('fonts/app.eot?djcl9f');
+  src:  url('fonts/app.eot?djcl9f#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?djcl9f') format('truetype'),
+    url('fonts/app.woff?djcl9f') format('woff'),
+    url('fonts/app.svg?djcl9f#app') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'app' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before {
+  content: "\e900";
+}
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-file-text2:before {
+  content: "\e926";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
+.icon-address-book:before {
+  content: "\e944";
+}
+.icon-user-plus:before {
+  content: "\e973";
+}
+.icon-spinner2:before {
+  content: "\e97b";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
