@@ -9,7 +9,13 @@ html,body{
 #bar{
     display: none;
 }
+#bar:checked ~ .sidebar{
+    flex: 0 0 70px;
+}
 
-#bar:checked ~ .sidebar .side aside nav ul li a{
-    transform: translateX(80px);
+#bar:checked ~ .sidebar .side aside nav ul li a span{
+    transform: translateX(150px);
+}
+#bar:checked ~ .sidebar .side aside div a h1{
+    transform: translateX(150px);
 }
