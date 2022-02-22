@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
 html,body{
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 #bar{
@@ -25,46 +29,46 @@ html,body{
     .sidebar{
         position: absolute;
         height: 100%;
+        left: -250px;
         z-index: 99;
         transition: 0.4s all;   
     }
-
+    .outlet{
+        margin-left: 80px;
+    }
     #bar:checked ~ .sidebar{
         width: 100%;
+        left: 0;
     }
     
     #bar:checked ~ .sidebar .side aside nav ul li a span{
         transform: translateX(0);
     }
-    #bar:checked ~ .sidebar .side aside nav ul li a{
-        transform: translateX(300px);
-    }
     
     #bar:checked ~ .sidebar .side aside div .heading{
-        transform: translateX(300px);    
+        transform: translateX(0);    
     }
 }
 
 @media screen and (max-width: 567px) {
     .sidebar{
-        position: absolute;
+        // position: absolute;
         height: 100%;
+        left: -100%;
         z-index: 99;
         transition: 0.4s all;     
     }
-
+    
     #bar:checked ~ .sidebar{
         width: 100%;
+        left: 0;
     }
     
     #bar:checked ~ .sidebar .side aside nav ul li a span{
         transform: translateX(0);
     }
-    #bar:checked ~ .sidebar .side aside nav ul li a{
-        transform: translateX(100px);    
-    }
-    
+   
     #bar:checked ~ .sidebar .side aside div .heading{
-        transform: translateX(100px);    
+        transform: translateX(0);    
     }
 }

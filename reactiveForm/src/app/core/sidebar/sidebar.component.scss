@@ -26,7 +26,7 @@
             .heading{
                 text-decoration: none;
                 color: black;
-                margin-left: 50px;
+                margin-left: 80px;
                 overflow: hidden;
                 // transform: translateX(0);
                 transition: transform .4s all;
@@ -39,6 +39,7 @@
         flex-grow: 1;
         flex-direction: column;
         height: 100%;
+        font-size: 1.25rem;
     }
 
     a{
@@ -48,7 +49,7 @@
     .list1 {
         padding: 10px 10px;
         list-style-type: none;
-        justify-content: center;  
+        // justify-content: center;  
         
         .icon {
             margin: auto 10px;
@@ -63,7 +64,7 @@
             &:hover{
                 color: blue;
             }
-            padding: 10px;
+            padding: 20px;
             padding-left: 10px;
             transition: 0.4s all;
         

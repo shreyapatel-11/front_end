@@ -36,9 +36,9 @@
     <!-- experience -->
     <label for="experience" class="form-lable">Experience: </label>
     <button type="button" (click)="addExperience()">Add Experience +</button>
-    <div class="form-group" formArrayName="experience" *ngFor="let exp of experience.controls; let i = index">
-      <div [formGroupName]="i" class="">
-        <input type="text" formControlName="companyName" class="form-input" placeholder="Company Name" />
+    <div class="form-group " formArrayName="experience" *ngFor="let exp of experience.controls; let i = index">
+      <div [formGroupName]="i" class="d-flex experience">
+        <input type=" text" formControlName="companyName" class="form-input" placeholder="Company Name" />
         <small
           *ngIf="getFormGroup(exp).controls['companyName'].touched && getFormGroup(exp).controls['companyName'].errors?.['required']"
           class="warn-msg">This Field is Required</small>
