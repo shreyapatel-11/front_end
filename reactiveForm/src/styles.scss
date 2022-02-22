@@ -16,6 +16,55 @@ html,body{
 #bar:checked ~ .sidebar .side aside nav ul li a span{
     transform: translateX(150px);
 }
-#bar:checked ~ .sidebar .side aside div a h1{
+#bar:checked ~ .sidebar .side aside div .heading{
     transform: translateX(150px);
+}
+
+@media screen and (max-width:768px){
+
+    .sidebar{
+        position: absolute;
+        height: 100%;
+        z-index: 99;
+        transition: 0.4s all;   
+    }
+
+    #bar:checked ~ .sidebar{
+        width: 100%;
+    }
+    
+    #bar:checked ~ .sidebar .side aside nav ul li a span{
+        transform: translateX(0);
+    }
+    #bar:checked ~ .sidebar .side aside nav ul li a{
+        transform: translateX(300px);
+    }
+    
+    #bar:checked ~ .sidebar .side aside div .heading{
+        transform: translateX(300px);    
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .sidebar{
+        position: absolute;
+        height: 100%;
+        z-index: 99;
+        transition: 0.4s all;     
+    }
+
+    #bar:checked ~ .sidebar{
+        width: 100%;
+    }
+    
+    #bar:checked ~ .sidebar .side aside nav ul li a span{
+        transform: translateX(0);
+    }
+    #bar:checked ~ .sidebar .side aside nav ul li a{
+        transform: translateX(100px);    
+    }
+    
+    #bar:checked ~ .sidebar .side aside div .heading{
+        transform: translateX(100px);    
+    }
 }

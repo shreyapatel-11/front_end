@@ -2,7 +2,7 @@
     display: flex;
 }
 .side{
-    
+    height: 100%;
     flex-direction: column;
     background-color: white;
 
@@ -11,7 +11,7 @@
         position: relative;
         .main-logo{
             border-bottom: 1px solid rgb(156, 158, 163);
-            justify-content: center;
+            // justify-content: center;
             min-height: 80px;
             align-items: center;
     
@@ -26,13 +26,12 @@
             .heading{
                 text-decoration: none;
                 color: black;
-                margin-left: 10px;
+                margin-left: 50px;
                 overflow: hidden;
-                transition: 0.5s all;
+                // transform: translateX(0);
+                transition: transform .4s all;
             }
         }
-
-
     }
 
     nav {
@@ -43,18 +42,19 @@
     }
 
     a{
-        transition: 1s all;
+        transition: 0.4s all;
         overflow: hidden;
     }
     .list1 {
         padding: 10px 10px;
         list-style-type: none;
+        justify-content: center;  
         
         .icon {
             margin: auto 10px;
         }
         span{
-            transition: 0.5s all;
+            transition: 0.4s all;
         }
         .nav-list {
             text-decoration-line: none;
@@ -65,6 +65,8 @@
             }
             padding: 10px;
             padding-left: 10px;
+            transition: 0.4s all;
+        
         }
         .nav-list:hover {
             background-color: #cdc8c8;
