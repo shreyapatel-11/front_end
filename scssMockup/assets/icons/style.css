@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'app';
+  src:  url('fonts/app.eot?rhzppp');
+  src:  url('fonts/app.eot?rhzppp#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?rhzppp') format('truetype'),
+    url('fonts/app.woff?rhzppp') format('woff'),
+    url('fonts/app.svg?rhzppp#app') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'app' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ant-design_message-outlined:before {
+  content: "\e901";
+}
+.icon-bi_cart-dash-fill:before {
+  content: "\e902";
+}
+.icon-bi_eye-fill:before {
+  content: "\e903";
+}
+.icon-ci_settings-filled:before {
+  content: "\e904";
+}
+.icon-ep_warning-filled:before {
+  content: "\e905";
+}
+.icon-fa6-solid_bag-shopping:before {
+  content: "\e906";
+}
+.icon-fa6-solid_user-group:before {
+  content: "\e907";
+}
+.icon-fluent_notepad-20-filled:before {
+  content: "\e908";
+}
+.icon-octicon_sign-out-16:before {
+  content: "\e909";
+}
+.icon-ph_bell:before {
+  content: "\e90a";
+}
+.icon-radix-icons_dashboard:before {
+  content: "\e90b";
+  color: #1271ff;
+}
+.icon-calendar:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-notification:before {
+  content: "\ea08";
+}

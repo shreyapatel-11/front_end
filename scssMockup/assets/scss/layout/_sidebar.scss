@@ -1,0 +1,13 @@
+.main-content{
+    height: 100%;
+}
+.sidebar{
+    height: 100%;
+    width: 60px;
+
+    .navbar{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

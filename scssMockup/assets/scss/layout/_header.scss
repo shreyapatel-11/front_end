@@ -1,0 +1,17 @@
+// Header area style
+.header{
+    height: $badge-height;
+    justify-content: $justify-content-between;
+    padding: $header-padding-y $header-padding-x;
+
+    #search{
+        height: $height;
+        width: $input-width;
+    }
+    .btn{
+        height: $height;
+        width: $btn-width;
+        color: $white;
+        background-color: $secondary;
+    }
+}
