@@ -1,1 +1,14 @@
 // Form controls styles goes here
+#search{
+    height: $height;
+    width: $input-width;
+    border: none;
+    background-color: $light-gray;
+    margin-left: $margin-left-search;
+    padding-left: $padding-left;
+}
+.search-icon{
+   left: $left;
+   top: $top;
+   color: $gray;
+}

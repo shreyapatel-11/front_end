@@ -1,1 +1,8 @@
 // Button styles goes here
+.btn{
+    height: $height;
+    width: $btn-width;
+    color: $white;
+    background-color: $secondary;
+    border: none;
+}

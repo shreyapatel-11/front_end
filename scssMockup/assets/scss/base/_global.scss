@@ -11,19 +11,49 @@ html,body{
 body{
     font-family:$font-family;
 }
+// flex
 .d-flex{
     display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-item-center{
+    align-items: center;
+}
+
+.position-relative{
+    position: relative;
+}
+.position-absolute{
+    position: absolute;
+}
+.text-decoration-none{
+    text-decoration: none;
+}
+.list-style-type{
+    list-style-type: none;
+}
+
+.padding-x{
+    padding: 0 0.8rem;
 }
 
 .icons{
     font-size: $icon-font-size;
+    text-decoration: none;
+    color: $gray;
 }
+
 .card-icon{
     font-size: $card-icon-font-size;
 }
 .wrapper{
     height: 100%;
-}
-.main{
-    flex-grow: 1;
 }

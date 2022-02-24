@@ -12,14 +12,20 @@
     <div class="wrapper">
         <!-- start: Header -->
         <header class="d-flex header">
-            <div class="logo-section">
-                <a href="#" class="icons brand-logo"><span class="icon-menu"></span></a>
-                <input type="search" placeholder="Search for transaction, items, etc" id="search">
-                <button class="btn" type="button">Search</button>
+            <div class="d-flex logo-section align-item-center">
+                <div><a href="#" class="icons brand-logo"><span class="icon-menu"></span></a></div>
+                <div class="position-relative">
+                    <input type="search" placeholder="Search for transaction, items, etc" id="search">
+                    <a href="#" class="text-decoration-none search-icon position-absolute"><span class="icon-search"></span></a>
+                </div>
+                <div><button class="btn" type="button">Search</button></div>
+                
             </div>
-            <div class="">
-                <a href="#"><span class="icons icon-ant-design_message-outlined"></span></a>
-                <a href="#"><span class="icons icon-ph_bell"></span></a>
+            <div class="d-flex icon-section align-item-center">
+                <div class="padding-x"><a href="#" class="icons"><span class="icons icon-ant-design_message-outlined"></span></a></div>
+                <div class="padding-x"><a href="#" class="icons"><span class="icons icon-ph_bell"></span></a></div>
+                <div class="padding-x"><span><img src="./assets/images/logo-img.png" alt=""></span></div>
+                <div class="padding-x"><span class="icons icon-circle-down"></span></div>    
             </div>
         </header>
         <!-- end: Header -->
@@ -29,16 +35,16 @@
             <input type="checkbox" id="bar">
             <aside class="sidebar">
                 <label for="bar" class=""></label>
-                <nav class="d-flex navbar">
-                    <ul class="navbar-nav1">
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-radix-icons_dashboard"></span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-bi_cart-dash-fill"></span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-fluent_notepad-20-filled"></span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-ci_settings-filled"></span></a></li>
+                <nav class="d-flex navbar flex-column justify-content-between">
+                    <ul class="navbar-nav1 list-style-type">
+                        <li class="nav-item"><a href="#" class="icons nav-link"><span class="icons icon-radix-icons_dashboard"></span></a></li>
+                        <li class="nav-item"><a href="#" class="icons nav-link"><span class="icons icon-bi_cart-dash-fill"></span></a></li>
+                        <li class="nav-item"><a href="#" class="icons nav-link"><span class="icons icon-fluent_notepad-20-filled"></span></a></li>
+                        <li class="nav-item"><a href="#" class="icons nav-link"><span class="icons icon-ci_settings-filled"></span></a></li>
                     </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-ep_warning-filled"></span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-octicon_sign-out-16"></span></a></li>
+                    <ul class="navbar-nav list-style-type">
+                        <li class="nav-item"><a href="#" class="icons nav-link"><span class="icons icon-ep_warning-filled"></span></a></li>
+                        <li class="nav-item"><a href="#" class="icons nav-link"><span class="icons icon-octicon_sign-out-16"></span></a></li>
                     </ul>
                 </nav>
             </aside>
@@ -52,10 +58,12 @@
                     <div class="d-flex card-wrapper">
                         <!-- card: 1 -->
                         <div class="card">
-                            <div class="card-inner">
-                                <div class="d-flex icon">
-                                    <span class="card-icon icon-bi_eye-fill"></span>
-                                    <span class=""></span>
+                            <div class="inner-card card-1">
+                                <div class="d-flex icon justify-content-between">
+                                    <div class="card-icon d-flex align-item-center justify-content-center">
+                                        <span class=" card-icon-1 align-item-center icon-bi_eye-fill"></span>
+                                    </div>
+                                    <span class="arrow-graph arrow-1 icon-arrow-up-right2"></span>
                                 </div>
                                 <div class="card-name">Total View</div>
                                 <div class="card-number">308.402</div>
@@ -63,11 +71,13 @@
                             </div>   
                         </div>
                         <!-- card: 2 -->
-                        <div class="card">
-                            <div class="inner-card">
-                                <div class="d-flex icon">
-                                <span class="card-icon icon-fa6-solid_bag-shopping"></span>
-                                <span class=""></span>
+                        <div class="card ">
+                            <div class="inner-card card-2">
+                                <div class="d-flex icon justify-content-between">
+                                    <div class="card-icon d-flex align-item-center justify-content-center">
+                                        <span class="card-icon-2 icon-fa6-solid_bag-shopping"></span>
+                                    </div>                                    
+                                    <span class="arrow-graph arrow-2 icon-arrow-up-left2"></span>
                                 </div>
                                 <div class="card-name">Total Products</div>
                                 <div class="card-number">10.820</div>
@@ -77,11 +87,13 @@
                         </div>
 
                         <!-- card: 3 -->
-                        <div class="card">
-                            <div class="inner-card">
-                                <div class="d-flex icon">
-                                <span class="card-icon icon-fa6-solid_user-group"></span>
-                                <span class=""></span>
+                        <div class="card ">
+                            <div class="inner-card card-3">
+                                <div class="d-flex icon justify-content-between">
+                                    <div class="card-icon d-flex align-item-center justify-content-center">
+                                        <span class=" card-icon-3 icon-fa6-solid_user-group"></span>
+                                    </div>
+                                    <span class="arrow-graph arrow-3 icon-arrow-up-right2"></span>
                                 </div>
                                 <div class="card-name">Total User</div>
                                 <div class="card-number">8.425</div>
@@ -90,11 +102,13 @@
                             
                         </div>
                         <!-- card: 4 -->
-                        <div class="card">
-                            <div class="inner-card">
-                                <div class="d-flex icon">
-                                <span class="card-icon icon-bi_cart-dash-fill"></span>
-                                <span class=""></span>
+                        <div class="card ">
+                            <div class="inner-card card-4">
+                                <div class="d-flex icon justify-content-between">
+                                    <div class="card-icon d-flex align-item-center justify-content-center">
+                                        <span class=" card-icon-4 icon-bi_cart-dash-fill"></span>
+                                    </div>
+                                    <span class="arrow-graph arrow-4 icon-arrow-up-right2"></span>
                                 </div>
                                 <div class="card-name">Total Sells</div>
                                 <div class="card-number">1.028.623</div>
@@ -105,69 +119,75 @@
                     </div>
                 </section>
                 <!-- end: cards -->
+                <div class="d-flex table-view-wrapper">
+                    <!-- start: table -->
+                    <section class="table-section">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th></th>
+                                    <th>Product Name</th>
+                                    <th>Status</th>
+                                    <th>Sold</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td>1</td>
+                                    <td><figure><img src="/assets/images/book.png" alt=""></figure></td>
+                                    <td>News Mobile App UI KIT F</td>
+                                    <td class="active">Active</td>
+                                    <td>10</td>
+                                    <td>320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>2</td>
+                                    <td><figure><img src="/assets/images/Calender.jpg" alt=""></figure></td>
+                                    <td>News Mobile App UI KIT F</td>
+                                    <td class="active">Active</td>
+                                    <td>10</td>
+                                    <td>320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>3</td>
+                                    <td><figure><img src="/assets/images/book.png" alt=""></figure></td>
+                                    <td>News Mobile App UI KIT F</td>
+                                    <td class="active">Active</td>
+                                    <td>10</td>
+                                    <td>320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>4</td>
+                                    <td><figure><img src="/assets/images/Calender.jpg" alt=""></figure></td>
+                                    <td>News Mobile App UI KIT F</td>
+                                    <td class="active">Active</td>
+                                    <td>10</td>
+                                    <td>320</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!-- end: table -->
 
-                <!-- start: table -->
-                <section class="table-section">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Product Name</th>
-                                <th>Status</th>
-                                <th>Sold</th>
-                                <th>View</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>News Mobile App UI KIT F</td>
-                                <td>Active</td>
-                                <td>10</td>
-                                <td>320</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>News Mobile App UI KIT F</td>
-                                <td>Active</td>
-                                <td>10</td>
-                                <td>320</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>News Mobile App UI KIT F</td>
-                                <td>Active</td>
-                                <td>10</td>
-                                <td>320</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>News Mobile App UI KIT F</td>
-                                <td>Active</td>
-                                <td>10</td>
-                                <td>320</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <!-- end: table -->
-
-                <!-- start: graph -->
-                <section class="d-flex chart">
-                    <h5>View & Sells</h5>
-                    <div class="">
-                        <span>Total View</span>
-                        <span>Total Sells</span>
-                    </div>
-                    <!-- graph -->
-                    <div class="graph">
-                        <div class="wrap">
-                            <div class="clr-1"></div>
-                            <div class="clr-2"></div>
+                    <!-- start: graph -->
+                    <section class="d-flex chart">
+                        <h5>View & Sells</h5>
+                        <div class="">
+                            <span>Total View</span>
+                            <span>Total Sells</span>
                         </div>
-                    </div>
-                </section>
-                <!-- end: graph -->
+                        <!-- graph -->
+                        <div class="graph">
+                            <div class="wrap">
+                                <div class="clr-1"></div>
+                                <div class="clr-2"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end: graph -->
+                </div>
 
             </main>
             <!-- end: main-section -->

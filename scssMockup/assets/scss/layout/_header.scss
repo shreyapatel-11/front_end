@@ -3,15 +3,15 @@
     height: $badge-height;
     justify-content: $justify-content-between;
     padding: $header-padding-y $header-padding-x;
+    border-bottom: 1px solid $gray;
 
-    #search{
-        height: $height;
-        width: $input-width;
+    .brand-logo{
+        color: $secondary;
     }
-    .btn{
-        height: $height;
-        width: $btn-width;
-        color: $white;
-        background-color: $secondary;
+    
+    img{
+        height: $image-height;
+        width: $image-width;
+        border-radius: $border-radius;
     }
 }

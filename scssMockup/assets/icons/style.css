@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'app';
-  src:  url('fonts/app.eot?rhzppp');
-  src:  url('fonts/app.eot?rhzppp#iefix') format('embedded-opentype'),
-    url('fonts/app.ttf?rhzppp') format('truetype'),
-    url('fonts/app.woff?rhzppp') format('woff'),
-    url('fonts/app.svg?rhzppp#app') format('svg');
+  src:  url('fonts/app.eot?qf5rlc');
+  src:  url('fonts/app.eot?qf5rlc#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?qf5rlc') format('truetype'),
+    url('fonts/app.woff?qf5rlc') format('woff'),
+    url('fonts/app.svg?qf5rlc#app') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -70,4 +70,22 @@
 }
 .icon-notification:before {
   content: "\ea08";
+}
+.icon-stop2:before {
+  content: "\ea1e";
+}
+.icon-arrow-up-left2:before {
+  content: "\ea39";
+}
+.icon-arrow-up-right2:before {
+  content: "\ea3b";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
 }

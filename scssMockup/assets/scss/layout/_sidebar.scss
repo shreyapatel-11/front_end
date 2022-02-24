@@ -1,13 +1,18 @@
 .main-content{
     height: 100%;
 }
+#bar{
+    display: none;
+}
 .sidebar{
     height: 100%;
-    width: 60px;
+    width: 100px;
 
     .navbar{
         height: 100%;
-        flex-direction: column;
-        justify-content: space-between;
+        padding: $nav-padding-y $nav-padding-x;
     }
+}
+.nav-item{
+    padding: $nav-list-padding-y $nav-list-padding-x;
 }

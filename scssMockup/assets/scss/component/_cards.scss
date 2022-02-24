@@ -1,12 +1,76 @@
 // Card styles goes here
+.cards{
+    width: 100%;
+}
 .card-wrapper{
     flex-wrap: wrap;
+    margin: $margin-card-wrapper-y $margin-card-wrapper-x;
 }
 .card{
     width: 25%;
-    background-color: rgb(250, 250, 202);
+    padding: $card-padding;
+    
+    .inner-card{
+        background-color: $white;
+        padding: $card-padding;
 
-    .card-inner{
-        padding: 1rem;
+        .card-icon{
+            height: $card-icon-height;
+            width: $card-icon-width;
+            background-color: $primary;
+        }
+        .card-name{
+            padding: $card-padding 0;
+        }
+        .card-number{
+            font-size: 2rem;
+            padding-bottom: $card-padding;
+            border-bottom: 1px solid $gray;
+        }
+        .card-end{
+            padding-top: $card-padding;
+        }
+        // card-icon-colors
+        .card-icon-1{
+            color: $secondary;   
+        }
+        .card-icon-2{
+            color: $green;
+        }
+        .card-icon-3{
+            color: $secondary;
+        }
+        .card-icon-4{
+            color: $green-blue;
+        }
+
+        // arrow-graph-colors
+        .arrow-graph{
+            font-size: 2.5rem;
+        }
+        .arrow-1, .arrow-3, .arrow-4{
+            color: $green;
+        }
+        .arrow-2{
+            color: $orange;
+        }
     }
+}
+// card-hover
+.card-1:hover, .card-3:hover{
+    background-color: $secondary;
+    color: $white;
+    .card-icon{
+        background-color: $light-blue;
+
+        .card-icon-1, .card-icon-3{
+            color: $white;
+        }
+    }
+}
+.card-2:hover{
+    background-color: $green;
+}
+.card-4:hover{
+    background-color: $green-blue;
 }

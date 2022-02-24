@@ -3,19 +3,49 @@
 $font-family: 'Josefin Sans', sans-serif;
 
 // Header
-$badge-height: 60px;
+$badge-height: 90px;
 $justify-content-between: space-between;
-$header-padding-y: 1rem;
-$header-padding-x: 1.25rem;
+$header-padding-y: 1.5rem;
+$header-padding-x: 2rem;
 
-// logo-section
+// logo-section-searchbar
 $height: 2rem;
-$input-width: 300px;
+$input-width: 350px;
 $btn-width: 70px;
+$margin-left-search: 5rem;
+$left: 5.5rem;
+$top: 0.5rem;
+$padding-left: 2rem;
+
+
+// icon-section
+$image-height: 40px;
+$image-width: 40px;
+$border-radius: 50%;
 
 // icons
-$icon-font-size: 1.25rem;
+$icon-font-size: 1.5rem;
 $card-icon-font-size: 1.5rem;
 
 // sidebar
-$badge-width: 60px;
+$badge-width: 90px;
+$nav-padding-x: 2rem;
+$nav-padding-y: 0;
+$nav-list-padding-y: 2rem;
+$nav-list-padding-x: 0;
+
+// main
+$main-content-padding: 2rem;
+
+// cards
+$card-padding: 1rem;
+$card-content-padding-y: 1rem;
+$margin-card-wrapper-x: -1rem;
+$margin-card-wrapper-y: 0;
+
+
+// card-icon
+$card-icon-height: 60px;
+$card-icon-width: 60px;
+
+// table
