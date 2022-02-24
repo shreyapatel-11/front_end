@@ -4,13 +4,19 @@
 .user-form{
     flex-direction: column;
     align-items: center;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+
+    .heading{
+        text-align: center;
+    }
 }
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 600px;
-    margin: 0 auto;
 
     .form-field {
         height: 2rem;

@@ -14,14 +14,13 @@
             // justify-content: center;
             min-height: 80px;
             align-items: center;
-    
             .logo-a {
                 color: black;
                 text-decoration-line: none;
                 display: flex;
                 align-items: center;
                 font-size: 1.25rem;
-               
+                
             }
             .heading{
                 text-decoration: none;
@@ -63,15 +62,13 @@
             color: black;
             &:hover{
                 color: blue;
+                background-color: #cdc8c8;
+                border-radius: 5px;
             }
             padding: 20px;
             padding-left: 10px;
             transition: 0.4s all;
         
-        }
-        .nav-list:hover {
-            background-color: #cdc8c8;
-            border-radius: 5px;
         }
     }
    

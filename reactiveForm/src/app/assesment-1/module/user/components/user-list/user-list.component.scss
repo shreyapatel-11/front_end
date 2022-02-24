@@ -2,14 +2,12 @@
     display: flex;
 }
 .user-list{
-    flex-direction: column;
-    // flex-grow: 1;
     height: 100%;
     width: 100%;
-    margin: auto;
+    margin: 30px auto;
 
-    .headind{
-        margin-left: 20px;
+    .heading{
+        text-align: center;
     }
     .header{
         justify-content: space-between;
