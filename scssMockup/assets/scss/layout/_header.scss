@@ -3,7 +3,7 @@
     height: $badge-height;
     justify-content: $justify-content-between;
     padding: $header-padding-y $header-padding-x;
-    border-bottom: 1px solid $gray;
+    @include border-bottom(1px, solid, $gray);
 
     .brand-logo{
         color: $secondary;
@@ -13,5 +13,16 @@
         height: $image-height;
         width: $image-width;
         border-radius: $border-radius;
+    }
+}
+
+@include media(mobile) {
+    .header{
+        height: 60px;
+
+    }
+    #search{
+        width: 50px;
+        margin-left: 10px;
     }
 }

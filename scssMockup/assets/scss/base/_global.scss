@@ -6,10 +6,13 @@
 }
 html,body{
     height: 100%;
-    width: 100%
+    overflow: hidden;
 }
 body{
     font-family:$font-family;
+}
+.wrapper{
+    height: 100%;
 }
 // flex
 .d-flex{
@@ -51,9 +54,4 @@ body{
     color: $gray;
 }
 
-.card-icon{
-    font-size: $card-icon-font-size;
-}
-.wrapper{
-    height: 100%;
-}
+

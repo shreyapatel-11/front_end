@@ -1,7 +1,12 @@
 // Card styles goes here
+.main{
+    @extend %transition;
+}
 .cards{
     width: 100%;
+    padding: 1.5rem 0;
 }
+
 .card-wrapper{
     flex-wrap: wrap;
     margin: $margin-card-wrapper-y $margin-card-wrapper-x;
@@ -10,21 +15,25 @@
     width: 25%;
     padding: $card-padding;
     
+    
     .inner-card{
         background-color: $white;
-        padding: $card-padding;
-
+        padding: $card-inner-padding;
+        
         .card-icon{
-            height: $card-icon-height;
-            width: $card-icon-width;
+            font-size: $card-icon-font-size;
+            height: 60px;
+            width: 60px;
             background-color: $primary;
         }
         .card-name{
+            color: $card-text-color;
             padding: $card-padding 0;
         }
         .card-number{
             font-size: 2rem;
             padding-bottom: $card-padding;
+            color: $purple;
             border-bottom: 1px solid $gray;
         }
         .card-end{
@@ -56,6 +65,12 @@
         }
     }
 }
+
+// @each $key,$clr in $theme-colors {
+//     .inner-card-#{$key} {
+//         color: $clr;
+//     }    
+// }
 // card-hover
 .card-1:hover, .card-3:hover{
     background-color: $secondary;
@@ -70,7 +85,23 @@
 }
 .card-2:hover{
     background-color: $green;
+    .card-name{
+        color: $white;
+    }
 }
 .card-4:hover{
     background-color: $green-blue;
+}
+
+@include media(tab) {
+    .card{
+        width: 50%;
+        padding: $card-padding;
+    }
+}
+@include media(mobile) {
+    .card{
+        width: 100%;
+        padding: $card-padding;
+    }
 }

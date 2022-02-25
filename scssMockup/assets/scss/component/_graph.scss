@@ -1,0 +1,22 @@
+.chart{
+    width: 40%;
+    flex-grow: 1;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: $white;
+}
+.square1, .square2{
+    height: 10px;
+    width: 10px;
+    background-color: $secondary;
+}
+
+.total-view, .total-sell{
+    padding: 1rem 0;
+}
+
+@include media(tab) {
+    .chart{
+        width: 100%;
+    }
+}

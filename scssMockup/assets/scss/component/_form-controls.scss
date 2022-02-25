@@ -12,3 +12,37 @@
    top: $top;
    color: $gray;
 }
+
+label{
+    color: $gray;
+    left: 90px;
+    top: 50%;
+}
+
+#bar:checked{
+    & ~ .sidebar{
+        width: 0;
+        @extend %transition;
+    }
+
+    & ~ label{
+        transform: rotate(180deg) translateX(80px);
+    }
+}
+#bar:not(checked){
+    & ~ .sidebar{
+        @extend %transition;
+    }
+}
+
+@include media(mobile) {
+    label{
+        left: 40px;
+    }
+
+    #bar:checked{
+        & ~ label{
+            transform: rotate(180deg) translateX(40px);
+        }
+    }
+}

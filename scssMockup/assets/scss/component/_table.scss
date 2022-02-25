@@ -1,6 +1,6 @@
-.table-view-wrapper{
-    width: 100%;
-}
+// .table-view-wrapper{
+//     width: 100%;
+// }
 .table-section{
     width: 60%;
     padding: 1rem;
@@ -9,16 +9,26 @@
     table{
         width: 100%;
         border-collapse: collapse;
+        text-align: center;
+
+        th,td{
+            padding: 0.8rem;
+            width: 16%;
+        }
+
+        .table-row{
+            background-color: $light-gray;
+            border-bottom: 1rem solid $white;
+        }    
     }
 }
+.table2{
+    height: 400px;
+    overflow: auto;
+}
 
-th,td{
-    padding: 1rem;
-}
-.table-row{
-    background-color: $light-gray;
-    border-bottom: 1rem solid $white;
-}
+
+
 img{
     height: 60px;
     width: 60px;
@@ -26,4 +36,25 @@ img{
 }
 .active{
     color: $secondary;
+}
+@include media(tab){
+    .table-view-wrapper{
+        display: block;
+
+        .table-section{
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+    
+}
+@include media(mobile){
+    .table-view-wrapper{
+        display: block;
+
+        .table-section{
+            width: 100%;
+            padding: 1rem;
+        }
+    }
 }

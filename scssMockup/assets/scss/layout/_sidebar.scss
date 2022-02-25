@@ -1,18 +1,41 @@
 .main-content{
-    height: 100%;
+    flex-grow: 1;
+    overflow: auto;
+    @extend %transition;
 }
 #bar{
     display: none;
 }
-.sidebar{
+.sidebar{ 
     height: 100%;
     width: 100px;
 
     .navbar{
         height: 100%;
         padding: $nav-padding-y $nav-padding-x;
+
+        .navbar-nav1{
+            overflow: auto;
+        }
+
+        .navbar-nav2{
+            padding-bottom: $nav-list-padding-y;
+        }
     }
 }
 .nav-item{
     padding: $nav-list-padding-y $nav-list-padding-x;
+}
+
+@include media(mobile) {
+    .sidebar{
+        height: 100%;
+        width: 70px;
+
+        .navbar{
+            height: 100%;
+            padding: 0.5rem;
+        }
+    }
+
 }
