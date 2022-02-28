@@ -1,0 +1,9 @@
+// Function styles goes here
+@each $percent in (25, 50, 75, 100) {
+    .h-#{$percent} {
+      height: 1% * $percent;
+    }
+    .w-#{$percent} {
+      width: 1% * $percent;
+    }
+  }

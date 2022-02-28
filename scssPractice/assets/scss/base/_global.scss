@@ -1,0 +1,31 @@
+// Global styles goes here
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.wrapper{
+    height: 100%;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-grow{
+    flex-grow: 1;
+}
+// icons
+.nav-link, .icons{
+    text-decoration: none; 
+    color: $black;  
+}

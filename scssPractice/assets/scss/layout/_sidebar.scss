@@ -1,0 +1,21 @@
+.side-section{
+    flex: 0 0 200px;
+    border: 1px solid black;
+    height: 100%;
+}
+.sidebar{
+    height: 100%;
+}
+.navbar{
+    padding: 1rem;
+    ul{
+        list-style-type: none;
+
+        .nav-item{
+            padding: $padding 0;
+        }  
+    }
+}
+.icons{
+    padding-right: $padding;
+}      

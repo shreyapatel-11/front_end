@@ -1,0 +1,21 @@
+// Card styles goes here
+.card-wrapper{
+    flex-wrap: wrap;
+}
+.card{
+     width: 33.33%; 
+}
+@each $key, $value in $theme-colors {
+    .card-#{key} {
+        .card-inner{
+            background-color: $value;
+            
+            .card-name{
+                color: $value;
+            }
+        }
+    }
+}
+.cards{
+    width: 50%;
+}
