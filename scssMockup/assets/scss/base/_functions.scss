@@ -1,5 +1,5 @@
 // Function styles goes here
-@each $key,$value in $height {
+@each $key,$value in $height1 {
     .h-#{key} {
         height: $value;
     }   
