@@ -6,9 +6,9 @@
 }
 html,body{
     height: 100%;
-    overflow: hidden;
 }
 body{
+    overflow: hidden;
     font-family:$font-family;
 }
 .wrapper{
@@ -27,6 +27,9 @@ body{
 .justify-content-center{
     justify-content: center;
 }
+.justify-content-end{
+    justify-content: flex-end;
+}
 .align-item-center{
     align-items: center;
 }
@@ -37,6 +40,7 @@ body{
 .position-absolute{
     position: absolute;
 }
+
 .text-decoration-none{
     text-decoration: none;
 }
@@ -53,5 +57,9 @@ body{
     text-decoration: none;
     color: $gray;
 }
+.mobile-drop-down, .drop-down-menu{
+    display: none;
+}
+
 
 

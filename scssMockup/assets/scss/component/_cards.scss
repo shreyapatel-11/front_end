@@ -1,6 +1,7 @@
 // Card styles goes here
 .main{
     @extend %transition;
+    overflow: auto;
 }
 .cards{
     width: 100%;
@@ -94,14 +95,47 @@
 }
 
 @include media(tab) {
+    .main{
+        overflow: auto;
+    }
     .card{
         width: 50%;
         padding: $card-padding;
     }
 }
 @include media(mobile) {
+    .main{
+        filter: blur(2px);
+        pointer-events: none;
+    }
     .card{
         width: 100%;
         padding: $card-padding;
+    }
+}
+@include media(mobile-phone) {
+    .main{
+        filter: blur(2px);
+        pointer-events: none;
+    }
+    .card{
+        width: 100%;
+        padding: 0.5rem;
+
+        .inner-card{
+            padding: 0.5rem;
+
+            .card-icon{
+                height: 40px;
+                width: 40px;
+            }
+            .card-number{
+                font-size: 1.5rem;
+            }
+            .arrow-graph{
+                font-size: 2rem;
+            }
+        }
+
     }
 }

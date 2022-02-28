@@ -35,10 +35,45 @@ label{
     }
 }
 
+@include media(tab) {
+    #search{
+        width: 250px;
+    }
+    .btn{
+        width: 50px;
+    }
+}
 @include media(mobile) {
+    #search{
+        width: 250px;
+        margin-left: 10px;
+    }
     label{
         left: 40px;
     }
+    .search-icon{
+        left: 1rem;
+    }
+    .btn{
+        display: none;
+    }
+
+    #bar:checked{
+        & ~ label{
+            transform: rotate(180deg) translateX(40px);
+        }
+    }
+}
+@include media(mobile-phone) {
+        #search{
+            width: 200px;
+        }
+        .btn{
+            display: none;
+        }
+        .search-icon{
+            left: 1rem;
+        }
 
     #bar:checked{
         & ~ label{

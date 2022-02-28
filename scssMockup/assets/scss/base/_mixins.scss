@@ -5,7 +5,7 @@
 
 @mixin media($point) {
     @if $point == laptop {
-        @media (max-width: 1200px) {
+        @media (max-width: 1400px) {
             @content;
         }
     }
@@ -23,5 +23,11 @@
         @media (max-width: 576px) {
             @content;
         }
-    }    
+    } 
+    @else if $point == mobile-phone {
+        @media (max-width: 320px) {
+            @content;
+        }
+    } 
+
 }

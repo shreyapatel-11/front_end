@@ -10,13 +10,29 @@
     width: 10px;
     background-color: $secondary;
 }
+.graph{
+    height: 200px;
+    
+    .wrap-vs{
+        width: 10px;
+        margin: 0.5rem;
+        // border: 1px solid black;
+    
+        .view,.sell{
+            width: 8px;
+            
+            // border: 1px solid black;
+        }
 
+    }
+}
 .total-view, .total-sell{
     padding: 1rem 0;
 }
 
 @include media(tab) {
     .chart{
+        margin: 2rem 0;
         width: 100%;
     }
 }

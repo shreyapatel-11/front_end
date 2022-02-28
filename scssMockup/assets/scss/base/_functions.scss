@@ -1,6 +1,12 @@
 // Function styles goes here
-@each $key,$value in $height {
-    .h-#{key} {
+@each $key,$value in $height1 {
+    .h-#{$key} {
         height: $value;
+    }
+    .view{
+        background-color: $blue;
     }   
+    .sell{
+        background-color: $red;
+    }
 }

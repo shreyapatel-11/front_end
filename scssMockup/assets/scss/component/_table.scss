@@ -9,11 +9,20 @@
     table{
         width: 100%;
         border-collapse: collapse;
-        text-align: center;
+        text-align: left;
 
         th,td{
             padding: 0.8rem;
-            width: 16%;
+            // width: 20.5%;
+            &:first-child{
+                width: 8%;
+            }
+            &:nth-child(2){
+                width: 15%;
+            }
+            &:nth-child(3){
+                width: 40%;
+            }
         }
 
         .table-row{
@@ -49,12 +58,38 @@ img{
     
 }
 @include media(mobile){
+    
     .table-view-wrapper{
         display: block;
 
         .table-section{
             width: 100%;
             padding: 1rem;
+            overflow: auto;
+
+            img{
+                height: 40px;
+                width: 40px;
+                // max-width: 100%;
+            }
+        }
+        .table2{
+            overflow:visible;
+        }
+    }
+}
+@include media(mobile-phone){
+    
+    .table-view-wrapper{
+        display: block;
+
+        .table-section{
+            width: 100%;
+            padding: 1rem;
+            overflow: auto;
+        }
+        .table2{
+            overflow:visible;
         }
     }
 }
