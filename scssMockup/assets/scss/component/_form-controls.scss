@@ -17,6 +17,7 @@ label{
     color: $gray;
     left: 90px;
     top: 50%;
+    // z-index: 999;
 }
 
 #bar:checked{
@@ -26,6 +27,7 @@ label{
     }
 
     & ~ label{
+        // z-index: 999;
         transform: rotate(180deg) translateX(80px);
     }
 }
@@ -50,6 +52,7 @@ label{
     }
     label{
         left: 40px;
+        z-index: 999;
     }
     .search-icon{
         left: 1rem;
@@ -60,6 +63,7 @@ label{
 
     #bar:checked{
         & ~ label{
+            z-index: 999;
             transform: rotate(180deg) translateX(40px);
         }
     }
@@ -77,6 +81,7 @@ label{
 
     #bar:checked{
         & ~ label{
+            z-index: 999;
             transform: rotate(180deg) translateX(40px);
         }
     }

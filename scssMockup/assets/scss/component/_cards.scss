@@ -104,19 +104,24 @@
     }
 }
 @include media(mobile) {
-    .main{
-        filter: blur(2px);
-        pointer-events: none;
-    }
+    
     .card{
         width: 100%;
         padding: $card-padding;
     }
+    #bar:not(:checked){
+        & ~ .main{
+            filter: blur(1px);
+            pointer-events: none;
+        }
+    }
 }
 @include media(mobile-phone) {
-    .main{
-        filter: blur(2px);
-        pointer-events: none;
+    #bar:not(:checked){
+        & ~ .main{
+            filter: blur(1px);
+            pointer-events: none;
+        }
     }
     .card{
         width: 100%;

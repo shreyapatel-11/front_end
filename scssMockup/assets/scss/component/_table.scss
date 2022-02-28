@@ -8,7 +8,8 @@
 
     table{
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 0 1rem;
         text-align: left;
 
         th,td{
@@ -24,10 +25,10 @@
                 width: 40%;
             }
         }
-
+        
         .table-row{
             background-color: $light-gray;
-            border-bottom: 1rem solid $white;
+            // border-bottom: 1rem solid $white;
         }    
     }
 }
