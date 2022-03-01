@@ -1,0 +1,112 @@
+// Card styles goes here
+.card-wrapper{
+    flex-wrap: wrap;
+    margin: $margin-card-wrapper-y $margin-card-wrapper-x;
+    padding-top: $padding;
+}
+.card{
+    width: 16.66%;
+    padding: $card-padding;
+    
+    
+    .inner-card{
+        background-color: $white;
+        padding: $card-inner-padding;
+
+        .card-icon{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+
+            .card-icons-2{
+                color: $blue;
+            }
+            .card-icons-3{
+                color: $secondary;
+            }
+            .card-icons-4{
+                color: $yellow;
+            }
+            .card-icons-5{
+                color: $purple;
+            }
+            .card-icons-6{
+                color: $red;
+            }
+        }
+        
+        .card-name{
+            font-size: $card-name-font-size;
+            padding-bottom: $padding-0-5rem;
+            color: $gray;
+        }
+
+        .card-number{
+            font-size: $card-num-font-size;
+            font-weight: 600;
+        }
+    }
+}
+
+@each $key,$value in $card-hover-colors{
+    .card-#{$key}:hover {
+        background-color: $value;
+        color: $white;
+
+        .card-name{
+           color: $white;
+        }
+    }      
+}
+
+@include media(tab) {
+    .card{
+        width: 33.33%;
+        
+        .inner-card{
+            padding: $card-padding ;
+
+            .card-icon{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                font-size: 1rem;
+            }
+
+            .card-number{
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+        
+    }
+}
+@include media(mobile) {
+    .card{
+        width: 50%;
+    }
+}
+@include media(mobile-phone) {
+    .card{
+        width: 50%;
+    }
+}
+ // .card-box-1{
+        //     background-color: $light-gray;
+        // }
+        // .card-box-2{
+        //     background-color: $light-blue;
+        // }
+        // .card-box-3{
+        //     background-color: $light-green;
+        // }
+        // .card-box-4{
+        //     background-color: $light-yellow;
+        // }
+        // .card-box-5{
+        //     background-color: $light-purple;
+        // }
+        // .card-box-6{
+        //     background-color: $light-red;
+        // }

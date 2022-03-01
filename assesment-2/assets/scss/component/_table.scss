@@ -1,0 +1,76 @@
+.table-section{
+    padding: $padding-2rem 0;
+
+    h2{
+        padding-bottom: $padding;
+    }
+
+    .table-content{
+        padding: $padding;
+        background-color: $white;
+        // overflow: hidden;
+    }
+    .table{
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        overflow: auto;
+        
+        th,td{
+            padding: $padding-0-5rem 0;
+        }
+
+        .thead{
+            position: sticky;
+        }
+        .thead th{
+            color: $gray;
+            font-weight: 100;
+        }
+
+        .tbody{
+            overflow: auto;
+        }
+        .tbody tr{
+            border-bottom: 1px solid $gray;
+        }
+        .amazon-img{
+            width: 70px;
+            height: 20px;
+        }
+    }
+    .tbody img{
+        height: 30px;
+        width: 30px;
+    }
+    .discard, .want, .wait, .cancel{
+        // width: 90px;
+        // height: 30px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .discard{
+        color: $red;
+        background-color: $light-red;
+    }
+    .want{
+        color: $secondary;
+        background-color: $light-green;
+    }
+    .wait{
+        color: $yellow;
+        background-color: $light-yellow;
+    }
+    .cancel{
+        background-color: $light-gray;
+    }   
+}
+
+@include media(tab){
+    table{
+        width: 100%;
+    }
+    .table .tbody{
+        overflow: auto;
+    }
+}

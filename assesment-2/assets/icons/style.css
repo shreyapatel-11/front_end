@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'app';
+  src:  url('fonts/app.eot?uhgtle');
+  src:  url('fonts/app.eot?uhgtle#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?uhgtle') format('truetype'),
+    url('fonts/app.woff?uhgtle') format('woff'),
+    url('fonts/app.svg?uhgtle#app') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'app' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-message:before {
+  content: "\e901";
+}
+.icon-cart:before {
+  content: "\e902";
+}
+.icon-settings:before {
+  content: "\e904";
+}
+.icon-bag-shopping:before {
+  content: "\e906";
+}
+.icon-user-group:before {
+  content: "\e907";
+}
+.icon-sign-out:before {
+  content: "\e909";
+}
+.icon-bell:before {
+  content: "\e90a";
+}
+.icon-dashboard:before {
+  content: "\e90b";
+  color: #1271ff;
+}
+.icon-home3:before {
+  content: "\e903";
+}
+.icon-price-tag:before {
+  content: "\e935";
+}
+.icon-barcode:before {
+  content: "\e937";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-list2:before {
+  content: "\e9bb";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-sun:before {
+  content: "\e9d4";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-notification:before {
+  content: "\ea08";
+}
+.icon-stop2:before {
+  content: "\ea1e";
+}
+.icon-arrow-up-left:before {
+  content: "\ea39";
+}
+.icon-arrow-up-right:before {
+  content: "\ea3b";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-filter:before {
+  content: "\ea5b";
+}

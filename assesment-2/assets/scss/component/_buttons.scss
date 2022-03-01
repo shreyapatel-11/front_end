@@ -1,0 +1,21 @@
+// Button styles goes here
+.btn{
+    width: 100px;
+    height: 40px;
+    background-color: $secondary;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    font-size: $button-font-size;
+
+    .icon-filter{
+        padding-right: 0.5rem;
+    }
+}
+
+@include media(mobile){
+    .btn{
+        width: 80px;
+        height: 30px;
+    }
+}

@@ -1,0 +1,64 @@
+// Theme Primary Color
+$primary: #fafafa;
+
+// Mainly use for UI controls like Buttons
+$secondary: #00b11c;
+
+// Used for Footer Section
+$accent: #021a28;
+
+// Mainly use for Normal Text color
+$gray: #989d9e;
+
+
+$icon-color: #83848d;
+// Additional Shades of gray color
+$light: #f8fafc;
+$extra-light: #fcfcfc;
+
+// Dedicated for button text only
+$btn-text-primary: $primary;
+
+$white: white;
+$black: black;
+$light-green: #f2fcf4;
+
+
+// card
+$light-gray: #f2f2f2;
+
+$blue: #389cff;
+$light-blue: #e9f4ff;
+
+$yellow: #ee8c2b;
+$light-yellow: #fff4e8; 
+
+$purple: #6868ff;
+$light-purple: #f1f0ff;
+
+$red: #ec6160;
+$light-red: #ffeeed;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "gray": $gray,
+  "light": $light,
+  "accent": $accent
+);
+$card-colors: (
+  "black": $light-gray,
+  "green": $light-green,
+  "blue": $light-blue,
+  "yellow": $light-yellow,
+  "purple": $light-purple,
+  "red" : $light-red
+);
+$card-hover-colors: (
+  "black": $black,
+  "green": $secondary,
+  "blue": $blue,
+  "yellow": $yellow,
+  "purple": $purple,
+  "red" : $red
+);

@@ -1,0 +1,22 @@
+// Form controls styles goes here
+#bar{
+    display: none;
+}
+label{
+    font-size: 1.25rem;
+    top:2px;
+}
+
+#bar:checked{
+   
+    & ~ .sidebar{
+        width: 0;
+        @extend %transition;
+    }
+}
+#bar:not(checked){
+    & ~ .sidebar{
+        @extend %transition;
+    }
+}
+
