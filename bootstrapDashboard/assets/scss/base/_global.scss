@@ -1,0 +1,62 @@
+// Global styles goes here
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+body{
+    overflow: hidden;
+    font-family:$font-family;
+}
+.wrapper{
+    height: 100%;
+}
+
+// // flex
+// .d-flex{
+//     display: flex;
+// }
+// .flex-grow-1{
+//     flex-grow: 1;
+// }
+// .flex-column{
+//     flex-direction: column;
+// }
+// .justify-content-between{
+//     justify-content: space-between;
+// }
+// .justify-content-center{
+//     justify-content: center;
+// }
+// .justify-content-end{
+//     justify-content: flex-end;
+// }
+// .align-items-center{
+//     align-items: center;
+// }
+
+// .position-relative{
+//     position: relative;
+// }
+// .position-absolute{
+//     position: absolute;
+// }
+
+// .text-decoration-none{
+//     text-decoration: none;
+// }
+// .list-style-type{
+//     list-style-type: none;
+// }
+
+// icons
+.nav-link, .icons{
+    text-decoration: none;
+}
+.icons{
+    color: $icon-color;
+    font-size: $icon-font-size;
+}
