@@ -13,11 +13,11 @@
     .table{
         width: 100%;
         text-align: left;
-        border-collapse: collapse;
+        // border-collapse: collapse;
         overflow: auto;
         
         th,td{
-            padding: $padding-0-5rem 0;
+            padding: $padding-0-5rem;
         }
 
         .thead{
@@ -31,9 +31,9 @@
         .tbody{
             overflow: auto;
         }
-        .tbody tr{
-            border-bottom: 1px solid $gray;
-        }
+        // .tbody tr{
+        //     border-bottom: 1px solid $gray;
+        // }
         .amazon-img{
             width: 70px;
             height: 20px;

@@ -11,6 +11,8 @@ label{
    
     & ~ .sidebar{
         width: 0;
+        // overflow: hidden;
+        transform: translateX(-200px);
         @extend %transition;
     }
 }

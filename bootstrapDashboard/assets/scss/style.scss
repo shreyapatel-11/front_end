@@ -1,10 +1,9 @@
 // Project base and component style import
 @import 'base/index';
 
+@import './vendor/node_modules/bootstrap/scss/bootstrap.scss';
 @import 'component/index';
 
 @import 'layout/index';
 
 @import 'utilities/index';
-
-@import './vendor/node_modules/bootstrap/scss/bootstrap.scss';
