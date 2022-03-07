@@ -1,1 +1,68 @@
-<p>user-form works!</p>
+<div class="form-wrapper">
+    <div class="form-heading">
+        <!-- <h3>{{modalTitle}}</h3> -->
+      </div>
+    <div class="user-form">
+        <form class="form-data" [ formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="form-field">
+                <label for="firstName" class="form-lable">First Name:</label><br>
+                <input type="text" id="firstName" formControlName='firstName' class="form-input">
+                <!-- <div *ngIf="formControl['firstName'].touched && userForm.controls['firstName'].errors?.['required']">
+                    <small>This
+                        Field is Required</small>
+                </div> -->
+            </div>
+            <div class="form-field">
+                <label for="lastName" class="form-lable">Last Name:</label> <br>
+                <input type="text" id="lastName" formControlName='lastName' class="form-input">
+                <!-- <div *ngIf="formControl['lastName'].touched && userForm.controls['lastName'].errors?.['required']"
+                    class="validation"><small>This
+                        Field is
+                        Required</small> </div> -->
+
+            </div>
+            <div class="form-field">
+                <label for="email" class="form-lable">Email:</label> <br>
+                <input type="email" id="email" formControlName='email' class="form-input">
+                <!-- <div *ngIf="formControl['email'].touched && userForm.controls['email'].errors?.['required']"
+                    class="validation">
+                    <small>This
+                        Field is
+                        Required</small>
+                </div> -->
+            </div>
+            <div class="form-field">
+                <label for="mobileNum" class="form-lable">Mobile Number:</label> <br>
+                <input type="number" id="mobieNo" formControlName='mobile' class="form-input">
+                <!-- <div *ngIf="formControl['mobile'].touched && userForm.controls['mobile'].errors?.['required']"><small>This
+                        Field is
+                        Required</small></div> -->
+            </div>
+            <div class="form-field">
+                <label for="gender" class="form-lable">Gender:</label> <br>
+                <input type="radio" id="male" value="male" formControlName='gender' class="">
+                <label class="form-check-label" for="male">Male</label>
+
+                <input type="radio" id="female" value="female" formControlName='gender' class="">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-field">
+                <label for="date" class="form-lable">Date of Employment:</label> <br>
+                <input type="date" id="date" formControlName='date' class="form-input">
+            </div>
+            <div class="form-field">
+                <label for="department" class="form-lable">Department:</label> <br>
+                <select id="department" class="form-input" formControlName='department'>
+                    <option *ngFor="let departments of department" [value]="departments.id">{{departments.name}}</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" (click)="resetForm()">Reset</button>
+                <button class="btn" (click)="onCancel()">Cancel</button>
+                <button type="button" class="btn btn-primary" routerLink="../list">List</button>
+            </div>
+
+        </form>
+    </div>
+</div>

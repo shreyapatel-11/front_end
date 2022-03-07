@@ -2,7 +2,7 @@
     <h2 class="sub-heading">Angular Task</h2>
     <div class="d-flex header">
         <input class="search" type="search" placeholder="Search" [(ngModel)]="searchData">
-        <button class="btn add-btn" routerLink="/user/add">+ Add New Employee</button>
+        <button class="btn add-btn" routerLink="/user/add" (click)="openForm()">+ Add New Employee</button>
     </div>
     <div *ngIf="employee?.length" class="table-list">
         <table class="table table-hove">
@@ -18,7 +18,7 @@
                     <th colspan="2">Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody *ngIf="employee?.length">
                 <tr *ngFor="let emp of employee">
                 <!-- <tr *ngFor="let emp of employee | search: searchData as result"> -->
                     <td>{{emp.id}}</td>
@@ -35,7 +35,7 @@
                     <!-- <td *ngIf="result?.length == 0">No Record Found</td> -->
                 </tr>
             </tbody>
+            <div *ngIf="!employee?.length" class="no-record">No Record Found</div>
         </table>
     </div>
-    <div *ngIf="!employee?.length" class="no-record">No Record Found</div>
 </div>

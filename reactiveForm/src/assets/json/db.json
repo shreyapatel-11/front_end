@@ -63,6 +63,18 @@
       "id": 4
     }
   ],
+  "User": [
+    {
+      "firstName": "Shreya",
+      "lastName": "Patel",
+      "email": "ab@gmail.com",
+      "mobile": 9999988888,
+      "gender": "female",
+      "date": "2022-02-01",
+      "department": 1,
+      "id": 1
+    }
+  ],
   "Employee": [
     {
       "firstName": "Shreya",
