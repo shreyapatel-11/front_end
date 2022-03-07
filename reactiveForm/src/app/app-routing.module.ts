@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'assesment',
     loadChildren: () => import('./assesment-1/module/user/user.module').then(m => m.UserModule)
+  },
+  {
+    path: 'overlay',
+    loadChildren: () => import('./cdk-overlay/cdk-overlay.module').then(m => m.CdkOverlayModule)
   }
 ];
 

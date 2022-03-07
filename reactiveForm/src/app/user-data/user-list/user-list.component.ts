@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../service/user-service.service';
 import { Department, Employee } from '../model/user.model';
 import { Router } from '@angular/router';
+import { Overlay, OverlayConfig, OverlayModule } from '@angular/cdk/overlay';
+import { ComponentPortal } from '@angular/cdk/portal';
+import { UserFormComponent } from '../user-form/user-form.component';
+
+
 
 @Component({
   selector: 'app-user-list',
@@ -12,7 +17,11 @@ export class UserListComponent implements OnInit {
   employee: Employee[];
   searchData: string = '';
   dpt: Department[];
-  constructor(private us: UserServiceService, private router: Router) { }
+
+  constructor(private us: UserServiceService, private router: Router, private overlay: Overlay) {
+      this.employee = [];
+      this.dpt = [];
+   }
 
 
   ngOnInit(): void {
@@ -41,5 +50,15 @@ export class UserListComponent implements OnInit {
       // alert("delete succesfully")
       this.getEmployeeData()
     });
+  }
+
+  openForm() {
+    let config = new OverlayConfig();
+    config.positionStrategy = this.overlay.position().global().right();
+
+    const overlayRef = this.overlay.create(config);
+    const component = new ComponentPortal(UserFormComponent);
+    const componentRef = overlayRef.attach(component);
+    componentRef.instance.department = this.dpt;
   }
 }

@@ -1,8 +1,8 @@
 <div class="d-flex user-list">
     <h2 class="sub-heading">Angular Task</h2>
     <div class="d-flex header">
-        <input class="search" type="search" placeholder="Search" [(ngModel)]="searchData">
-        <button class="btn add-btn" routerLink="/user/add">+ Add New Employee</button>
+        <input class="search" type="search" placeholder="Search">
+        <button class="btn add-btn" routerLink="/overlay/form">+ Add New Employee</button>
     </div>
     <div *ngIf="employee?.length" class="table-list">
         <table class="table table-hove">
@@ -20,14 +20,13 @@
             </thead>
             <tbody>
                 <tr *ngFor="let emp of employee">
-                <!-- <tr *ngFor="let emp of employee | search: searchData as result"> -->
                     <td>{{emp.id}}</td>
                     <td>{{emp.firstName + " " + emp.lastName}}</td>
                     <td>{{emp.email}}</td>
                     <td>{{emp.mobile}}</td>
                     <td>{{emp.gender}}</td>
-                    <td>{{emp.date | date:'MM/dd/YYYY'}}</td>
-                    <td>{{emp.department | custom: dpt }}</td>
+                    <td>{{emp.date}}</td>
+                    <!-- <td>{{emp.department | custom: dpt }}</td> -->
                     <td><button class="btn edit-btn" (click)="this.editEmployee(emp)">Edit</button></td>
                     <td><button class="btn delete-btn" (click)="deleteRecord(emp.id)">Delete</button></td>
                 </tr>

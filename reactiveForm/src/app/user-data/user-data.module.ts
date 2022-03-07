@@ -7,6 +7,9 @@ import { UserAddComponent } from './user-add/user-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomPipe } from './pipe/custom.pipe';
 import { SearchPipe } from './pipe/search.pipe';
+// import { CdkOverlayModule } from '../cdk-overlay/cdk-overlay.module';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { UserFormComponent } from './user-form/user-form.component';
 
 
 
@@ -15,13 +18,15 @@ import { SearchPipe } from './pipe/search.pipe';
     UserListComponent,
     UserAddComponent,
     CustomPipe,
-    SearchPipe
+    SearchPipe,
+    UserFormComponent
   ],
   imports: [
     CommonModule,
     UserDataRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OverlayModule
   ],
   exports: [
     
