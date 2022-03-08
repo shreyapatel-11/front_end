@@ -1,5 +1,8 @@
 @import 'base/index';
-@import 'vendor/node_modules/bootstrap/scss/bootstrap.scss';
+@import 'vendor/bootstrap-base';
+@import 'vendor/bootstrap-components';
+
+// @import 'vendor/node_modules/bootstrap/scss/bootstrap.scss';
 @import 'component/index';
 @import 'layout/index';
 @import 'utilities/index';

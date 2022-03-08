@@ -1,0 +1,40 @@
+.d-flex{
+    display: flex;
+}
+.user-form{
+    background-color: white;
+    border-radius: 10px;
+    margin:30px auto;
+}
+.form-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+
+    .form-field {
+        margin: 1.25rem;
+        height: 2rem;
+
+        .form-input {
+            width: 300px;   
+        }
+        small{
+            color: red;
+        }
+    }
+    .form-lable {
+        width: 200px;
+        font-size: 20px;
+    }
+    .btn-primary {
+        width: 100px;
+        margin: 1.25rem;
+    }
+}
+
+
+
+
+

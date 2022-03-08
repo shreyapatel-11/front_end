@@ -83,16 +83,6 @@
       "mobile": 9999988888,
       "gender": "female",
       "date": "2022-02-01",
-      "department": 2,
-      "id": 2
-    },
-    {
-      "firstName": "Shreya",
-      "lastName": "Patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": "female",
-      "date": "2022-02-01",
       "department": 3,
       "id": 3
     },
@@ -137,66 +127,6 @@
       "id": 8
     },
     {
-      "name": "Honey patel",
-      "email": "ab@gmail.com",
-      "mobile": "9999988888",
-      "city": "valsad",
-      "gender": null,
-      "department": "",
-      "date": null,
-      "id": 9
-    },
-    {
-      "name": "Shreya Patel",
-      "email": "ab@gmail.com",
-      "mobile": "9999988888",
-      "city": "valsad",
-      "gender": null,
-      "department": "",
-      "date": null,
-      "id": 10
-    },
-    {
-      "firstName": "Shreya",
-      "lastName": "Patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": "female",
-      "date": "2022-03-01",
-      "department": "2",
-      "id": 11
-    },
-    {
-      "name": "Shreya Patel",
-      "email": "ab@gmail.com",
-      "mobile": "9999988888",
-      "city": "valsad",
-      "gender": "",
-      "department": "3",
-      "date": "2022-02-02",
-      "id": 12
-    },
-    {
-      "name": "Shreya Patel",
-      "email": "ab@gmail.com",
-      "mobile": "9999988888",
-      "city": "valsad",
-      "gender": "",
-      "department": "2",
-      "date": "",
-      "id": 13
-    },
-    {
-      "name": "Shreya Patel",
-      "email": "ab@gmail.com",
-      "mobile": "9999988888",
-      "city": "valsad",
-      "gender": "female",
-      "department": "4",
-      "date": "2022-03-01",
-      "id": 14
-    },
-    {
       "name": "Ishika ",
       "email": "ishu@gmail.com",
       "mobile": "9999999999",
@@ -215,6 +145,26 @@
       "date": "2022-03-01",
       "department": "1",
       "id": 16
+    },
+    {
+      "firstName": "Shreya",
+      "lastName": "Patel",
+      "email": "ab@gmail.com",
+      "mobile": 9999988888,
+      "gender": null,
+      "date": null,
+      "department": "",
+      "id": 17
+    },
+    {
+      "firstName": "Shreya",
+      "lastName": "Patel",
+      "email": "ab@gmail.com",
+      "mobile": 9999988888,
+      "gender": null,
+      "date": null,
+      "department": "",
+      "id": 18
     }
   ],
   "resumeData": [

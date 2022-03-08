@@ -2,7 +2,7 @@
     <h2 class="sub-heading">Angular Task</h2>
     <div class="d-flex header">
         <input class="search" type="search" placeholder="Search" [(ngModel)]="searchData">
-        <button class="btn add-btn" routerLink="/user/add" (click)="openForm()">+ Add New Employee</button>
+        <button class="btn add-btn" (click)="openForm()">+ Add New Employee</button>
     </div>
     <div *ngIf="employee?.length" class="table-list">
         <table class="table table-hove">

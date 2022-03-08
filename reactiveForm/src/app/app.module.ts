@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { DeletePopupComponent } from './shared/delete-popup/delete-popup.component';
 // import { SearchesPipe } from './assesment-1/module/pipes/searches.pipe';
 // import { DepartmentsPipe } from './assesment-1/module/pipes/departments.pipe';
 
@@ -14,6 +15,7 @@ import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [
     AppComponent,
+    DeletePopupComponent,
     // SearchesPipe,
     // DepartmentsPipe,
   ],

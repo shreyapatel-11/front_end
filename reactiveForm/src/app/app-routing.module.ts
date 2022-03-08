@@ -20,7 +20,16 @@ const routes: Routes = [
   {
     path: 'overlay',
     loadChildren: () => import('./cdk-overlay/cdk-overlay.module').then(m => m.CdkOverlayModule)
-  }
+  },
+  {
+    path: 'todo',
+    loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule)
+  },
+  {
+    path: 'template',
+    loadChildren: () => import('./ng-template/ng-template.module').then(m => m.NgTemplateModule)
+  },
+  
 ];
 
 @NgModule({

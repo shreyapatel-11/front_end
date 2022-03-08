@@ -13,13 +13,4 @@ export interface Employee{
     date: string,
     department: number
 }
-export interface User{
-    id: number,
-    firstName: string,
-    lastName: string,
-    email: string,
-    mobile: number,
-    gender: boolean,
-    date: string,
-    department: number
-}
+

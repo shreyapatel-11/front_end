@@ -1,14 +1,14 @@
 // Card styles goes here
 .card-wrapper{
     flex-wrap: wrap;
-    // border: 1px solid black;
     margin: $margin-card-wrapper-y $margin-card-wrapper-x;
     border-radius: 20px;
-    // background-color: yellow;
+    background-color: yellow;
 }
 
 .card{
     width: 33.33%; 
+    border: none;
     padding: $card-padding;
     
     .card-inner{

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../service/user-service.service';
-import { Department, Employee, User } from '../model/user.model';
-import { Router } from '@angular/router';
-import { Overlay, OverlayConfig, OverlayModule } from '@angular/cdk/overlay';
+import { Department, Employee } from '../model/user.model';
+import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { UserFormComponent } from '../user-form/user-form.component';
+import { DeletePopupComponent } from 'src/app/shared/delete-popup/delete-popup.component';
 
 
 
@@ -14,26 +14,25 @@ import { UserFormComponent } from '../user-form/user-form.component';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit {
-  employee: User[];
+  employee: Employee[];
   searchData: string = '';
   dpt: Department[];
-
-  editData: User;
+  editData: Employee;
 
   constructor(private us: UserServiceService, private overlay: Overlay) {
       this.employee = [];
       this.dpt = [];
       this.searchData = '';
-      this.editData = {} as User;
+      this.editData = {} as Employee;
    }
 
 
   ngOnInit(): void {
     this.getEmployeeData()
-    this.getUSerdata();
+    this.getDeptdata();
   }
 
-  getUSerdata() {
+  getDeptdata() {
     this.us.getDepartment().subscribe((data) => {
       this.dpt = data;
     })
@@ -57,45 +56,48 @@ export class UserListComponent implements OnInit {
     );
   }
 
-  saveData(data: User): void {
-    this.us.createUser(data).subscribe((data) => {
+  saveData(data:Employee): void {
+    this.us.saveEmployee(data).subscribe((data) => {
         alert('Data Saved Successfully');
         this.getEmployeeData();
       }
     );
   }
-  updateUser(id: number, data: User): void {
-    this.us.updateUser(id, data).subscribe((data) => {
+  updateUser(id: number, data:Employee): void {
+    this.us.updateEmployeeList(id, data).subscribe((data) => {
         alert('Data Updated Successfully');
         this.getEmployeeData();
       }
     );
   }
 
-  openForm() {
+  openForm(id?: number) {
     let config = new OverlayConfig();
+    config.hasBackdrop = true;
     config.positionStrategy = this.overlay.position().global().right();
-
     const overlayRef = this.overlay.create(config);
     const component = new ComponentPortal(UserFormComponent);
+    
     const componentRef = overlayRef.attach(component);
     componentRef.instance.department = this.dpt;
-
-  //   if (id) {
-  //     componentRef.instance.id = id;
-  //     componentRef.instance.editData=this.editData;
-  //     componentRef.instance.employee.subscribe((data) => {
-  //       overlayRef.detach();
-  //       this.updateUser(id, data);
-  //     });
-  //   } else {
-  //     componentRef.instance.employee.subscribe((data) => {
-  //       overlayRef.detach();
-  //       this.saveData(data);
-  //     });
-  //   }
-  //   componentRef.instance.cancel.subscribe(() => overlayRef.detach());
-  // }
+    if (id) {
+      componentRef.instance.id;
+      componentRef.instance.editData=this.editData;
+      componentRef.instance.employee.subscribe((data) => {
+        overlayRef.detach();
+        this.updateUser(id, data);
+      });
+    } else {
+      componentRef.instance.employee.subscribe((data) => {
+        overlayRef.detach();
+        this.saveData(data);
+      });
+    }
+    overlayRef.backdropClick().subscribe(() => {
+      overlayRef.detach();
+    });
+    componentRef.instance.cancel.subscribe(() => overlayRef.detach());
+  }
 
   deleteRecord(id: number){
     this.us.deleteUser(id).subscribe((data) => {
@@ -112,17 +114,17 @@ export class UserListComponent implements OnInit {
       .centerVertically();
 
     const overlayRef = this.overlay.create(config);
-    const component = new ComponentPortal(delete);
+    const component = new ComponentPortal(DeletePopupComponent);
     const componentRef = overlayRef.attach(component);
 
-    // componentRef.instance.value.subscribe((result) => {
-    //   if (result) {
-    //     this.deleteUser(id);
-    //     overlayRef.detach();
-    //   } else {
-    //     overlayRef.detach();
-    //   }
-    // });
+    componentRef.instance.value.subscribe((result) => {
+      if (result) {
+        this.deleteUser(id);
+        overlayRef.detach();
+      } else {
+        overlayRef.detach();
+      }
+    });
 
     overlayRef.backdropClick().subscribe(() => {
       overlayRef.detach();
@@ -130,4 +132,4 @@ export class UserListComponent implements OnInit {
   })
 }
   
-}}
+}

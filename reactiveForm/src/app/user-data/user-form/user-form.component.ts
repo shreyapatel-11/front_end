@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Department, User } from '../model/user.model';
+import { Department, Employee } from '../model/user.model';
 import { UserServiceService } from '../service/user-service.service';
 
 @Component({
@@ -15,10 +15,10 @@ export class UserFormComponent implements OnInit {
   private isAddMode: boolean;
 
   @Input() public id: number = 0;
-  @Input() public editData: User;
+  @Input() public editData:Employee;
   @Input() public department: Department[];
 
-  @Output() public userForm;
+  @Output() public employee;
   @Output() public cancel;
 
   // department: Department[];
@@ -26,10 +26,10 @@ export class UserFormComponent implements OnInit {
   // userForm: FormGroup;
   constructor(private fb: FormBuilder, private us: UserServiceService, private activeRoute: ActivatedRoute) {
     this.modalTitle = 'Add User';
-    this.editData = {} as User;
+    this.editData = {} as Employee;
     this.department = [];
     this.isAddMode = true;
-    this.userForm = new EventEmitter<User>();
+    this.employee = new EventEmitter<Employee>();
     this.cancel = new EventEmitter<String>();
    }
 
@@ -65,7 +65,7 @@ export class UserFormComponent implements OnInit {
   get getvalue() {
     return this.buildUserForm.controls;
   }
-  
+
   // getUSerdata() {
   //   this.us.getDepartment().subscribe((data) => {
   //     this.department = data;
@@ -99,7 +99,7 @@ export class UserFormComponent implements OnInit {
   // }
 
   onSubmit() {
-    this.userForm.emit(this.buildUserForm.value);
+    this.employee.emit(this.buildUserForm.value);
   }
 
   resetForm() {
