@@ -83,16 +83,6 @@
       "mobile": 9999988888,
       "gender": "female",
       "date": "2022-02-01",
-      "department": 3,
-      "id": 3
-    },
-    {
-      "firstName": "Shreya",
-      "lastName": "Patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": "female",
-      "date": "2022-02-01",
       "department": 4,
       "id": 4
     },

@@ -34,6 +34,10 @@ export class UserServiceService {
     return this.http.get<Employee[]>(`${this.apiLink}/employee`);
   }
 
+  getById(id: number) {
+    return this.http.get<Employee>(`${this.apiLink}/employee/${id}`);
+  }
+
   saveEmployee(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(`${this.apiLink}/employee`, employee)
   }

@@ -30,6 +30,7 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.getEmployeeData()
     this.getDeptdata();
+    this.getdept();
   }
 
   getDeptdata() {
@@ -43,29 +44,42 @@ export class UserListComponent implements OnInit {
     })
   }
 
+  getdept() {
+    this.us.getDepartment().subscribe((data) => (this.dpt = data));
+  }
   editEmployee(emp: Employee) {
     this.us.sendEmployeeToEdit(emp);
     // this.router.navigate([`/user/edit/${emp.id}`]);
   }
-  deleteUser(id: number): void {
-    this.us.deleteUser(id).subscribe(
-      (result) => {
-        alert(id + ' is Deleted');
+
+  saveForm(data: Employee) {
+        this.us.saveEmployee(data).subscribe(
+          (data) => {
+            //  alert("Data Updated Succesfully");
+            this.getEmployeeData();
+          }
+        )
+  }
+  editUser(id: number): void {
+    this.us.getById(id).subscribe((data) => {
+        this.editData = data;
+        this.openForm(id);
+      }
+    );
+  }
+
+  updateUser(id: number, data:Employee): void {
+    this.us.updateEmployeeList(id, data).subscribe((data) => {
+        alert('Data Updated Successfully');
         this.getEmployeeData();
       }
     );
   }
 
-  saveData(data:Employee): void {
-    this.us.saveEmployee(data).subscribe((data) => {
-        alert('Data Saved Successfully');
-        this.getEmployeeData();
-      }
-    );
-  }
-  updateUser(id: number, data:Employee): void {
-    this.us.updateEmployeeList(id, data).subscribe((data) => {
-        alert('Data Updated Successfully');
+  deleteUser(id: number): void {
+    this.us.deleteUser(id).subscribe(
+      (result) => {
+        alert(id + ' is Deleted');
         this.getEmployeeData();
       }
     );
@@ -90,7 +104,7 @@ export class UserListComponent implements OnInit {
     } else {
       componentRef.instance.employee.subscribe((data) => {
         overlayRef.detach();
-        this.saveData(data);
+        this.saveForm(data);
       });
     }
     overlayRef.backdropClick().subscribe(() => {

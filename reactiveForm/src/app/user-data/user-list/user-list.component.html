@@ -28,7 +28,7 @@
                     <td>{{emp.gender}}</td>
                     <td>{{emp.date | date:'MM/dd/YYYY'}}</td>
                     <td>{{emp.department | custom: dpt }}</td>
-                    <td><button class="btn edit-btn" (click)="this.editEmployee(emp)">Edit</button></td>
+                    <td><button class="btn edit-btn" (click)="this.editUser(emp.id)">Edit</button></td>
                     <td><button class="btn delete-btn" (click)="deleteRecord(emp.id)">Delete</button></td>
                 </tr>
                 <tr>
