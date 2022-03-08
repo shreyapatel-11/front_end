@@ -1,2 +1,29 @@
-// All the SCSS Variables goes here
+$font-family: 'Josefin Sans', sans-serif;
+
+$padding: 1rem;
+$padding-0: 0;
+$padding-2rem: 2rem;
+$padding-0-5rem: 0.5rem;
+// icons
+$icon-font-size: 1.4rem;
+$logo-icon-font-size: 4rem;
+$padding-left-icon: 1.25rem;
+// header
+$header-height: 80px;
+$img-height-width: 50px;
+$logo-width: 200px;
+
 // sidebar
+$ul-padding-bottom: 2rem;
+
+// cards
+$card-padding: 0.5rem;
+$margin-card-wrapper-x: -0.5rem;
+$margin-card-wrapper-y: 0;
+$card-inner-padding: 1rem;
+
+$card-num-font-size: 1.25rem;
+$card-name-font-size: 0.8rem;
+
+// button
+$button-font-size: 1rem;

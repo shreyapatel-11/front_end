@@ -36,9 +36,9 @@
             </aside>
         </div>
         
-        <main class="d-flex main flex-grow">
+        <main class="d-flex main flex-grow-1">
             <!-- main1:start -->
-            <div class="d-flex main-1 flex-column">
+            <div class="d-flex main-1 p-4 flex-column">
                 <!-- search -->
                 <div class="search-bar">
                     <a href="#" class="icons"><span class="icon-search"></span></a>
@@ -46,21 +46,22 @@
                 </div>
 
                 <!-- start: heading -->
-                <div class="d-flex">
+                <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <h1>Hello David</h1>
                         <div>Welcome  back !</div>
                     </div>
                     <div class="filter">
-                        <input type="text" id="filters">
-                        <a href="#" class="filter-icon"><span class="icons "></span></a>
+                        <button type="button" class="btn btn-secondary">Filters</button>
+                        <!-- <input type="text" id="filters">
+                        <a href="#" class="filter-icon"><span class="icons "></span></a> -->
                     </div>
                 </div>
                 <!-- end: heading -->
                 <!-- start: cards -->
-                <div class="d-flex card-wrapper">
+                <div class="d-flex card-wrapper pt-4 pb-4">
                     <!-- card1 -->
-                    <div class="card">
+                    <div class="card col-6">
                         <div class="card-inner">
                             <div class="d-flex card-icon">
                                 <span class="icons icon-eye"></span>
@@ -71,7 +72,7 @@
                         </div>
                     </div>
                     <!-- card-2 -->
-                    <div class="card">
+                    <div class="card col-6">
                         <div class="card-inner">
                             <div class="d-flex card-icon">
                                 <span class="icons icon-compass"></span>
@@ -82,7 +83,7 @@
                         </div>
                     </div>
                     <!-- card-3 -->
-                    <div class="card">
+                    <div class="card col-6">
                         <div class="card-inner">
                             <div class="d-flex card-icon">
                                 <span class="icons icon-home"></span>
@@ -97,9 +98,9 @@
                 <!-- start: card-2 -->
                 <div class="d-flex card-wrapper">
                     <!-- card-1 -->
-                    <div class="d-flex cards">
-                        <div class="arrow justify-content-between"><span class="icon-arrow-down-right"></span></div>
-                        <div class="d-flex content justify-content-between">
+                    <div class="d-flex cards flex-column flex-column">
+                        <div class="arrow d-flex justify-content-end"><div><span class="icon-arrow-down-right"></span></div></div>
+                        <div class="d-flex content justify-content-between align-items-center">
                             <div class="card-text">
                                 <div>Sales</div>
                                 <div>Total sales Today</div>
@@ -111,9 +112,10 @@
                         </div>
                     </div>
                     <!-- card-2 -->
-                    <div class="d-flex cards">
-                        <div class="arrow justify-content-between"><span class="icon-arrow-down-right"></span></div>
-                        <div class="d-flex content justify-content-between">
+                    <div class="d-flex cards flex-column">
+                        <div class="card-inner">
+                        <div class="arrow d-flex justify-content-end"><span class="icon-arrow-down-right"></span></div>
+                        <div class="d-flex content justify-content-between align-items-center">
                             <div class="card-text">
                                 <div>Sales</div>
                                 <div>Total sales Today</div>
@@ -124,10 +126,11 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                     <!-- card-3 -->
-                    <div class="d-flex cards">
-                        <div class="arrow justify-content-between"><span class="icon-arrow-up-right"></span></div>
-                        <div class="d-flex content justify-content-between">
+                    <div class="d-flex cards flex-column">
+                        <div class="arrow d-flex justify-content-end"><span class="icon-arrow-up-right"></span></div>
+                        <div class="d-flex content justify-content-between align-items-center">
                             <div class="card-text">
                                 <div>Sales</div>
                                 <div>Total sales Today</div>
@@ -139,9 +142,9 @@
                         </div>
                     </div>
                     <!-- card-4 -->
-                    <div class="d-flex cards">
-                        <div class="arrow justify-content-between"><span class="icon-arrow-up-right"></span></div>
-                        <div class="d-flex content justify-content-between">
+                    <div class="d-flex cards flex-column">
+                        <div class="arrow d-flex justify-content-end"><span class="icon-arrow-up-right"></span></div>
+                        <div class="d-flex content justify-content-between align-items-center">
                             <div class="card-text">
                                 <div>Sales</div>
                                 <div>Total sales Today</div>
@@ -158,7 +161,7 @@
             <!-- end: main 1 -->
 
             <!-- start: main 2 -->
-            <div class="sales-rev flex-grow">
+            <div class="sales-rev pt-4 flex-grow-1">
                 <h2>Sales Revenue</h2>
                 <!-- start: sales-list -->
                 <div class="sales-list">

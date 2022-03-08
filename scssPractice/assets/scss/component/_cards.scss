@@ -1,21 +1,43 @@
 // Card styles goes here
 .card-wrapper{
     flex-wrap: wrap;
+    // border: 1px solid black;
+    margin: $margin-card-wrapper-y $margin-card-wrapper-x;
+    border-radius: 20px;
+    // background-color: yellow;
 }
+
 .card{
-     width: 33.33%; 
-}
-@each $key, $value in $theme-colors {
-    .card-#{key} {
-        .card-inner{
-            background-color: $value;
-            
-            .card-name{
-                color: $value;
-            }
+    width: 33.33%; 
+    padding: $card-padding;
+    
+    .card-inner{
+        background-color: $white;
+        padding: $card-inner-padding;
+
+        .card-icon{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
         }
     }
 }
+// @each $key, $value in $theme-colors {
+//     .card-#{key} {
+//         .card-inner{
+//             background-color: $value;
+            
+//             .card-name{
+//                 color: $value;
+//             }
+//         }
+//     }
+// }
 .cards{
     width: 50%;
+    .card-inner{
+        background-color: $white;
+        padding: $card-inner-padding;
+    }
 }
