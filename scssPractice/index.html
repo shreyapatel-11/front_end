@@ -12,60 +12,63 @@
     <div class="d-flex wrapper">
         <!-- sidebar: start -->
         <div class="side-section">
-            <header class="header">
-                <div>
+           
+                
+            
+            <aside class="sidebar d-flex flex-column"> 
+                <div class="header">
                     <a href="#" class="icons logo"><span class="icon-menu"></span></a>
                 </div>
-            </header>
-            <aside class="d-flex justify-content-between flex-column sidebar"> 
-                <nav class="navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-home"></span>Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-trophy"></span>Project</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-library"></span>Billing</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-user"></span>Team Members</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-stats-bars"></span>Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="icons icon-cog"></span>Home</a></li>
-                    </ul>
+                <div class="d-flex justify-content-between flex-column flex-grow-1">
+                    <nav class="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="nav-link"><span class="icons  fs-4 icon-home"></span>Home</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><span class="icons  fs-4 icon-trophy"></span>Project</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><span class="icons  fs-4 icon-library"></span>Billing</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><span class="icons  fs-4 icon-user"></span>Team Members</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><span class="icons  fs-4 icon-stats-bars"></span>Stats</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><span class="icons  fs-4 icon-cog"></span>Settings</a></li>
+                        </ul>
 
-                </nav>
-                <div class="side-bottom">
-                    <div class="bottom-img">box</div>
-                    <div>David Milan</div>
+                    </nav>
+                    <div class="side-bottom">
+                        <div class="bottom-img">box</div>
+                        <div>David Milan</div>
+                    </div>
                 </div>
     
             </aside>
         </div>
         <!-- end: sidebar -->
-        <main class="d-flex main flex-grow-1">
+        <main class="d-flex main p-4 flex-grow-1">
             <!-- main1:start -->
-            <div class="d-flex main-1 p-4 flex-column">
+            <div class="d-flex main-1 col-9 p-4 flex-column">
                 <!-- search -->
-                <div class="search-bar">
-                    <a href="#" class="icons"><span class="icon-search"></span></a>
+                <div class="search-bar position-relative">
+                    <a href="#" class="icons search-icon position-absolute"><span class="icon-search"></span></a>
                     <input type="search" id="search" placeholder="Search for stats">
                 </div>
 
                 <!-- start: heading -->
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="heading d-flex justify-content-between align-items-center">
                     <div>
                         <h1>Hello David</h1>
                         <div>Welcome  back !</div>
                     </div>
                     <div class="filter">
-                        <button type="button" class="btn btn-secondary">Filters</button>
+                        <button type="button" class="btn btn-primary">Filters</button>
                         <!-- <input type="text" id="filters">
                         <a href="#" class="filter-icon"><span class="icons "></span></a> -->
                     </div>
                 </div>
                 <!-- end: heading -->
                 <!-- start: cards -->
-                <div class="d-flex card-wrapper pt-4 pb-4">
+                <div class="d-flex card card-wrapper flex-wrap flex-row p-3 g-2">
                     <!-- card1 -->
-                    <div class="card col-6">
+                    <div class="card-body ">
                         <div class="card-inner">
-                            <div class="d-flex card-icon">
-                                <span class="icons icon-eye"></span>
+                            <div class="d-flex card-icon align-items-center justify-content-center">
+                                <span class="icon icon-eye"></span>
                             </div>
                             <div class="card-name">Views</div>
                             <div class="card-number">500</div>
@@ -73,10 +76,10 @@
                         </div>
                     </div>
                     <!-- card-2 -->
-                    <div class="card col-6">
+                    <div class="card-body ">
                         <div class="card-inner">
-                            <div class="d-flex card-icon">
-                                <span class="icons icon-compass"></span>
+                            <div class="d-flex card-icon align-items-center justify-content-center">
+                                <span class="icon icon-compass"></span>
                             </div>
                             <div class="card-name">Views</div>
                             <div class="card-number">2000</div>
@@ -84,10 +87,10 @@
                         </div>
                     </div>
                     <!-- card-3 -->
-                    <div class="card col-6">
+                    <div class="card-body ">
                         <div class="card-inner">
-                            <div class="d-flex card-icon">
-                                <span class="icons icon-home"></span>
+                            <div class="d-flex card-icon align-items-center justify-content-center">
+                                <span class="icon icon-home"></span>
                             </div>
                             <div class="card-name">Views</div>
                             <div class="card-number">5100</div>
@@ -97,102 +100,116 @@
                 </div>
 
                 <!-- start: card-2 -->
-                <div class="d-flex card-wrapper">
+                <div class="d-flex flex-wrap card-wrapper2 pt-4 row g-4">
                     <!-- card-1 -->
-                    <div class="d-flex cards flex-column flex-column">
-                        <div class="arrow d-flex justify-content-end"><div><span class="icon-arrow-down-right"></span></div></div>
-                        <div class="d-flex content justify-content-between align-items-center">
-                            <div class="card-text">
-                                <div>Sales</div>
-                                <div>Total sales Today</div>
-                                <div>$500</div>
-                            </div>
-                            <div class="d-flex round-rate">
-                                <div>55%</div>
+                    <div class="col-6">
+                    <div class="d-flex card flex-column bg-primary p-3 ">
+                        <div class="card-inner card-yellow  ">
+                            <div class="arrow d-flex justify-content-end"><div><span class="icon-arrow-down-right"></span></div></div>
+                            <div class="d-flex content justify-content-between align-items-center">
+                                <div class="card-text">
+                                    <div class="card-name fw-bold">Sales</div>
+                                    <div>Total sales Today</div>
+                                    <div class="card-number fw-bold">$500</div>
+                                </div>
+                                <div class="d-flex round-rate">
+                                    <div>55%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
                     <!-- card-2 -->
-                    <div class="d-flex cards flex-column">
-                        <div class="card-inner">
-                        <div class="arrow d-flex justify-content-end"><span class="icon-arrow-down-right"></span></div>
-                        <div class="d-flex content justify-content-between align-items-center">
-                            <div class="card-text">
-                                <div>Sales</div>
-                                <div>Total sales Today</div>
-                                <div>$500</div>
-                            </div>
-                            <div class="d-flex round-rate">
-                                <div>30%</div>
+                    <div class="col-6">
+                    <div class="d-flex card flex-column">
+                        <div class="card-inner card-green">
+                            <div class="arrow d-flex justify-content-end"><span class="icon-arrow-down-right"></span></div>
+                            <div class="d-flex content justify-content-between align-items-center">
+                                <div class="card-text">
+                                    <div class="card-name fw-bold">Sales</div>
+                                    <div>Total sales Today</div>
+                                    <div class="card-number fw-bold">$500</div>
+                                </div>
+                                <div class="d-flex round-rate">
+                                    <div>30%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
                     <!-- card-3 -->
-                    <div class="d-flex cards flex-column">
-                        <div class="arrow d-flex justify-content-end"><span class="icon-arrow-up-right"></span></div>
-                        <div class="d-flex content justify-content-between align-items-center">
-                            <div class="card-text">
-                                <div>Sales</div>
-                                <div>Total sales Today</div>
-                                <div>$500</div>
-                            </div>
-                            <div class="d-flex round-rate">
-                                <div>80%</div>
+                    <div class="col-6">
+                    <div class="d-flex card flex-column">
+                        <div class="card-inner card-blue">
+                            <div class="arrow d-flex justify-content-end"><span class="icon-arrow-up-right"></span></div>
+                            <div class="d-flex content justify-content-between align-items-center">
+                                <div class="card-text">
+                                    <div class="card-name fw-bold">Sales</div>
+                                    <div>Total sales Today</div>
+                                    <div class="card-number fw-bold">1000</div>
+                                </div>
+                                <div class="d-flex round-rate">
+                                    <div>80%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
                     <!-- card-4 -->
-                    <div class="d-flex cards flex-column">
-                        <div class="arrow d-flex justify-content-end"><span class="icon-arrow-up-right"></span></div>
-                        <div class="d-flex content justify-content-between align-items-center">
-                            <div class="card-text">
-                                <div>Sales</div>
-                                <div>Total sales Today</div>
-                                <div>$500</div>
-                            </div>
-                            <div class="d-flex round-rate">
-                                <div>70%</div>
+                    <div class="col-6">
+                    <div class="d-flex card flex-column">
+                        <div class="card-inner card-purple">
+                            <div class="arrow d-flex justify-content-end"><span class="icon-arrow-up-right"></span></div>
+                            <div class="d-flex content justify-content-between align-items-center">
+                                <div class="card-text">
+                                    <div class="card-name fw-bold">Sales</div>
+                                    <div>Total sales Today</div>
+                                    <div class="card-number fw-bold">500</div>
+                                </div>
+                                <div class="d-flex round-rate">
+                                    <div>70%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <!-- end: card-2 -->
             </div>
             <!-- end: main 1 -->
 
             <!-- start: main 2 -->
-            <div class="sales-rev main-2 pt-4 d-flex flex-column flex-grow-1">
+            <div class="sales-rev main-2 p-5 d-flex flex-column flex-grow-1">
                 <h2>Sales Revenue</h2>
                 <!-- start: sales-list -->
                 <div class="sales-list">
 
-                    <div class="d-flex sale">
-                        <div class="sale-icon"><span class="icon-cog"></span></div>
-                        <div class="sale-number">
-                            <div>230k</div>
-                            <div>sales</div>
+                    <div class="d-flex sale align-items-center justify-content-between">
+                        <div class="card-icon d-flex align-items-center justify-content-center"><span class="icon-cog"></span></div>
+                        <div class="card-text">
+                            <div class="card-number">230k</div>
+                            <div class="card-name">sales</div>
                         </div>
                     </div>
-                    <div class="d-flex sale">
-                        <div class="sale-icon"><span class="icon-user"></span></div>
-                        <div class="sale-number">
-                            <div>230k</div>
-                            <div>sales</div>
+                    <div class="d-flex sale align-items-center justify-content-between">
+                        <div class="card-icon d-flex align-items-center justify-content-center"><span class="icon-user"></span></div>
+                        <div class="card-text">
+                            <div class="card-number">230k</div>
+                            <div class="card-name">sales</div>
                         </div>
                     </div>
-                    <div class="d-flex sale">
-                        <div class="sale-icon"><span class="icon-book"></span></div>
-                        <div class="sale-number">
-                            <div>230k</div>
-                            <div>sales</div>
+                    <div class="d-flex sale align-items-center justify-content-between">
+                        <div class="card-icon d-flex align-items-center justify-content-center"><span class="icon-book"></span></div>
+                        <div class="card-text">
+                            <div class="card-number">230k</div>
+                            <div class="card-name">sales</div>
                         </div>
                     </div>
-                    <div class="d-flex sale">
-                        <div class="sale-icon"><span class="icon-pie-chart"></span></div>
-                        <div class="sale-number">
-                            <div>230k</div>
-                            <div>sales</div>
+                    <div class="d-flex sale align-items-center justify-content-between">
+                        <div class="card-icon d-flex align-items-center justify-content-center"><span class="icon-pie-chart"></span></div>
+                        <div class="card-text">
+                            <div class="card-number">230k</div>
+                            <div class="card-name">sales</div>
                         </div>
                     </div>
                 </div>

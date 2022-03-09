@@ -7,6 +7,10 @@ $secondary: #00b11c;
 // Used for Footer Section
 $accent: #021a28;
 
+$yellow: #c1875f;
+$light-yellow: #ffefe2; 
+
+$warning: $light-yellow;
 // Mainly use for Normal Text color
 $gray: #989d9e;
 
@@ -21,28 +25,36 @@ $btn-text-primary: $primary;
 
 $white: white;
 $black: black;
-$light-green: #f2fcf4;
+$dark: $black;
 
-
+$card1-bg-color: #f9f8f3;
+$card-icon-bg-color: #e2ded3;
 // card
 $light-gray: #f2f2f2;
 
-$blue: #389cff;
-$light-blue: #e9f4ff;
+$blue: #81bbc9;
+$light-blue: #e6f5fa;
 
-$yellow: #ee8c2b;
-$light-yellow: #fff4e8; 
+$green: #88c28f;
+$light-green: #eefcef;
 
 $purple: #6868ff;
-$light-purple: #f1f0ff;
+$light-purple: #f4f5f9;
 
-$red: #ec6160;
-$light-red: #ffeeed;
+// $red: #ec6160;
+// $light-red: #ffeeed;
 
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "gray": $gray,
-  "light": $light,
-  "accent": $accent
-);
+// $card-color: (
+//   "yellow": $light-yellow,
+//   "green": $light-green,
+//   "blue": $light-blue,
+//   "purple": $light-purple,
+
+// );
+// $theme-colors: (
+//   "primary": $primary,
+//   "secondary": $secondary,
+//   "gray": $gray,
+//   "light": $light,
+//   "accent": $accent
+// );

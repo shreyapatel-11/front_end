@@ -1,43 +1,90 @@
-// Card styles goes here
+// // Card styles goes here
 .card-wrapper{
-    flex-wrap: wrap;
-    margin: $margin-card-wrapper-y $margin-card-wrapper-x;
+    // flex-wrap: wrap;
+//     margin: $margin-card-wrapper-y $margin-card-wrapper-x;
+//     margin-top: 2rem;
     border-radius: 20px;
-    background-color: yellow;
+    background-color: $card1-bg-color;
 }
+// .card-wrapper2{
+//     flex-wrap: wrap;
+//     margin-top: 2rem;
+// }
 
-.card{
-    width: 33.33%; 
-    border: none;
-    padding: $card-padding;
+// .card{
+//     width: 33.33%; 
+//     border: none;
+//     // padding: $card-padding;
+//     background: transparent;
+  
     
-    .card-inner{
-        background-color: $white;
-        padding: $card-inner-padding;
+//     .card-inner{
+//         padding: $card-inner-padding;
 
         .card-icon{
             height: 50px;
             width: 50px;
             border-radius: 50%;
             font-size: 1.5rem;
+            background-color: $card-icon-bg-color;
         }
-    }
-}
-// @each $key, $value in $theme-colors {
-//     .card-#{key} {
-//         .card-inner{
-//             background-color: $value;
-            
-//             .card-name{
-//                 color: $value;
-//             }
+//         .card-name, .time{
+//             font-size: 0.8rem;
+//             color: $gray;
+//         }
+//         .card-number{
+//             font-size: 2.5rem;
+//             font-weight: bold;
 //         }
 //     }
 // }
-.cards{
-    width: 50%;
-    .card-inner{
-        background-color: $white;
-        padding: $card-inner-padding;
+// .card-name{
+//     padding-top: $padding;
+// }
+
+// .cards{
+//     padding: $card-padding;
+//     .card-inner{
+//         padding: $card-inner-padding;  
+//         border-radius: 20px;
+//         .card-number{
+//             font-size: 1.75rem;
+//         }
+//     } 
+// }
+// .card-yellow{
+//     background-color: $warning;
+// }
+.card-green{
+    background-color: $light-green;
+}
+.card-blue{
+    background-color: $light-blue;
+}
+.card-purple{
+    background-color: $light-purple;
+}
+
+.main-2 {
+    background-color: $dark;
+    color: $white;
+    border-radius: 20px;
+    .sale{
+        padding: $padding 0;
+        .card-icon{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            background-color: $light;
+            color: $dark;
+
+        }
+        .card-number{
+            font-size: 1.75rem;
+        }
+        .card-name{
+            color: $gray;
+        }
     }
 }
