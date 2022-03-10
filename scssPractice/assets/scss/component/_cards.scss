@@ -59,30 +59,31 @@
 // .card-yellow{
 //     background-color: $warning;
 // }
-.card-green{
-    background-color: $light-green;
+// .card-green{
+//     background-color: $light-green;
+// }
+// .card-blue{
+//     background-color: $light-blue;
+// }
+// .card-purple{
+//     background-color: $light-purple;
+// }
+.card-text{
+    color: $gray
 }
-.card-blue{
-    background-color: $light-blue;
-}
-.card-purple{
-    background-color: $light-purple;
-}
-
 .main-2 {
-    background-color: $dark;
+    // background-color: $dark;
     color: $white;
     border-radius: 20px;
     .sale{
-        padding: $padding 0;
+        // padding: $padding 0;
         .card-icon{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
+            // height: 50px;
+            // width: 50px;
+            // border-radius: 50%;
+            // font-size: 1.5rem;
             background-color: $light;
             color: $dark;
-
         }
         .card-number{
             font-size: 1.75rem;

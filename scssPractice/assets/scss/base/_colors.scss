@@ -1,5 +1,6 @@
 // Theme Primary Color
-$primary: #fafafa;
+$dark: black;
+$primary: $dark;
 
 // Mainly use for UI controls like Buttons
 $secondary: #00b11c;
@@ -58,3 +59,4 @@ $light-purple: #f4f5f9;
 //   "light": $light,
 //   "accent": $accent
 // );
+$nav-link-color: $dark;
