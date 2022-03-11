@@ -36,11 +36,18 @@
     width: 70px;
     border: 1px solid $gray;
 }  
-#bar{
-    display: none;
-} 
+// #bar{
+//     display: none;
+// } 
 #bar:checked{
-    & ~ .sidebar{
-        width: 100px;
+   
+    & ~ .side-section{
+        transform: translateX(-100%);
+    }
+    
+}
+#bar:not(checked){
+    & ~ .side-section{
+        transition: 0.4s all;
     }
 }
