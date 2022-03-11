@@ -4,8 +4,3 @@
         background-color: $value;
     }   
 }
-@each $key,$value in $card-hover-colors{
-    .card-#{$key} {
-        background-color: $value;
-    }   
-}

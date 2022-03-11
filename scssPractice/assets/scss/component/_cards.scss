@@ -1,8 +1,5 @@
 // // Card styles goes here
 .card-wrapper{
-    // flex-wrap: wrap;
-//     margin: $margin-card-wrapper-y $margin-card-wrapper-x;
-//     margin-top: 2rem;
     border-radius: 20px;
     background-color: $card1-bg-color;
 }
@@ -25,13 +22,14 @@
 //     .card-inner{
 //         padding: $card-inner-padding;
 
-        .card-icon{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            background-color: $card-icon-bg-color;
-        }
+.card-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background-color: $card-icon-bg-color;
+    margin-bottom: 1rem;
+}
 //         .card-name, .time{
 //             font-size: 0.8rem;
 //             color: $gray;

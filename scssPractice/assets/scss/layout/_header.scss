@@ -16,3 +16,21 @@
 .heading{
     padding-top: 2.5rem;
 }
+
+.toggle{
+    left: 2.5rem;
+    top: 1rem;
+}
+.text-welcome{
+    color: $gray;
+}
+.filter{
+    .form-control{
+        border-radius: 10px;
+        width: 100px;
+    }
+    span{
+        top:0.8rem;
+        right: 1rem;
+    }
+}

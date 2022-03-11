@@ -78,7 +78,8 @@ console.log("people from 1Rivet:- ", array1.every(isFrom1Rivet));
 // console.log("people not from 1Rivet:- ", array1.filter(isNotFrom1Rivet));
 // console.log(array1);
 
-const num = [1, 2, 3, 4];
+const num = [1, 2, 3, 4, 5, 1];
+const number = [2, 3, 4]
 console.log("fill: ",num.fill(8, 2));
 
 // chech array or not return boolean value
@@ -90,7 +91,6 @@ console.log("list",list);
 console.log("splice",list.splice(1, 0, "February")); 
 
 
-console.log(list.indexOf('May',2))
 // push
 console.log("push",list.push('June'));
 
