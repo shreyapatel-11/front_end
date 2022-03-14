@@ -29,6 +29,10 @@ const routes: Routes = [
     path: 'template',
     loadChildren: () => import('./ng-template/ng-template.module').then(m => m.NgTemplateModule)
   },
+  {
+    path: 'crud',
+    loadChildren: () => import('./crud-static/crud-static.module').then(m => m.CrudStaticModule)
+  },
   
 ];
 

@@ -1,0 +1,27 @@
+<button type="button" class="btn" routerLink="/form">Form</button>
+
+<!-- <span>{{ this.employee | json }}</span> -->
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>company</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of this.employee">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.company }}</td>
+            <td>
+                <button type="button" (click)="editEmployee(employee.id)">Edit</button>
+                <button type="button" (click)="deleteEmployee(employee.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

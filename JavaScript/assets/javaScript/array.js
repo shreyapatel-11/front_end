@@ -61,6 +61,16 @@ let array1 = [
     },
 ];
 
+console.log("of(): ",Array.of(8));
+console.log("Array: ",Array(6));
+
+const a1 = [0, 1, 2, 3, [4, 5]];
+const a2 = [0, 1, 2, 3, [[[4, 5, 6]]]];
+console.log("flat(): ",a1.flat());
+console.log("flat(depth): ", a2.flat(2));
+
+var arr = [1, 2, 3, 4];
+console.log("flatMap() : ",arr.flatMap(x => [x, x * 2]));
 
 // console.log("replace 1rivet to google: ",array1.replace("1Rivet","Google"))
 // -------------------------------------------------------------------------------------------
@@ -72,7 +82,7 @@ for( x of marks.entries()){
 // keys
 console.log("keys: ", Object.keys(marks))
 // findindex
-console.log("findIndex: ",marks.findIndex(x => x==90));
+console.log("findIndex: ",marks.findIndex(x => x==78));
 
 // map
 console.log("map: ",marks.map((x) => x/2));
@@ -89,6 +99,7 @@ function empName(index, name){
 
 // sort()
 console.log("sort() array: ",marks.sort());
+
 console.log("foreach: ",marks.forEach(empName));
 console.log("filter : people from 1Rivet:- ",array1.filter(isFrom1Rivet));
 console.log("find : ",array1.find(isFrom1Rivet));
