@@ -12,3 +12,29 @@ console.log("freeze: ", o1.a);
 
 // spread operator
 const cloneObj = console.log("...Spread ope. : ",{...o1, ...o2}) 
+
+// fromEntries()
+const entries = new Map([
+['foo', 'bar'],
+['baz', 42]
+]);
+
+const obj = Object.fromEntries(entries);
+console.log("fromEntries(): ",obj);
+
+// is() like ===
+console.log("is(25, 25): ", Object.is( 25, 25));  
+
+// values()
+const object1 = {
+a: 'Hello',
+b: 11,
+c: false
+};
+
+console.log("values(): ",Object.values(object1));
+
+// seal()
+Object.seal(object1);
+object1.d = 99;
+console.log("seal(): ",object1.d);

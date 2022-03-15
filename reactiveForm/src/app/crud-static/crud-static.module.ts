@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CrudStaticRoutingModule } from './crud-static-routing.module';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     CommonModule,
-    CrudStaticRoutingModule
+    CrudStaticRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CrudStaticModule { }

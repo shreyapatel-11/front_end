@@ -33,6 +33,7 @@ const routes: Routes = [
     path: 'crud',
     loadChildren: () => import('./crud-static/crud-static.module').then(m => m.CrudStaticModule)
   },
+  { path: 'mvp', loadChildren: () => import('./mvp/mvp.module').then(m => m.MvpModule) },
   
 ];
 

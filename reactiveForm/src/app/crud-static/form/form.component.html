@@ -1,10 +1,10 @@
-<div>123</div>
-<form (ngSubmit)="onSubmit()">
-    <input type="text" name="name" formControlName="name">
-    <input type="text" name="email" formControlName="email">
+
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+    <input type="text" name="name" formControlName="name"><br><br>
+    <input type="text" name="email" formControlName="email"><br><br>
     <input type="text" name="company" formControlName="company">
     <button type="submit">Submit</button>
 </form>
 
 
-<button type="button" class="btn" routerLink="/crud-practice/crud-list">Cancel</button>
+<button type="button" class="btn" routerLink="/crud/list">Cancel</button>

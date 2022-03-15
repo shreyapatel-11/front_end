@@ -29,7 +29,7 @@ export class FormComponent implements OnInit {
   onSubmit(): void {
     if (this.idToEdit) {
       this.cs.editData(this.idToEdit, this.empForm.value);
-      this.router.navigateByUrl('/crud-practice/crud-list');
+      this.router.navigateByUrl('/crud/list');
     }
   }
 }
