@@ -6,6 +6,9 @@ import { MvpComponent } from './mvp.component';
 import { UserContainerComponent } from './user-container/user-container.component';
 import { UserFormPresentationComponent } from './user-container/user-form-presentation/user-form-presentation.component';
 import { UserListPresentationComponent } from './user-container/user-list-presentation/user-list-presentation.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MvpService } from './mvp.service';
 
 
 @NgModule({
@@ -17,7 +20,12 @@ import { UserListPresentationComponent } from './user-container/user-list-presen
   ],
   imports: [
     CommonModule,
-    MvpRoutingModule
+    MvpRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    MvpService
   ]
 })
 export class MvpModule { }

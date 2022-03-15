@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserListComponent } from '../user-data/user-list/user-list.component';
 import { MvpComponent } from './mvp.component';
+import { UserFormPresentationComponent } from './user-container/user-form-presentation/user-form-presentation.component';
+import { UserListPresentationComponent } from './user-container/user-list-presentation/user-list-presentation.component';
 
 const routes: Routes = [
   { path: '', component: MvpComponent,
@@ -10,8 +11,11 @@ const routes: Routes = [
         path: '', redirectTo: 'list', pathMatch: 'full'
       },
       {
-        path: 'list', component: UserListComponent
-      }
+        path: 'list', component: UserListPresentationComponent
+      },
+      {
+        path: 'add', component: UserFormPresentationComponent
+      },
     ] 
   }
 ];
