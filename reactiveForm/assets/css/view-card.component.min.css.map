@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,AAAA,CACJ,OAAO,CAAE,IAAI,CAChB,AACD,AAAA,aAAa,AAAA,CACT,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,aAAa,CACjC,AAED,AAAA,KAAK,AAAA,CACD,KAAK,CAAE,GAAG,CACV,OAAO,CAAE,IAAI,CAChB",
+    "sources": [
+        "../../src/app/ng-template/view-card/view-card.component.scss"
+    ],
+    "names": [],
+    "file": "view-card.component.min.css"
+}

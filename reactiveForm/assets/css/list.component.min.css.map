@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/crud-static/list/list.component.scss"
+    ],
+    "names": [],
+    "file": "list.component.min.css"
+}

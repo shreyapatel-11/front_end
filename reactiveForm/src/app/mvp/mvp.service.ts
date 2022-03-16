@@ -10,7 +10,17 @@ export class MvpService {
 
   constructor(private http: HttpClient) { }
 
+  
   public getUser(): Observable<User[]> {
-    return this.http.get<User[]>(` http://localhost:3000/users`)
+    return this.http.get<User[]>(`http://localhost:3000/users`)
+  }
+
+  public addUserData(user: User): Observable<User> {
+    debugger
+    return this.http.post<User>(`http://localhost:3000/users`, user)
+  }
+
+  public deleteUser(id: number){
+    return this.http.delete(`http://localhost:3000/users/${id}`);
   }
 }

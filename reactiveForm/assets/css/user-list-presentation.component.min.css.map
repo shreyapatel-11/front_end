@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/mvp/user-container/user-list-presentation/user-list-presentation.component.scss"
+    ],
+    "names": [],
+    "file": "user-list-presentation.component.min.css"
+}

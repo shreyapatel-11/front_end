@@ -8,36 +8,23 @@
     },
     {
       "id": 2,
-      "name": "Hiren",
+      "name": "Nirali",
       "age": "23",
-      "gender": "Male"
+      "gender": "Female"
     },
     {
       "id": 3,
-      "name": "Harshiv",
+      "name": "Parth",
       "age": "23",
       "gender": "Male"
     },
     {
-      "name": "Jay",
+      "name": "Ayushi",
       "age": "23",
-      "gender": "Male",
-      "id": 4
-    },
-    {
-      "name": "Sonal",
-      "age": "25",
       "gender": "Female",
-      "id": 5
-    },
-    {
-      "name": "Test",
-      "age": "Test",
-      "gender": "Male",
-      "id": 6
+      "id": 4
     }
   ],
-  
   "department": [
     {
       "id": 1,
@@ -116,16 +103,6 @@
   ],
   "Employee": [
     {
-      "firstName": "Shreya",
-      "lastName": "Patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": "female",
-      "date": "2022-02-01",
-      "department": 4,
-      "id": 4
-    },
-    {
       "firstName": "Panth",
       "lastName": "Patel",
       "email": "p@gmail.com",
@@ -136,13 +113,13 @@
       "id": 6
     },
     {
-      "firstName": "shreya",
-      "lastName": "patel",
+      "name": "Honey",
       "email": "ab@gmil.com",
       "mobile": 9988776655,
+      "city": "",
       "gender": "female",
-      "date": "2022-02-01",
       "department": "2",
+      "date": "2022-02-01",
       "id": 7
     },
     {
@@ -161,39 +138,49 @@
       "mobile": "9999999999",
       "city": "valsad",
       "gender": "female",
-      "department": "1",
+      "department": "2",
       "date": "2022-03-01",
       "id": 15
     },
     {
-      "firstName": "Maitry",
+      "name": "Maitry",
+      "email": "ab@gmail.com",
+      "mobile": 9999988888,
+      "city": "Navsari",
+      "gender": "female",
+      "department": "1",
+      "date": "2022-03-01",
+      "id": 16
+    },
+    {
+      "name": "Parth",
+      "email": "ab@gmail.com",
+      "mobile": 9999988888,
+      "city": "Surat",
+      "gender": "male",
+      "department": "1",
+      "date": "2022-03-01",
+      "id": 17
+    },
+    {
+      "name": "Nirali",
+      "email": "ab@gmail.com",
+      "mobile": 9999988888,
+      "city": "valsad",
+      "gender": "female",
+      "department": "1",
+      "date": "2022-02-28",
+      "id": 18
+    },
+    {
+      "firstName": "Honey",
       "lastName": "Patel",
       "email": "ab@gmail.com",
       "mobile": 9999988888,
       "gender": "female",
       "date": "2022-03-01",
-      "department": "1",
-      "id": 16
-    },
-    {
-      "firstName": "Shreya",
-      "lastName": "Patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": null,
-      "date": null,
-      "department": "",
-      "id": 17
-    },
-    {
-      "firstName": "Shreya",
-      "lastName": "Patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": null,
-      "date": null,
-      "department": "",
-      "id": 18
+      "department": "3",
+      "id": 19
     }
   ],
   "resumeData": [

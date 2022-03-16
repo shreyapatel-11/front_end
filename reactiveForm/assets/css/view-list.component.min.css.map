@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/ng-template/view-card/view-list/view-list.component.scss"
+    ],
+    "names": [],
+    "file": "view-list.component.min.css"
+}

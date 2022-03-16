@@ -1,8 +1,11 @@
 <p>user-container works!</p>
 <div class="container-fluid p-4">
    <div>
-    <app-user-list-presentation>
-        
+    <app-user-list-presentation  
+    [userList]="userList$ | async"
+    (delete)="deleteUser($event)"
+    (addUser)="addUser($event)"
+    >       
     </app-user-list-presentation>
    </div> 
 </div>
