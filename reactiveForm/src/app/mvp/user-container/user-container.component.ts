@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UserService } from 'src/app/assesment-1/module/service/user.service';
-import { User, UserForm } from '../mvp.model';
+import { User, UserEditDetails, UserForm } from '../mvp.model';
 import { MvpService } from '../mvp.service';
 
 @Component({
@@ -12,10 +12,16 @@ import { MvpService } from '../mvp.service';
 })
 export class UserContainerComponent implements OnInit {
 
-  public userList$: Observable<User[]>
+  public userList$: Observable<User>
+  public id!: string;
 
-  constructor(private userContainerService:MvpService, private router: Router) {
-    this.userList$=new Observable();
+  constructor(private userContainerService:MvpService, private router: Router, private activatedRoute: ActivatedRoute) {
+    this.userList$ =new Observable();
+    this.id= this.activatedRoute.snapshot.params.id;
+
+    if (this.id) {
+      this.userList$ = this.userContainerService.getUserById(this.id);
+    }
    }
 
   ngOnInit(): void {
@@ -28,6 +34,14 @@ export class UserContainerComponent implements OnInit {
       this.router.navigateByUrl('user');
     }
     )    
+  }
+  editUser(data: UserEditDetails) {
+    this.userContainerService.editUser(data.userForm, data.id).subscribe(
+      (res) => {
+        alert('User Edited Successfully')
+        this.router.navigateByUrl('mvp/user')
+      }
+    )
   }
   deleteUser(id: number){
     this.userContainerService.deleteUser(id).subscribe((res) => {

@@ -19,7 +19,11 @@ export class UserFormPresentationComponent implements OnInit {
   @Input() 
   public set userData(value : User) {
     console.log(value);
-    this._userData = value;
+    if(value){
+      console.log(this.userForm);
+      this.userForm.patchValue(value);
+      this._userData = value;
+    }
   }
 
   public get userData() : User{
@@ -27,12 +31,14 @@ export class UserFormPresentationComponent implements OnInit {
   }
   
   @Output()  public add: EventEmitter<UserForm>;
+  @Output() public edit: EventEmitter<UserForm>;
 
   private _userData !: User;
 
   constructor(private userFormPresenter: UserFormPresenterService, private router: Router) { 
     this.userForm = userFormPresenter.buildForm();
     this.add = new EventEmitter();
+    this.edit = new EventEmitter();
   }
 
   ngOnInit(): void {
@@ -44,6 +50,5 @@ export class UserFormPresentationComponent implements OnInit {
   onSubmit() {
     console.log(this.userForm.value);
     this.userFormPresenter.onSubmit(this.userForm);
-    // this.router.navigateByUrl('../user');
   }
 }

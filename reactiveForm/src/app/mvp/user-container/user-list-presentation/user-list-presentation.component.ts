@@ -43,6 +43,9 @@ export class UserListPresentationComponent implements OnInit {
     })
   }
 
+  onEdit(id: number){
+    this.router.navigateByUrl(`mvp/edit/${id}`);
+  }
   onDelete(id: number){
     this.userListPresenter.onDelete(id);
   }
