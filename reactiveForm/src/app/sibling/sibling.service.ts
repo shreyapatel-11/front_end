@@ -8,6 +8,11 @@ import { User } from '../mvp/mvp.model';
 export class SiblingService {
 
   public userData = new Subject<User>();
+
   userName = new Subject<string>();
   constructor() { }
+
+  sendData(){
+    this.userData.next()
+  }
 }

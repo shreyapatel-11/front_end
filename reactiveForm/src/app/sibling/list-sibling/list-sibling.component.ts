@@ -10,6 +10,7 @@ export class ListSiblingComponent implements OnInit {
   
   userName: string;
 
+  
   constructor(private siblingService: SiblingService) { 
     this.siblingService.userName.subscribe(uName => {
       this.userName = uName;
