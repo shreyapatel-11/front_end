@@ -12,15 +12,17 @@ import { MvpService } from '../mvp.service';
 })
 export class UserContainerComponent implements OnInit {
 
-  public userList$: Observable<User>
-  public id!: string;
+  public userList$: Observable<User[]>
+  public userListById$: Observable<User>
+
+  public id: number;
 
   constructor(private userContainerService:MvpService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.userList$ =new Observable();
-    this.id= this.activatedRoute.snapshot.params.id;
+    this.id= this.activatedRoute.snapshot.params['id'];
 
     if (this.id) {
-      this.userList$ = this.userContainerService.getUserById(this.id);
+      this.userListById$ = this.userContainerService.getUserById(this.id);
     }
    }
 
@@ -31,15 +33,15 @@ export class UserContainerComponent implements OnInit {
   addUser(data: User){
     this.userContainerService.addUserData(data).subscribe((res) => {
       alert("user added successfully")
-      this.router.navigateByUrl('user');
+      this.router.navigateByUrl('mvp/user');
     }
     )    
   }
   editUser(data: UserEditDetails) {
     this.userContainerService.editUser(data.userForm, data.id).subscribe(
-      (res) => {
+      (res: UserForm) => {
         alert('User Edited Successfully')
-        this.router.navigateByUrl('mvp/user')
+        this.router.navigateByUrl('mvp/edit')
       }
     )
   }

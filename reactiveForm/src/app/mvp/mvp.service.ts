@@ -20,11 +20,11 @@ export class MvpService {
     return this.http.post<User>(`http://localhost:3000/users`, user)
   }
 
-  public getUserById(id: string): Observable<UserForm>{
-    return this.http.get<UserForm>(`http://localhost:3000/users/${id}`)
+  public getUserById(id: number): Observable<User>{
+    return this.http.get<User>(`http://localhost:3000/users/${id}`)
   }
 
-  public editUser(user: UserForm, id: string): Observable<UserForm> {
+  public editUser(user: UserForm, id: number): Observable<UserForm> {
     return this.http.put<UserForm>(`http://localhost:3000/users/${id}`, user)
   } 
 
