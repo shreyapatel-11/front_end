@@ -11,16 +11,19 @@ import { SiblingService } from '../sibling.service';
 export class FormSiblingComponent implements OnInit {
 
   public userForm: FormGroup;
+  public editMode: false;
   // userData: import("c:/Users/shreya.patel/Desktop/git/front_end/reactiveForm/src/app/mvp/mvp.model").User;
   // public uName: string;
   constructor(private fb: FormBuilder, private siblingService: SiblingService) { 
-    this.siblingService.userData.subscribe(data => {
-      this.userData = data;
-    })
   }
 
   ngOnInit(): void {
-    this.userForm = this.buildForm()
+    this.userForm = this.buildForm();
+    this.siblingService.editData.subscribe((res) => {
+      this.userForm.patchValue(res);
+      // editMode: true;
+    })
+
   }
    
   buildForm(){
@@ -31,14 +34,15 @@ export class FormSiblingComponent implements OnInit {
     })
   }
 
-  userName: string ="hello";
+  // userName: string ="hello";
 
   onSubmit(){
+    console.log(this.userForm.value);
     this.siblingService.userData.next(this.userForm.value);
   }
   
-  onSubmitButton(uName: { value: string; }){
-    // this.userName = uName.value;
-    this.siblingService.userName.next(uName.value);
-  }
+  // onSubmitButton(uName: { value: string; }){
+  //   // this.userName = uName.value;
+  //   this.siblingService.userName.next(uName.value);
+  // }
 }
