@@ -34,11 +34,13 @@ const routes: Routes = [
     loadChildren: () => import('./crud-static/crud-static.module').then(m => m.CrudStaticModule)
   },
   { 
-    path: 'mvp', loadChildren: () => import('./mvp/mvp.module').then(m => m.MvpModule) 
+    path: 'mvp', 
+    loadChildren: () => import('./mvp/mvp.module').then(m => m.MvpModule) 
   },
   { 
     path: 'sibling', loadChildren: () => import('./sibling/sibling.module').then(m => m.SiblingModule) 
   },
+  { path: 'mentor', loadChildren: () => import('./mentor/mentor.module').then(m => m.MentorModule) },
  
   
 ];

@@ -11,7 +11,9 @@ export class ListSiblingComponent implements OnInit {
   
   // userName: string;
 
-  filterData:User;
+ 
+  public editMode:boolean = false;
+
   public uData:User[] = [
     {
       id: 1,
@@ -19,7 +21,21 @@ export class ListSiblingComponent implements OnInit {
       age: 21,
       gender: 'female',
     },
+    {
+      id: 2,
+      name: 'shreya',
+      age: 19,
+      gender: 'female',
+    },
+    {
+      id: 3,
+      name: 'Honey',
+      age: 18,
+      gender: 'female',
+    },
   ]
+  userdata: User[] = [];
+  activeId: number;
   constructor(private siblingService: SiblingService) { 
     // this.siblingService.userName.subscribe(uName => {
     //   this.userName = uName;
@@ -27,15 +43,33 @@ export class ListSiblingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.siblingService.userData.subscribe(res => this.uData.push(res));
+    this.siblingService.userData.subscribe((data) => {
+      console.log(this.activeId)
+      if (this.editMode) {
+        this.uData[this.activeId] = data;
+        this.editMode = false;
+      } 
+      else {
+        this.uData.push(data);
+        // console.log(data)
+      }
+    }); 
   }
 
-  onEdit(id:number){
-    this.filterData = this.uData[id-1];
-    this.siblingService.editData.next(this.filterData);
+  onEdit(id: number): void {
+    this.siblingService.saveDatatoEdit(this.uData[id]);
+    this.editMode = true;
+    this.activeId = id;
   }
+
+  
+  updateUser(id: number, data: User): void {
+    this.uData[this.uData.findIndex((val) => id == val.id)] = {...data, id: id};
+  }
+
 
   onDelete(id:number){
-    
+    let index = this.uData.findIndex(x => x.id == id);
+    this.uData.splice(index,1);
   }
 }

@@ -1,24 +1,6 @@
 {
   "users": [
     {
-      "name": "Shreya",
-      "age": "21",
-      "gender": "Female",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Nirali",
-      "age": "23",
-      "gender": "Female"
-    },
-    {
-      "id": 3,
-      "name": "Parth",
-      "age": "23",
-      "gender": "Male"
-    },
-    {
       "name": "Ayushi",
       "age": "23",
       "gender": "Female",
@@ -171,16 +153,6 @@
       "department": "1",
       "date": "2022-02-28",
       "id": 18
-    },
-    {
-      "firstName": "Honey",
-      "lastName": "Patel",
-      "email": "ab@gmail.com",
-      "mobile": 9999988888,
-      "gender": "female",
-      "date": "2022-03-01",
-      "department": "3",
-      "id": 19
     }
   ],
   "resumeData": [

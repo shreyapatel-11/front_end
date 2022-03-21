@@ -22,11 +22,12 @@
     <tbody>
       <tr class="align-middle" *ngFor="let user of uData; let i = index">
         <td>{{ i+1 }}</td>
+        <!-- <td>{{ user.id }}</td> -->
         <td>{{ user.name }}</td>
         <td>{{ user.age }}</td>
         <td>{{ user.gender }}</td>
         <td>
-          <button class="btn btn-primary me-2" (click)="onEdit(user.id)">Edit</button>
+          <button class="btn btn-primary me-2" (click)="onEdit(i)">Edit</button>
           <button class="btn btn-danger" (click)="onDelete(user.id)">Delete</button>
         </td>
       </tr>
