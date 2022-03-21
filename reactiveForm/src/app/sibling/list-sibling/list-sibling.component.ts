@@ -61,7 +61,6 @@ export class ListSiblingComponent implements OnInit {
     this.editMode = true;
     this.activeId = id;
   }
-
   
   updateUser(id: number, data: User): void {
     this.uData[this.uData.findIndex((val) => id == val.id)] = {...data, id: id};
