@@ -1,4 +1,7 @@
 <p>mentor-form-container works!</p>
-<app-mentor-form-presentation>
+<app-mentor-form-presentation 
+    [mentorData]="mentorData$ |async"
+    (add)="addMentor($event)"
+>
     
 </app-mentor-form-presentation>

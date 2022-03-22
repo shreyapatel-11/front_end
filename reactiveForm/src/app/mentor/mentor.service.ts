@@ -10,7 +10,14 @@ export class MentorService {
 
   constructor(private http: HttpClient) { }
 
-  public getCustomers(): Observable<Mentor[]> {
-    return this.http.get<Mentor[]>(' http://localhost:3000/mentors')
+  public getMentors(): Observable<Mentor[]> {
+    return this.http.get<Mentor[]>(`http://localhost:3000/mentors`)
   }
+  public addMentors(form: Mentor): Observable<Mentor> {
+    return this.http.post<Mentor>(`http://localhost:3000/mentors`, form)
+  }
+  public deleteMentors(id: number) {
+    return this.http.delete(`http://localhost:3000/mentors/${id}`)
+  }
+
 }

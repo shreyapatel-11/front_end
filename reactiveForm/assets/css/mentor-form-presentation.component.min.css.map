@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/mentor/mentor-form-container/mentor-form-presentation/mentor-form-presentation.component.scss"
+    ],
+    "names": [],
+    "file": "mentor-form-presentation.component.min.css"
+}

@@ -13,6 +13,24 @@
       "age": "23",
       "gender": "Male",
       "id": 1
+    },
+    {
+      "name": "Honey Patel",
+      "age": "21",
+      "gender": "Female",
+      "id": 4
+    },
+    {
+      "name": "Shreya Patel",
+      "age": "21",
+      "gender": "Female",
+      "id": 6
+    },
+    {
+      "name": "Honey Patel",
+      "age": "21",
+      "gender": "Female",
+      "id": 7
     }
   ],
   "department": [

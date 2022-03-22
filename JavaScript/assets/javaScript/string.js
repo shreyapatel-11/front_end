@@ -1,4 +1,4 @@
-let text= "shreya patel ,hii Hello!!, Welcome to js, Hello";
+let text1= "shreya patel ,hii Hello!!, Welcome to js, Hello";
 let text2= "angular"
 let s1 = "hii";
 let s2 = "hii";
@@ -56,3 +56,4 @@ console.log(text.replace("Hello", "Hii"))
 console.log(text.replace(/Hello/g, "Hii"))
 // case sensitive
 console.log(text.replace(/Hello/gi, "Hii"))
+

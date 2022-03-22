@@ -9,6 +9,7 @@ import { MentorFormPresentationComponent } from './mentor-form-container/mentor-
 import { MentorListPresentationComponent } from './mentor-list-container/mentor-list-presentation/mentor-list-presentation.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MentorService } from './mentor.service';
 
 
 @NgModule({
@@ -24,6 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     MentorRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+  ],
+  providers: [
+    MentorService
   ]
 })
 export class MentorModule { }

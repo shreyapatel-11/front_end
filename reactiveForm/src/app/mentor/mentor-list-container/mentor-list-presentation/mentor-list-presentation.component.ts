@@ -1,15 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Mentor } from '../../model/mentor.model';
+import { MentorListPresenterService } from '../mentor-list-presenter/mentor-list-presenter.service';
 
 @Component({
   selector: 'app-mentor-list-presentation',
   templateUrl: './mentor-list-presentation.component.html',
-  styleUrls: ['./mentor-list-presentation.component.scss']
+  styleUrls: ['./mentor-list-presentation.component.scss'],
+  viewProviders: [MentorListPresenterService],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MentorListPresentationComponent implements OnInit {
 
-  constructor() { }
+  @Input() public set mentorList(value : Mentor[] | null) {
+    if(value){
 
-  ngOnInit(): void {
+      this._mentorList = value;
+    }
   }
 
+  @Output() public delete: EventEmitter<number>;
+
+  public get mentorList() : Mentor[] {
+    return this._mentorList;
+  }
+  
+  
+  private _mentorList: Mentor[];
+  constructor(private mentorListPresenter: MentorListPresenterService) { 
+    this.delete = new EventEmitter();
+  }
+
+  ngOnInit(): void {
+    this.mentorListPresenter.delete$.subscribe((data: number) => {
+      this.delete.emit(data);
+    })
+  }
+
+  onDelete(id: number){
+    this.mentorListPresenter.onDelete(id);
+  }
 }

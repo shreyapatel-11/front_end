@@ -26,7 +26,7 @@ import { MentorModule } from './mentor/mentor.module';
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
-    MentorModule,
+    // MentorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

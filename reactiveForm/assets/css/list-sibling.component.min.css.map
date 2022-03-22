@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/sibling/list-sibling/list-sibling.component.scss"
+    ],
+    "names": [],
+    "file": "list-sibling.component.min.css"
+}

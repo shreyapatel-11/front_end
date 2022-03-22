@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/mentor/mentor-list-container/mentor-list-container.component.scss"
+    ],
+    "names": [],
+    "file": "mentor-list-container.component.min.css"
+}

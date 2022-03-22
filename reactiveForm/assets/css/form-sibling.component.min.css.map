@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/sibling/form-sibling/form-sibling.component.scss"
+    ],
+    "names": [],
+    "file": "form-sibling.component.min.css"
+}

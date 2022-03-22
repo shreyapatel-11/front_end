@@ -3,6 +3,7 @@ export class Mentor {
     public name: string;
     public age: string;
     public gender: string;
+  static value: Mentor;
     constructor(
       id: number,
       name: string,
