@@ -7,6 +7,14 @@
       "id": 4
     }
   ],
+  "mentors": [
+    {
+      "name": "Hiren",
+      "age": "23",
+      "gender": "Male",
+      "id": 1
+    }
+  ],
   "department": [
     {
       "id": 1,
