@@ -15,6 +15,9 @@ const routes: Routes = [
       },
       {
         path:'add', component: MentorFormContainerComponent
+      },
+      {
+        path:'edit/:id', component: MentorFormContainerComponent
       }
     ]
   }

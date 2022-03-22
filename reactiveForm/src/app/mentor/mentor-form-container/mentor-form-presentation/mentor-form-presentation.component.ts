@@ -16,8 +16,8 @@ export class MentorFormPresentationComponent implements OnInit {
   @Input() public set mentorData(value : Mentor | null) {
     if(value){
       console.log(value);
+      this.mentorForm.patchValue(value);
       this._mentorData = value;
-
     }
   }
 
@@ -26,17 +26,23 @@ export class MentorFormPresentationComponent implements OnInit {
   }
   
   @Output() public add: EventEmitter<Mentor>;
-   
+  @Output() public edit: EventEmitter<Mentor>;
+
+  public isEditMode: boolean = false;
   public mentorForm: FormGroup;
   private _mentorData: Mentor;
 
   constructor(private mentorFormPresenter: MentorFormPresenterService) { 
     this.mentorForm = this.mentorFormPresenter.buildForm();
     this.add = new EventEmitter();
+    this.edit = new EventEmitter();
   }
 
   ngOnInit(): void {
     this.mentorFormPresenter.mentorFormData$.subscribe((data: Mentor) => {
+      if(!this.isEditMode){
+        this.edit.emit(data);
+      }
       this.add.emit(data);
     })
   }
