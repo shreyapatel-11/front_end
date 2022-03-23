@@ -21,16 +21,16 @@
       "id": 4
     },
     {
-      "name": "Shreya Patel",
+      "name": "Honey Patel",
       "age": "21",
       "gender": "Female",
-      "id": 6
+      "id": 8
     },
     {
       "name": "Honey Patel",
       "age": "21",
       "gender": "Female",
-      "id": 7
+      "id": 9
     }
   ],
   "department": [
@@ -111,13 +111,13 @@
   ],
   "Employee": [
     {
-      "firstName": "Panth",
-      "lastName": "Patel",
+      "name": "Maitry",
       "email": "p@gmail.com",
       "mobile": 999999998,
-      "gender": "male",
-      "date": "2022-02-01",
+      "city": "Navsari",
+      "gender": "female",
       "department": "3",
+      "date": "2022-02-01",
       "id": 6
     },
     {
@@ -135,8 +135,8 @@
       "email": "ab@gmail.com",
       "mobile": "9999988888",
       "city": "valsad",
-      "gender": null,
-      "department": "",
+      "gender": "female",
+      "department": "1",
       "date": null,
       "id": 8
     },

@@ -12,8 +12,9 @@ import { Mentor } from '../model/mentor.model';
 export class MentorFormContainerComponent implements OnInit {
 
   public mentorData$: Observable<Mentor>;
-  public id: number;
-  // public id!: string;
+  // public id: number;
+  public id!: string;
+  public isEditMode: boolean = true;
 
   constructor(private mentorService: MentorService, private router: Router, private activateRoute: ActivatedRoute) { 
     this.mentorData$ = new Observable();
@@ -36,7 +37,7 @@ export class MentorFormContainerComponent implements OnInit {
   }
 
   editMentor(mentor: Mentor){
-    this.mentorService.editMentors(mentor, this.id).subscribe((data: Mentor) => {
+    this.mentorService.editMentors(this.id, mentor).subscribe((data: Mentor) => {
       alert("Edit Successfully");
       this.router.navigateByUrl('mentor/list');
     })

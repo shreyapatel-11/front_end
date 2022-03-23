@@ -18,11 +18,11 @@ export class MentorService {
     return this.http.post<Mentor>(`http://localhost:3000/mentors`, form)
   }
 
-  public getMentorById(id:number): Observable<Mentor> {
+  public getMentorById(id: string): Observable<Mentor> {
     return this.http.get<Mentor>(`http://localhost:3000/mentors/${id}`)
   }
 
-  public editMentors(id:number, form: Mentor): Observable<Mentor> {
+  public editMentors(id: string, form: Mentor): Observable<Mentor> {
     return this.http.put<Mentor>(`http://localhost:3000/mentors/${id}`, form)
   }
   

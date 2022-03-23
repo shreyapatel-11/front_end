@@ -6,9 +6,10 @@ import { MvpComponent } from './mvp.component';
 import { UserContainerComponent } from './user-container/user-container.component';
 import { UserFormPresentationComponent } from './user-container/user-form-presentation/user-form-presentation.component';
 import { UserListPresentationComponent } from './user-container/user-list-presentation/user-list-presentation.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MvpService } from './mvp.service';
+import { JwtInterceptor } from './jwt.interceptor';
 
 
 @NgModule({
@@ -25,6 +26,9 @@ import { MvpService } from './mvp.service';
     ReactiveFormsModule
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true
+    },
     MvpService
   ]
 })

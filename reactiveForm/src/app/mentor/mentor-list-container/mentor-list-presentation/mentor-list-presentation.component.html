@@ -17,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="align-middle" *ngFor="let mentor of mentorList">
+      <tr class="align-middle" *ngFor="let mentor of mentorList; let i = index">
         <td>{{ mentor.id }}</td>
         <td>{{ mentor.name }}</td>
         <td>{{ mentor.age }}</td>
