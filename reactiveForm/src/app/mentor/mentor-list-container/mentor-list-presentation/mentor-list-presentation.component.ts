@@ -1,9 +1,10 @@
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MentorFormComponent } from '../../mentor-form/mentor-form.component';
-import { Mentor } from '../../model/mentor.model';
+
+import { Mentor, MentorForm } from '../../model/mentor.model';
 import { MentorListPresenterService } from '../mentor-list-presenter/mentor-list-presenter.service';
 
 @Component({
@@ -24,10 +25,16 @@ export class MentorListPresentationComponent implements OnInit {
   public get mentorList() : Mentor[] {
     return this._mentorList;
   }
-  
+
+  public mentorFotm: FormGroup;
+
+  public filterMentorList: MentorForm;
+
   @Output() public delete: EventEmitter<number>;
   
-  private _mentorList: Mentor[];
+  private _mentorList!: Mentor[];
+  public mentorListData: Mentor[];
+
   constructor(private mentorListPresenter: MentorListPresenterService, private router: Router, private cdr: ChangeDetectorRef) { 
     this.delete = new EventEmitter();
   }
@@ -36,7 +43,6 @@ export class MentorListPresentationComponent implements OnInit {
     this.mentorListPresenter.delete$.subscribe((data: number) => {
       this.delete.emit(data);
     });
-
     this.filterMentor();
   }
 
@@ -52,9 +58,14 @@ export class MentorListPresentationComponent implements OnInit {
    this.mentorListPresenter.openOverlay();
   }
   filterMentor(){
-    this.mentorListPresenter.mentorData$.subscribe(data => {
-      const newMentor = this._mentorList.filter(data => data.name === data.name);
-      this._mentorList = newMentor;
+    debugger
+    this.mentorListPresenter.filterData$.subscribe((res) => {
+      console.log("hii");
+      const newMentorData = this._mentorList.filter(data => {
+        return data.name === res.filtername
+      });
+      this._mentorList = newMentorData;
+      // console.log(newMentorData);
       this.cdr.detectChanges();
     })
   }

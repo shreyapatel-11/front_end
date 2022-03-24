@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MentorService } from './mentor.service';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MentorFormComponent } from './mentor-form/mentor-form.component';
+import { FilterFormPresentationComponent } from './mentor-list-container/filter-form-presentation/filter-form-presentation.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MentorFormComponent } from './mentor-form/mentor-form.component';
     MentorListContainerComponent,
     MentorFormPresentationComponent,
     MentorListPresentationComponent,
-    MentorFormComponent
+    MentorFormComponent,
+    FilterFormPresentationComponent
   ],
   imports: [
     CommonModule,

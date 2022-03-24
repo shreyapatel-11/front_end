@@ -23,7 +23,7 @@ export class MentorFormComponent implements OnInit {
   }
 
   builForm() {
-    this.mentorForm = this.fb.group({
+    return this.mentorForm = this.fb.group({
       name: [''],
       age: [''],
       gender: ['']
@@ -31,8 +31,8 @@ export class MentorFormComponent implements OnInit {
   }
 
   onSubmit(){
-    alert("hii");
-    this.filterData.emit(this.mentorForm.value);
-    
+    // alert("hii");
+    console.log(this.mentorForm.value)
+    this.filterData.emit(this.mentorForm.value);  
   }
 }

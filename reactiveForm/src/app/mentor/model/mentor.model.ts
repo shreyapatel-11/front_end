@@ -19,19 +19,8 @@ export class Mentor {
 
 export class MentorForm {
     
-    public name: string;
+    public filtername: string;
     public age: string;
     public gender: string;
-  static value: Mentor;
-    constructor(
-     
-      name: string,
-      age: string,
-      gender: string
-    ) {
-    
-      this.name = name;
-      this.age = age;
-      this.gender = gender;
-    }
+
   }

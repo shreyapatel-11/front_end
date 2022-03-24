@@ -2,15 +2,17 @@ import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable, Input } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { MentorFormComponent } from '../../mentor-form/mentor-form.component';
 import { MentorForm } from '../../model/mentor.model';
+import { FilterFormPresentationComponent } from '../filter-form-presentation/filter-form-presentation.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MentorListPresenterService {
 
-  public mentorData$: Subject<MentorForm>;
+  public filterData$: Subject<MentorForm>;
+ 
+  public filterdata: MentorForm;
 
   private delete: Subject<number>;
   public delete$: Observable<number>;
@@ -21,7 +23,8 @@ export class MentorListPresenterService {
     this.delete$ = new Observable();
     this.delete$ = this.delete.asObservable();
 
-    this.mentorData$ = new Subject();
+    this.filterData$ = new Subject<MentorForm>();
+
   }
 
   onDelete(id: number){
@@ -33,7 +36,7 @@ export class MentorListPresenterService {
     config.hasBackdrop = true;
     config.positionStrategy = this.overlay.position().global().right();
     const overlayRef = this.overlay.create(config);
-    const component = new ComponentPortal(MentorFormComponent);
+    const component = new ComponentPortal(FilterFormPresentationComponent);
     const componentRef = overlayRef.attach(component);
 
     overlayRef.backdropClick().subscribe(() => {
@@ -41,8 +44,9 @@ export class MentorListPresenterService {
     });
 
     componentRef.instance.filterData.subscribe((data) => {
-      this.mentorData$.next(data);
-    })
+      this.filterData$.next(data);
+      overlayRef.detach();
+    });
   }
   
 }
