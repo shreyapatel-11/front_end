@@ -10,6 +10,8 @@ import { MentorListPresentationComponent } from './mentor-list-container/mentor-
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MentorService } from './mentor.service';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MentorFormComponent } from './mentor-form/mentor-form.component';
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import { MentorService } from './mentor.service';
     MentorFormContainerComponent,
     MentorListContainerComponent,
     MentorFormPresentationComponent,
-    MentorListPresentationComponent
+    MentorListPresentationComponent,
+    MentorFormComponent
   ],
   imports: [
     CommonModule,
     MentorRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    OverlayModule
   ],
   providers: [
     MentorService
