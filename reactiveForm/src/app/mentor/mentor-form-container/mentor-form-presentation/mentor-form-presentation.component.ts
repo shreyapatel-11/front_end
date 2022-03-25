@@ -41,7 +41,7 @@ export class MentorFormPresentationComponent implements OnInit {
 
   ngOnInit(): void {
     this.mentorFormPresenter.mentorFormData$.subscribe((data: Mentor) => {
-      debugger
+      // debugger
       if(this.isEditMode){
         this.edit.emit(data);
       }

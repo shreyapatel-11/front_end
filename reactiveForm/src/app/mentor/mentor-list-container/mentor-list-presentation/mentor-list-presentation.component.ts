@@ -26,7 +26,7 @@ export class MentorListPresentationComponent implements OnInit {
     return this._mentorList;
   }
 
-  public mentorFotm: FormGroup;
+  public mentorFom: FormGroup;
 
   public filterMentorList: MentorForm;
 
@@ -58,11 +58,29 @@ export class MentorListPresentationComponent implements OnInit {
    this.mentorListPresenter.openOverlay();
   }
   filterMentor(){
+    this.mentorListPresenter.filterMentor
     this.mentorListPresenter.filterData$.subscribe((res) => {
+      debugger
       console.log(res);
       const newMentorData = this._mentorList.filter(data => {
         return data.name == res.name
       });
+      // if(!(mentor.age === "")){
+      //   const newMentorData = this._mentorList.filter(data => {
+      //     return data.age == res.age;
+      //   })
+      // }
+      // else if(!(mentor.gender === "")){
+      //   this._mentorList.filter(data => {
+      //     return data.gender == res.gender;
+      //   })
+      // }
+      // else{
+      //   this._mentorList.filter(data => {
+      //     return data.name == res.name;
+      //   })
+      // }
+    
       // debugger
       this._mentorList = newMentorData;
       this.cdr.detectChanges();

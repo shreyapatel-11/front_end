@@ -18,7 +18,9 @@ export class FilterFormPresenterService {
     return this.mentorForm = this.fb.group({
       name: [''],
       age: [''],
-      gender: ['']
+      gender: [''],
+      email: [''],
+      experience: ['']
     })
   }
 

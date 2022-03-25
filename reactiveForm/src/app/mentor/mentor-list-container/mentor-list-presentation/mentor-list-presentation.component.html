@@ -7,12 +7,14 @@
     </div>
   </div>
   
-  <table class="table caption-top border">
+  <table class="table caption-top border text-center">
     <thead>
       <tr>
         <th scope="col">User Id</th>
         <th scope="col">Name</th>
         <th scope="col">Age</th>
+        <th scope="col">Email</th>
+        <th scope="col">Experience(Year)</th>
         <th scope="col">Gender</th>
         <th scope="col">Actions</th>
       </tr>
@@ -22,6 +24,8 @@
         <td>{{ mentor.id }}</td>
         <td>{{ mentor.name }}</td>
         <td>{{ mentor.age }}</td>
+        <td>{{ mentor.email }}</td>
+        <td>{{ mentor.experience }}</td>
         <td>{{ mentor.gender }}</td>
         <td>
           <button class="btn btn-primary me-2" (click)="onEdit(mentor.id)">Edit</button>

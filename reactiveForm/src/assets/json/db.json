@@ -9,50 +9,58 @@
   ],
   "mentors": [
     {
-      "name": "Hiren",
-      "age": "23",
-      "gender": "Male",
-      "id": 1
-    },
-    {
       "name": "Honey Patel",
       "age": "21",
+      "email": "honey@gmail.com",
+      "experience": 1,
       "gender": "Female",
       "id": 4
     },
     {
       "name": "Honey Patel",
       "age": "21",
+      "email": "honey@gmail.com",
+      "experience": 2,
       "gender": "Female",
       "id": 8
     },
     {
       "name": "Honey Patel",
       "age": "18",
+      "email": "honey@gmail.com",
+      "experience": 1.5,
       "gender": "Female",
       "id": 9
     },
     {
       "name": "Shreya Patel",
       "age": "21",
+      "email": "shreya@gmail.com",
+      "experience": 1,
       "gender": "Female",
       "id": 11
     },
     {
       "name": "Nirali",
       "age": "23",
+      "email": "nirali@gmailcom",
+      "experience": 1,
       "gender": "Female",
       "id": 12
     },
     {
       "name": "Nirali",
       "age": "22",
+      "email": "nirali@gmailcom",
+      "experience": 3,
       "gender": "Female",
       "id": 13
     },
     {
       "name": "Maitry",
       "age": "21",
+      "email": "maitry@gmail.com",
+      "experience": 2,
       "gender": "Female",
       "id": 14
     }

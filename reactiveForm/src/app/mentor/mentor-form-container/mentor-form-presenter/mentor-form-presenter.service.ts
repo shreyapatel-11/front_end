@@ -21,6 +21,8 @@ export class MentorFormPresenterService {
     return this.fb.group({
       name: ['',Validators.required],
       age: ['',Validators.required],
+      email: ['',Validators.required],
+      experience: ['',Validators.required],
       gender: ['',Validators.required],
     })
   }

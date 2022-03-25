@@ -2,7 +2,7 @@ import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable, Input } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { MentorForm } from '../../model/mentor.model';
+import { Mentor, MentorForm } from '../../model/mentor.model';
 import { FilterFormPresentationComponent } from '../filter-form-presentation/filter-form-presentation.component';
 
 @Injectable({
@@ -13,6 +13,7 @@ export class MentorListPresenterService {
   public filterData$: Subject<MentorForm>;
  
   public filterdata: MentorForm;
+  public mentorList: Mentor[];
 
   private delete: Subject<number>;
   public delete$: Observable<number>;
@@ -47,6 +48,13 @@ export class MentorListPresenterService {
       this.filterData$.next(data);
       overlayRef.detach();
     });
+  }
+  filterMentor(filter: MentorForm){
+    if(!(filter.age === "")){
+      this.mentorList = this.mentorList.filter(data => {
+        return data.age == filter.age;
+      })
+    }
   }
   
 }

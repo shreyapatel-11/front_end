@@ -2,6 +2,8 @@ export class Mentor {
     public id: number;
     public name: string;
     public age: string;
+    public email: string;
+    public experience: number;
     public gender: string;
   static value: Mentor;
     constructor(
@@ -22,5 +24,7 @@ export class MentorForm {
     public name: string;
     public age: string;
     public gender: string;
+    public email: string;
+    public experience: number;
 
   }
