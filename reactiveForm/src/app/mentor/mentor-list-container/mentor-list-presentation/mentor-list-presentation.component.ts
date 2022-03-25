@@ -58,15 +58,15 @@ export class MentorListPresentationComponent implements OnInit {
    this.mentorListPresenter.openOverlay();
   }
   filterMentor(){
-    debugger
     this.mentorListPresenter.filterData$.subscribe((res) => {
-      console.log("hii");
+      console.log(res);
       const newMentorData = this._mentorList.filter(data => {
-        return data.name === res.filtername
+        return data.name == res.name
       });
+      // debugger
       this._mentorList = newMentorData;
-      // console.log(newMentorData);
       this.cdr.detectChanges();
+      // console.log(this._mentorList);
     })
   }
 }

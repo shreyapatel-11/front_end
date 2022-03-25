@@ -25,9 +25,9 @@ export class FilterFormPresentationComponent implements OnInit {
   }
 
   onApply(){
-    // this.filterFormPresenter.onApply();
+   
     this.filterData.emit(this.mentorForm.value);
-    console.log(this.mentorForm.value);
+    // console.log(this.mentorForm.value);
   }
 
 }

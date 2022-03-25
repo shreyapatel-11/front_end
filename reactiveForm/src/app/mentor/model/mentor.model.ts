@@ -19,7 +19,7 @@ export class Mentor {
 
 export class MentorForm {
     
-    public filtername: string;
+    public name: string;
     public age: string;
     public gender: string;
 
