@@ -34,18 +34,21 @@ export class MentorListPresentationComponent implements OnInit {
   
   private _mentorList!: Mentor[];
   public mentorListData: Mentor[];
+  public pageOfItems: Mentor[];
 
   constructor(private mentorListPresenter: MentorListPresenterService, private router: Router, private cdr: ChangeDetectorRef) { 
     this.delete = new EventEmitter();
+    this.pageOfItems = [];
   }
 
   ngOnInit(): void {
     this.mentorListPresenter.delete$.subscribe((data: number) => {
       this.delete.emit(data);
     });
-    // this.filterMentor();
-    this.mentorListPresenter.filterData$.subscribe(data => {
 
+    // this.filterMentor();
+
+    this.mentorListPresenter.filterData$.subscribe(data => {
       this.filterData(data);
     })
   }
@@ -61,32 +64,42 @@ export class MentorListPresentationComponent implements OnInit {
   onOverlay(){
    this.mentorListPresenter.openOverlay();
   }
-  // filterMentor(){
-  //   this.mentorListPresenter.filterData$.subscribe((res) => {
-  //     debugger
-  //     console.log(res);
-  //     const newMentorData = this._mentorList.filter(data => {
-  //       return data.name == res.name
-  //     });
-  //     // debugger
-  //     this._mentorList = newMentorData;
-  //     this.cdr.detectChanges();
-  //     // console.log(this._mentorList);
-  //   })
-  // }
+  filterMentor(){
+    this.mentorListPresenter.filterData$.subscribe((res) => {
+      debugger
+      console.log(res);
+      const newMentorData = this._mentorList.filter(data => {
+        return data.name == res.name
+      });
+      // debugger
+      this._mentorList = newMentorData;
+      this.cdr.detectChanges();
+      // console.log(this._mentorList);
+    })
+  }
 
   filterData(data: any){
-    if(!this.filterMentorList){
-      this.filterMentorList = [...this._mentorList];
+    console.log(data);
+    if(!this.mentorListData){
+      this.mentorListData = [...this._mentorList];
     }
-    const keys: string[] = Object.keys(data);
 
+    const keys: string[] = Object.keys(data);
+   
     keys.forEach((key: any) => {
       if(data[key]) {
-        this.filterMentorList = this.filterMentorList.filter((res: any) => {
-          return res[key].toString().toLowerCase()  === data[key].toString().toLowerCase();
+       
+        this.mentorListData = this.mentorListData.filter((res: any) => {
+          return res[key].toString().toLowerCase() === data[key].toString().toLowerCase();
+          // console.log("hii");
         })
       }
     })
+    this._mentorList = this.mentorListData;
+    debugger
   } 
+  // onChangePage(pageOfItems: Array<any>) {
+  //   // update current page of items
+  //   this.pageOfItems = pageOfItems;
+  // }
 }

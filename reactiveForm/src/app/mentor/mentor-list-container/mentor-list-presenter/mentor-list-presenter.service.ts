@@ -49,7 +49,7 @@ export class MentorListPresenterService {
 
     componentRef.instance.filterData.subscribe((data) => {
       this.filterData.next(data);
-      overlayRef.detach();
+      // overlayRef.detach();
     });
   }
   filterMentor(filter: MentorForm){
