@@ -10,7 +10,8 @@ import { FilterFormPresentationComponent } from '../filter-form-presentation/fil
 })
 export class MentorListPresenterService {
 
-  public filterData$: Subject<MentorForm>;
+  private filterData: Subject<MentorForm>;
+  public filterData$: Observable<MentorForm>;
  
   public filterdata: MentorForm;
   public mentorList: Mentor[];
@@ -24,7 +25,9 @@ export class MentorListPresenterService {
     this.delete$ = new Observable();
     this.delete$ = this.delete.asObservable();
 
-    this.filterData$ = new Subject<MentorForm>();
+    this.filterData = new Subject<MentorForm>();
+    this.filterData$ = new Observable<MentorForm>();
+    this.filterData$ = this.filterData.asObservable();
 
   }
 
@@ -45,7 +48,7 @@ export class MentorListPresenterService {
     });
 
     componentRef.instance.filterData.subscribe((data) => {
-      this.filterData$.next(data);
+      this.filterData.next(data);
       overlayRef.detach();
     });
   }

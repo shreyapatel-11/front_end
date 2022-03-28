@@ -41,6 +41,7 @@ const routes: Routes = [
     path: 'sibling', loadChildren: () => import('./sibling/sibling.module').then(m => m.SiblingModule) 
   },
   { path: 'mentor', loadChildren: () => import('./mentor/mentor.module').then(m => m.MentorModule) },
+  { path: 'login', loadChildren: () => import('./core/login/login.module').then(m => m.LoginModule) },
  
   
 ];

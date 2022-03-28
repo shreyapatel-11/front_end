@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans&family=Roboto&display=swap');
-@import "~bootstrap/dist/css/bootstrap.css";
-// @import "~node_modules/bootstrap/scss/bootstrap.scss";
+
 @import '@angular/cdk/overlay-prebuilt.css';
+
+@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~src/assets/scss/base/index";
+// @import "~src/assets/scss/vendor/bootstrap-base";
+// @import "~src/assets/scss/vendor/bootstrap-components";
+// @import "~src/assets/scss/component/index";
 
 *{
     margin: 0;

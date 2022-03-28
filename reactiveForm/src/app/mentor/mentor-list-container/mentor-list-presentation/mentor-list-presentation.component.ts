@@ -28,7 +28,7 @@ export class MentorListPresentationComponent implements OnInit {
 
   public mentorFom: FormGroup;
 
-  public filterMentorList: MentorForm;
+  public filterMentorList: MentorForm[];
 
   @Output() public delete: EventEmitter<number>;
   
@@ -43,7 +43,11 @@ export class MentorListPresentationComponent implements OnInit {
     this.mentorListPresenter.delete$.subscribe((data: number) => {
       this.delete.emit(data);
     });
-    this.filterMentor();
+    // this.filterMentor();
+    this.mentorListPresenter.filterData$.subscribe(data => {
+
+      this.filterData(data);
+    })
   }
 
   onDelete(id: number){
@@ -57,34 +61,32 @@ export class MentorListPresentationComponent implements OnInit {
   onOverlay(){
    this.mentorListPresenter.openOverlay();
   }
-  filterMentor(){
-    this.mentorListPresenter.filterMentor
-    this.mentorListPresenter.filterData$.subscribe((res) => {
-      debugger
-      console.log(res);
-      const newMentorData = this._mentorList.filter(data => {
-        return data.name == res.name
-      });
-      // if(!(mentor.age === "")){
-      //   const newMentorData = this._mentorList.filter(data => {
-      //     return data.age == res.age;
-      //   })
-      // }
-      // else if(!(mentor.gender === "")){
-      //   this._mentorList.filter(data => {
-      //     return data.gender == res.gender;
-      //   })
-      // }
-      // else{
-      //   this._mentorList.filter(data => {
-      //     return data.name == res.name;
-      //   })
-      // }
-    
-      // debugger
-      this._mentorList = newMentorData;
-      this.cdr.detectChanges();
-      // console.log(this._mentorList);
+  // filterMentor(){
+  //   this.mentorListPresenter.filterData$.subscribe((res) => {
+  //     debugger
+  //     console.log(res);
+  //     const newMentorData = this._mentorList.filter(data => {
+  //       return data.name == res.name
+  //     });
+  //     // debugger
+  //     this._mentorList = newMentorData;
+  //     this.cdr.detectChanges();
+  //     // console.log(this._mentorList);
+  //   })
+  // }
+
+  filterData(data: any){
+    if(!this.filterMentorList){
+      this.filterMentorList = [...this._mentorList];
+    }
+    const keys: string[] = Object.keys(data);
+
+    keys.forEach((key: any) => {
+      if(data[key]) {
+        this.filterMentorList = this.filterMentorList.filter((res: any) => {
+          return res[key].toString().toLowerCase()  === data[key].toString().toLowerCase();
+        })
+      }
     })
-  }
+  } 
 }
