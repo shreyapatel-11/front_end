@@ -7,8 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { DeletePopupComponent } from './shared/delete-popup/delete-popup.component';
-import { MentorModule } from './mentor/mentor.module';
-import { PaginationComponent } from './shared/pagination/pagination.component';
 
 // import { SearchesPipe } from './assesment-1/module/pipes/searches.pipe';
 // import { DepartmentsPipe } from './assesment-1/module/pipes/departments.pipe';
@@ -19,7 +17,6 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
   declarations: [
     AppComponent,
     DeletePopupComponent,
-    PaginationComponent,
     // SearchesPipe,
     // DepartmentsPipe,
   ],

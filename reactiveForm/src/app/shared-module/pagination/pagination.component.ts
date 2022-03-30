@@ -7,8 +7,6 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@
 })
 export class PaginationComponent implements OnInit {
 
-  constructor() { }
-
   @Input() items: Array<any>;
   @Output() changePage = new EventEmitter<any>();
   @Input() initialPage = 1;
@@ -17,28 +15,32 @@ export class PaginationComponent implements OnInit {
 
   pager: any = {};
 
+  constructor() { }
 
   ngOnInit(): void {
     if (this.items && this.items.length) {
-      this.setPage(this.initialPage);
-    }
+      this.setPage(this.initialPage); 
+  }
   }
 
   ngOnChanges(changes: SimpleChanges) {
     // reset page if items array has changed
     if (changes['items'].currentValue !== changes['items'].previousValue) {
       this.setPage(this.initialPage);
+      console.log(this.pager.totalPages);
     }
   }
 
   setPage(page: number) {
     // get new pager object for specified page
     this.pager = this.paginate(this.items.length, page, this.itemsPerPage, this.maxPages);
-
+    
     // get new page of items from items array
     var pageOfItems = this.items.slice(this.pager.startIndex, this.pager.endIndex + 1);
-
+    
+    // console.log(pageOfItems,'page pf Index here')
     // call change page function in parent component
+
     this.changePage.emit(pageOfItems);
   }
 

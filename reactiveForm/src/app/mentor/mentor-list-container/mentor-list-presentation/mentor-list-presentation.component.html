@@ -34,5 +34,4 @@
       </tr>
     </tbody>
   </table>
-  <!-- <app-pagination [items]="userList  (changePage)="onChangePage($event)"></app-pagination> -->
-  <!-- <app-pagination></app-pagination> -->
+  <app-pagination [items]="mentorList" [itemsPerPage]="5" (changePage)="changePage($event)"></app-pagination>

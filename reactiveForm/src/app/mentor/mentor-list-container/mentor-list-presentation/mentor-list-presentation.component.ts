@@ -32,8 +32,9 @@ export class MentorListPresentationComponent implements OnInit {
 
   @Output() public delete: EventEmitter<number>;
   
-  private _mentorList!: Mentor[];
   public mentorListData: Mentor[];
+  public mentor: Mentor[];
+  private _mentorList!: Mentor[];
   public pageOfItems: Mentor[];
 
   constructor(private mentorListPresenter: MentorListPresenterService, private router: Router, private cdr: ChangeDetectorRef) { 
@@ -102,4 +103,11 @@ export class MentorListPresentationComponent implements OnInit {
   //   // update current page of items
   //   this.pageOfItems = pageOfItems;
   // }
+
+  // pagination
+  changePage(mentorList:Mentor[]) {
+    this.mentor = [...this._mentorList]
+    console.log(this.mentor);
+    this.mentor = mentorList;
+  }
 }

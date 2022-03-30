@@ -71,6 +71,22 @@
       "experience": 45,
       "gender": "Male",
       "id": 15
+    },
+    {
+      "name": "AA",
+      "age": "21",
+      "email": "ab@gmail.com",
+      "experience": 2,
+      "gender": "Male",
+      "id": 16
+    },
+    {
+      "name": "Nirali",
+      "age": "24",
+      "email": "nirali@gmailcom",
+      "experience": 3,
+      "gender": "Female",
+      "id": 17
     }
   ],
   "department": [
