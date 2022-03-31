@@ -33,7 +33,7 @@ export class MentorListPresentationComponent implements OnInit {
   @Output() public delete: EventEmitter<number>;
   
   public mentorListData: Mentor[];
-  public mentor: Mentor[];
+  public mentorlist: Mentor[];
   private _mentorList!: Mentor[];
   public pageOfItems: Mentor[];
 
@@ -97,7 +97,6 @@ export class MentorListPresentationComponent implements OnInit {
       }
     })
     this._mentorList = this.mentorListData;
-    debugger
   } 
   // onChangePage(pageOfItems: Array<any>) {
   //   // update current page of items
@@ -106,8 +105,9 @@ export class MentorListPresentationComponent implements OnInit {
 
   // pagination
   changePage(mentorList:Mentor[]) {
-    this.mentor = [...this._mentorList]
-    console.log(this.mentor);
-    this.mentor = mentorList;
+    this.mentorlist = mentorList;
+    this.cdr.detectChanges();
+      this.cdr.detectChanges();
+    console.log(this.mentorlist);
   }
 }

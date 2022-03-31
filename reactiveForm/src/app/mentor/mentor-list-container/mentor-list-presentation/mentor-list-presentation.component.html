@@ -19,8 +19,8 @@
         <th scope="col">Actions</th>
       </tr>
     </thead>
-    <tbody>
-      <tr class="align-middle" *ngFor="let mentor of mentorList; let i = index">
+    <tbody *ngIf="mentorlist?.length">
+      <tr class="align-middle" *ngFor="let mentor of mentorlist; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{ mentor.name }}</td>
         <td>{{ mentor.age }}</td>
@@ -34,4 +34,6 @@
       </tr>
     </tbody>
   </table>
-  <app-pagination [items]="mentorList" [itemsPerPage]="5" (changePage)="changePage($event)"></app-pagination>
+  <app-pagination [items]="mentorList" [itemsPerPage]="6" (changePage)="changePage($event)"></app-pagination>
+  
+  <app-file-upload-container></app-file-upload-container>
