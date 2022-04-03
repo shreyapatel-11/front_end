@@ -1,24 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from './pagination/pagination.component';
-import { FileUploadContainerComponent } from './file-upload-container/file-upload-container.component';
-import { FileUploadPresentationComponent } from './file-upload-container/file-upload-presentation/file-upload-presentation.component';
-
+import { DragAndDropDirective } from './directive/drag-and-drop.directive';
 
 
 @NgModule({
   declarations: [
     PaginationComponent,
-    FileUploadContainerComponent,
-    FileUploadPresentationComponent
+    DragAndDropDirective,
   ],
   imports: [
     CommonModule
   ],
   exports: [
     PaginationComponent,
-    FileUploadContainerComponent,
-    // FileUploadPresentationComponent
+    DragAndDropDirective,
   ]
 })
 export class SharedModuleModule { }

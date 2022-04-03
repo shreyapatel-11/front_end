@@ -424,5 +424,43 @@
       ],
       "id": 7
     }
+  ],
+  "files": [
+    {
+      "name": ".bash_history",
+      "size": 1000,
+      "type": "",
+      "id": 1
+    },
+    {
+      "name": "README.html",
+      "size": 0,
+      "type": "text/html",
+      "id": 2
+    },
+    {
+      "name": "README.html",
+      "size": 0,
+      "type": "text/html",
+      "id": 3
+    },
+    {
+      "name": "README.html",
+      "size": 0,
+      "type": "text/html",
+      "id": 4
+    },
+    {
+      "name": "ant-javafx.jar",
+      "size": 1,
+      "type": "",
+      "id": 5
+    },
+    {
+      "name": "sa-jdi.jar",
+      "size": 2,
+      "type": "",
+      "id": 6
+    }
   ]
 }
