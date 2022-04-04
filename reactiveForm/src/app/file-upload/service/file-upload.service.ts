@@ -22,4 +22,7 @@ export class FileUploadService {
   addFiles(file:Files):Observable<Files>{
     return this.http.post<Files>(`${this.apiLink}/files`,file)
   }
+  deleteFiles(id: number) {
+    return this.http.delete(`${this.apiLink}/files/${id}`)
+  }
 }

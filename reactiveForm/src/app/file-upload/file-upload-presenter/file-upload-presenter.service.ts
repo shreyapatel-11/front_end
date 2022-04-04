@@ -12,7 +12,7 @@ export class FileUploadPresenterService {
   public fileUpload$:Observable<Files>;
 
   constructor() { 
-    this.file={} as File;
+    this.file={} as Files;
     this.fileUpload=new Subject<Files>();
     this.fileUpload$=new Observable<Files>();
     this.fileUpload$=this.fileUpload.asObservable();
@@ -20,12 +20,25 @@ export class FileUploadPresenterService {
 
   uploadFile(file:File){
     let size=Math.round(file.size/1024/1024)
-    if(size<=2){
-      this.file.name=file.name;
-      this.file.size=size;
-      this.file.type=file.type;
-
-      this.fileUpload.next(this.file);
+    if(size<=2  && file.type == "image/jpeg"){
+      
+      // for (let i = 0; i < 3; i++) {
+      //   console.log("len",this.uploadFile.length);
+        this.file.name=file.name;
+        this.file.size=size;
+        this.file.type=file.type;
+        
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        console.log(file);
+        reader.onload = (event) => {
+          this.file.content = event.target?.result as string;
+          this.fileUpload.next(this.file);
+        }
+      // }
+    }
+    else if(file.type != "image/jpeg"){
+      alert("Please select proper file")
     }
     else{
       alert("File Size is greater than 2MB");

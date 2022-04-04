@@ -1,10 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FileListPresenterService } from '../file-list-presenter/file-list-presenter.service';
 import { Files } from '../model/file.model';
 
 @Component({
   selector: 'app-file-list-presentation',
   templateUrl: './file-list-presentation.component.html',
-  styleUrls: ['./file-list-presentation.component.scss']
+  styleUrls: ['./file-list-presentation.component.scss'],
+  viewProviders: [FileListPresenterService]
 })
 export class FileListPresentationComponent implements OnInit {
 
@@ -18,9 +20,23 @@ export class FileListPresentationComponent implements OnInit {
   }
 
   private _fileList: Files[];
-  constructor() { }
 
-  ngOnInit(): void {
+  @Output() public delete: EventEmitter<number>;
+
+  constructor(private fileListPresenter: FileListPresenterService) { 
+    this.delete = new EventEmitter();
   }
 
+  ngOnInit(): void {
+    this.fileListPresenter.delete$.subscribe((data: number) => {
+      this.delete.emit(data);
+    })
+  }
+
+  onDelete(id: number) {
+    this.fileListPresenter.onDelete(id);
+  }
+  onView(content: string, type: string){
+    this.fileListPresenter.showFile(content, type);
+  }
 }

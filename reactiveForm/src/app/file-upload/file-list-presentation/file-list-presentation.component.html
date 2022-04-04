@@ -11,7 +11,8 @@
                 <td>{{filedata.name}}</td>
                 <td class="text-center">{{filedata.size}} mb</td>
                 <td class="text-center">{{filedata.type}}</td>
-                <td><button class="btn btn-danger">Delete</button></td>
+                <td><button class="btn btn-primary me-3" (click)="onView(filedata.content, filedata.type)">View</button>
+                <button class="btn btn-danger" (click)="onDelete(filedata.id)">Delete</button></td>
             </tr>
         </tbody>
     </table>
