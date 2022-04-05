@@ -48,6 +48,7 @@
 }
 .icon-sign-out:before {
   content: "\e909";
+  transform: rotate(180deg);
 }
 .icon-bell:before {
   content: "\e90a";

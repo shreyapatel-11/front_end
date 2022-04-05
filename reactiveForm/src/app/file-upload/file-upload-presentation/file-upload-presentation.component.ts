@@ -9,7 +9,7 @@ import { Files } from '../model/file.model';
 })
 export class FileUploadPresentationComponent implements OnInit {
 
-  public file: File;
+  public file: FileList;
   public startDate:string;
   public endDate:string;
 
@@ -29,11 +29,13 @@ export class FileUploadPresentationComponent implements OnInit {
   }
 
   readFile(files: any) {
-    this.file = files.files[0];
+    // console.log(files.files);
+    this.file = files.files;
   }
-
   uploadFile() {
+    // debugger
     if (this.file) {
+      // console.log(this.file);
       this.fileUploadPrensenter.uploadFile(this.file)
     }
     else {

@@ -2,9 +2,9 @@
     <div class="main-header row align-center">
         <h2 class="title">ng Template</h2>
     </div>
-    <label for="mode" class="mode">Display Mode:</label>
-    <select [(ngModel)]="mode">
-    <option *ngFor="let item of modeOptions" [ngValue]="item.mode">{{item.mode}}</option>
+    <label for="mode" class="mode pb-3">Display Mode : </label>
+    <select [(ngModel)]="mode" class="ms-2">
+    <option *ngFor="let item of modeOptions" [ngValue]="item.mode"> {{item.mode}}</option>
     </select>
 
     <ng-template let-items #cardTemplate>

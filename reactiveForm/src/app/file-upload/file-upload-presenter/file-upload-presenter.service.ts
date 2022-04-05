@@ -7,41 +7,45 @@ import { Files } from '../model/file.model';
 })
 export class FileUploadPresenterService {
 
-  private file:Files;
+  // private file:Files;
   private fileUpload:Subject<Files>;
   public fileUpload$:Observable<Files>;
+  // files: any;
 
   constructor() { 
-    this.file={} as Files;
+    // this.file={} as Files;
     this.fileUpload=new Subject<Files>();
     this.fileUpload$=new Observable<Files>();
     this.fileUpload$=this.fileUpload.asObservable();
   }
 
-  uploadFile(file:File){
-    let size=Math.round(file.size/1024/1024)
-    if(size<=2  && file.type == "image/jpeg"){
-      
-      // for (let i = 0; i < 3; i++) {
-      //   console.log("len",this.uploadFile.length);
-        this.file.name=file.name;
-        this.file.size=size;
-        this.file.type=file.type;
+  fileType = ["image/jpeg", "image/png", "application/pdf"]
+
+  uploadFile(file:FileList){
+    for (let i = 0; i < file.length; i++) {
+      const files = {} as Files;
+
+      let size=Math.round(file[i].size/1024/1024)
+      if(size<=2 && this.fileType.includes(file[i].type)){
         
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        console.log(file);
-        reader.onload = (event) => {
-          this.file.content = event.target?.result as string;
-          this.fileUpload.next(this.file);
+          files.name=file[i].name;
+          files.size=size;
+          files.type=file[i].type;
+          
+          const reader = new FileReader();
+          reader.readAsDataURL(file[i]);
+          console.log(file);
+          reader.onload = (event) => {
+            files.content = event.target?.result as string;
+            this.fileUpload.next(files);
+          }
         }
-      // }
-    }
-    else if(file.type != "image/jpeg"){
-      alert("Please select proper file")
-    }
-    else{
-      alert("File Size is greater than 2MB");
+        else if(!this.fileType.includes(file[i].type)){
+          alert("Please select proper file")
+        }
+        else{
+          alert("File Size is greater than 2MB");
+        }
     }
   }
 }

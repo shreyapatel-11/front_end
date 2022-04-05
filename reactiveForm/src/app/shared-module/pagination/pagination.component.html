@@ -5,7 +5,7 @@
     <li class="page-item"><a class="page-link" href="#">Next</a></li>
 </ul> -->
 
-<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+<ul *ngIf="pager.pages && pager.pages.length" class="pagination align-items-center justify-content-center p-3">
     <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item first-item">
         <a (click)="setPage(1)" class="page-link">First</a>
     </li>
@@ -22,4 +22,3 @@
         <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
     </li>
 </ul>
-
