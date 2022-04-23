@@ -1,0 +1,29 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/style.scss",
+        "../scss/base/_index.scss",
+        "../scss/base/_colors.scss",
+        "../scss/base/_variables.scss",
+        "../scss/base/_functions.scss",
+        "../scss/base/_mixins.scss",
+        "../scss/base/_placeholder.scss",
+        "../scss/base/_global.scss",
+        "../scss/component/_index.scss",
+        "../scss/component/_buttons.scss",
+        "../scss/component/_form-controls.scss",
+        "../scss/component/_cards.scss",
+        "../scss/component/_breadcrumb.scss",
+        "../scss/layout/_index.scss",
+        "../scss/layout/_header.scss",
+        "../scss/layout/_footer.scss",
+        "../scss/layout/_content.scss",
+        "../scss/layout/_sidebar.scss",
+        "../scss/layout/_login.scss",
+        "../scss/utilities/_index.scss",
+        "../scss/utilities/_text.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
