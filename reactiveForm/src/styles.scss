@@ -4,10 +4,11 @@
 @import '@angular/cdk/overlay-prebuilt.css';
 
 @import "~bootstrap/dist/css/bootstrap.css";
-// @import "~src/assets/scss/base/index";
+@import "~src/assets/scss/base/index";
 // @import "~src/assets/scss/vendor/bootstrap-base";
 // @import "~src/assets/scss/vendor/bootstrap-components";
-// @import "~src/assets/scss/component/index";
+@import "~src/assets/scss/component/index";
+@import "~src/assets/scss/layout/index";
 
 *{
     margin: 0;

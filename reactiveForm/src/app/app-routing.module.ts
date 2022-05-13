@@ -43,6 +43,7 @@ const routes: Routes = [
   { path: 'mentor', loadChildren: () => import('./mentor/mentor.module').then(m => m.MentorModule) },
   { path: 'login', loadChildren: () => import('./core/login/login.module').then(m => m.LoginModule) },
   { path: 'file-upload', loadChildren: () => import('./file-upload/file-upload.module').then(m => m.FileUploadModule) },
+  { path: 'doctor', loadChildren: () => import('./doctor/doctor.module').then(m => m.DoctorModule) },
  
   
 ];
