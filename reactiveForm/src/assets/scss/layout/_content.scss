@@ -6,3 +6,11 @@
     width: 50px;
     border-radius: 50%;
 }
+
+// 1st card- Hello Dr. Good Morning
+.greeting span{
+    color: $medify-primary;
+}
+.greeting-quote, .pharma-contact, .disease, .medical-name, .time, .patient-contact, .gender, .count{
+    color: $medify-secondary;
+}

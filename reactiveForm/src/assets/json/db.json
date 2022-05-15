@@ -1,4 +1,27 @@
 {
+  "prescription":[
+    {
+      "name": "Sam Bhatt",
+      "disease": "Headache, Fever",
+      "status": "Pending",
+      "medical": "HealthyMe Pharmacy",
+      "time": "12:35 AM"
+    },
+    {
+      "name": "Zeel Patel",
+      "disease": "Headache, Fever",
+      "status": "Approved",
+      "medical": "Patient",
+      "time": "12:35 AM"
+    },
+    {
+      "name": "Zeel Patel",
+      "disease": "Headache, Fever",
+      "status": "Approved",
+      "medical": "Patient",
+      "time": "12:35 AM"
+    }
+  ],
   "users": [
     {
       "name": "Ayushi",

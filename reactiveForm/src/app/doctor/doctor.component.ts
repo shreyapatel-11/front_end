@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Medical } from './medical.model';
+import { DoctorService } from './doctor.service';
+import { Medical, Prescription } from './medical.model';
 
 @Component({
   selector: 'app-doctor',
@@ -8,9 +9,10 @@ import { Medical } from './medical.model';
 })
 export class DoctorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private doctorService: DoctorService) { }
 
   ngOnInit(): void {
+    this.getPrescriptionData();
   }
 
   public data: Medical[] = [
@@ -30,5 +32,14 @@ export class DoctorComponent implements OnInit {
       address: "Valsad,Gujarat"
     }
   ]
+
+  public preData: Prescription[];
+
+  getPrescriptionData(){
+    this.doctorService.getPrescription().subscribe(data => {
+      this.preData = data;
+      console.log(data);
+    })
+  }
 
 }

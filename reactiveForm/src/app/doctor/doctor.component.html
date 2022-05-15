@@ -3,11 +3,23 @@
     <!-- start: row -->
     <div class="row g-4 h-100">
         <!-- start: doctor-intro -->
-        <div class="col-7 ">
+        <div class="col-7 shadow-sm rounded">
             <div class="d-flex justify-content-between">
                 <div>
-                    Hello Doctor
+                    <img src="" alt="">
                 </div>
+                <div>
+                    <div class="greeting">
+                        Hello Dr. Virat, <span>Good Morning</span>
+                    </div>
+                    <div class="greeting-quote">
+                        Have a nice day and don't forget to take 
+                    </div>
+                    <div class="greeting-quote">
+                        care of your health!
+                    </div>        
+                </div>
+                
                 <div class="">
                     <img src="" alt="Doctor's Image">
                 </div>
@@ -16,24 +28,24 @@
         <!-- end: doctor-intro -->
 
         <!-- start: numbers of pharmacies and patient -->
-        <div class="col-5 numbers ">
+        <div class="col-5 numbers shadow-sm rounded">
             <div class="d-flex">
                 <div class="d-flex pharma justify-content-between">
-                    <div class="">
+                    <div class="pe-3">
                         <img src="" alt="Pharma-logo">  
                     </div>
                     <div class="">
                         <div>45</div>
-                        <div>Pharmacies</div>
+                        <div class="count">Pharmacies</div>
                     </div>
                 </div>
                 <div class="d-flex patientn justify-content-between">
-                    <div class="">
+                    <div class="pe-3">
                         <img src="" alt="Patient-logo">
                     </div>
                     <div class="">
                         <div>45</div>
-                        <div>Patient</div>
+                        <div class="count">Patient</div>
                     </div>
                 </div>
             </div>
@@ -41,7 +53,7 @@
         <!-- end: numbers of pharmacies and patient -->
 
         <!-- trial -->
-        <div class="col-7 ">
+        <div class="col-7 shadow-sm rounded">
             <!-- start: google-chart -->
             <div class="google-chart">
                 Chart
@@ -49,7 +61,7 @@
             <!-- end: google-chart -->
         </div>
 
-        <div class="col-5 shadow-sm">
+        <div class="col-5 shadow-sm rounded">
             <!-- start: list of pharmacies -->
             <div class="pharmacyList ">
                 <div class="d-flex pharmaTitle justify-content-between">
@@ -63,14 +75,14 @@
                     <div><img src="assets/image/pexels-photo-2762942.jpeg" class="image" alt="Medical-Image"></div>
                     <div class="d-flex align-items-center">{{catch.medical}}</div>
                 </div>
-                <div class="text-end">
+                <div class="pharma-contact text-end">
                     <div>{{catch.number}}</div>
                     <div>{{catch.address}}</div>
                 </div>
             </div>
             <!-- end: list of pharmacies -->
         </div>
-        <div class="col-7 ">
+        <div class="col-7 shadow-sm rounded">
             <!-- start: view prescription -->
             <div class="prescription">
                 <div class="d-flex justify-content-between">
@@ -79,20 +91,20 @@
                 </div>
             </div>
             <!-- start: view-prescription-1 -->
-            <div class="d-flex justify-content-betwee">
+            <div class="d-flex space-evenly" *ngFor="let pre of preData">
                 <div class="img pe-4">
                     <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
                 </div>
-                <div class="col-4">
-                    <div>Sam Bhatt</div>
-                    <div>Headache, Fever</div>
+                <div class="">
+                    <div>{{pre.name}}</div>
+                    <div class="disease">{{pre.diseas}}</div>
                 </div>
                 <div class="col-5">
-                    <div>Pending</div>
-                    <div>by HealthyMe Pharmacy</div>
+                    <div class="text-warning">{{pre.status}}</div>
+                    <div class="medical-name">by {{pre.medical}}</div>
                 </div>
                 <div class="time col-2">
-                    12.35 AM
+                    {{pre.time}}
                 </div>
             </div>
             <!-- end: view-prescription-1 -->
@@ -107,7 +119,7 @@
                     <div>Headache, Fever</div>
                 </div>
                 <div class="col-5">
-                    <div>Approved</div>
+                    <div class="text-success">Approved</div>
                     <div>by Patient</div>
                 </div>
                 <div class="time ">
@@ -117,12 +129,17 @@
             <!-- end: view-prescription-2 -->
             <!-- start: view-prescription-3 -->
             <div class="d-flex justify-content-between">
-                <div class="img">
-                    <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
-                </div>
-                <div class="">
-                    <div>Zeel Patel</div>
-                    <div>Headache, Fever</div>
+                <div class="d-flex img">
+                    <!-- <div> -->
+                        <figure class="pe-4">
+
+                            <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
+                        </figure>
+                    <!-- </div> -->
+                    <div class="">
+                        <div>Zeel Patel</div>
+                        <div>Headache, Fever</div>
+                    </div>
                 </div>
                 <div class="">
                     <div>Approved</div>
@@ -138,7 +155,7 @@
         <!-- end: view prescription -->
 
         <!-- start: list of patient -->
-        <div class="col-5 ">
+        <div class="col-5 shadow-sm rounded">
             <div class="patientList">
                 <div class="d-flex patientTitle justify-content-between">
                     <div>My Patient</div>
@@ -151,10 +168,10 @@
                     <div><img src="assets/image/logo-img.png" class="image" alt="Image"></div>
                     <div class="patientName">
                         <div>Sara Paul</div>
-                        <div>Female,28 yrs</div>
+                        <div class="gender">Female,28 yrs</div>
                     </div>
                 </div>
-                <div class="text-end">
+                <div class="patient-contact text-end">
                     <div>12:35 AM</div>
                     <div>9999988888</div>
                 </div>
