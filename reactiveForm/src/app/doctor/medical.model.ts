@@ -16,20 +16,20 @@ export class Medical {
 };
 export class Prescription {
     public name: string;
-    public diseas: string;
+    public disease: string;
     public status: string;
     public medical: string;
     public time: string;
 
     constructor(
       name: string,
-      diseas: string,
+      disease: string,
       status: string,
       medical: string,
       time: string
     ) {
       this.name = name;
-      this.diseas = diseas;
+      this.disease = disease;
       this.status = status;
       this.medical = medical;
       this.time = time;  

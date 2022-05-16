@@ -2,22 +2,71 @@
 <div class="wrapper h-100">
     <!-- start: row -->
     <div class="row g-4 h-100">
-        <!-- start: doctor-intro -->
-        <div class="col-7 shadow-sm rounded">
-            <div class="d-flex justify-content-between">
-                <div>
-                    <img src="" alt="">
+        <!-- start: practice -->
+        <div class="col-7">
+            <div class="card shadow">
+                <div class="card-body d-flex justify-content-between">
+                    <figure>
+                        <img src="assets/image/pexels-marta-dzedyshko-2067396 (1).jpg" style="height: 60px; " alt="">
+                    </figure>
+                    <div>
+                        <h3 class="card-title">
+                            Hello Dr. Virat, <span>Good Morning</span>
+                        </h3>
+                        <div>Have a nice day and don't forget to take</div>
+                        <div>care of your health!</div> 
+                    </div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
                 </div>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <div class="d-flex">
+            <div class="card shadow">
+                <div class="card-body d-flex pharma justify-content-between">
+                    <div class="pe-3">
+                        <img src="assets/image/pexels-marta-dzedyshko-2067396 (1).jpg" style="height: 60px; " alt="">
+
+                    </div>
+                    <div class="">
+                        <div>45</div>
+                        <div class="count">Pharmacies</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card shadow">
+                <div class="card-body d-flex patient justify-content-between">
+                    <div class="pe-3">
+                        <img src="" alt="Pharma-logo">  
+                    </div>
+                    <div class="">
+                        <div>58</div>
+                        <div class="count">Patient</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- end: practice -->
+
+        <!-- start: doctor-intro -->
+        <div class="col-7">
+            <div class="d-flex rounded justify-content-between shadow-sm">
+                <figure>
+                    <img src="" alt="">
+                </figure>
                 <div>
                     <div class="greeting">
                         Hello Dr. Virat, <span>Good Morning</span>
                     </div>
                     <div class="greeting-quote">
-                        Have a nice day and don't forget to take 
-                    </div>
-                    <div class="greeting-quote">
-                        care of your health!
-                    </div>        
+                        Have a nice day and don't forget to take
+                        <p>care of your health!</p> 
+                    </div>       
                 </div>
                 
                 <div class="">
@@ -28,8 +77,8 @@
         <!-- end: doctor-intro -->
 
         <!-- start: numbers of pharmacies and patient -->
-        <div class="col-5 numbers shadow-sm rounded">
-            <div class="d-flex">
+        <div class="col-5 numbers">
+            <div class="d-flex shadow-sm rounded">
                 <div class="d-flex pharma justify-content-between">
                     <div class="pe-3">
                         <img src="" alt="Pharma-logo">  
@@ -91,19 +140,21 @@
                 </div>
             </div>
             <!-- start: view-prescription-1 -->
-            <div class="d-flex space-evenly" *ngFor="let pre of preData">
-                <div class="img pe-4">
-                    <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
+            <div class="d-flex justify-content-between" *ngFor="let pre of preData">
+                <div class="d-flex img">
+                    <figure class="pe-3">
+                        <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
+                    </figure>
+                    <div class="">
+                        <div>{{pre.name}}</div>
+                        <div class="disease">{{pre.disease}}</div>
+                    </div>
                 </div>
-                <div class="">
-                    <div>{{pre.name}}</div>
-                    <div class="disease">{{pre.diseas}}</div>
-                </div>
-                <div class="col-5">
+                <div class="col-4">
                     <div class="text-warning">{{pre.status}}</div>
                     <div class="medical-name">by {{pre.medical}}</div>
                 </div>
-                <div class="time col-2">
+                <div class="time">
                     {{pre.time}}
                 </div>
             </div>
@@ -111,9 +162,9 @@
 
             <!-- start: view-prescription-2 -->
             <div class="d-flex justify-content-between">
-                <div class="img pe-4">
+                <figure class="pe-3">
                     <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
-                </div>
+                </figure>
                 <div class="col-4">
                     <div>Zeel Patel</div>
                     <div>Headache, Fever</div>
@@ -122,7 +173,7 @@
                     <div class="text-success">Approved</div>
                     <div>by Patient</div>
                 </div>
-                <div class="time ">
+                <div class="time">
                     12.35 AM
                 </div>
             </div>
@@ -130,12 +181,9 @@
             <!-- start: view-prescription-3 -->
             <div class="d-flex justify-content-between">
                 <div class="d-flex img">
-                    <!-- <div> -->
-                        <figure class="pe-4">
-
-                            <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
-                        </figure>
-                    <!-- </div> -->
+                    <figure class="pe-3">
+                        <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
+                    </figure>
                     <div class="">
                         <div>Zeel Patel</div>
                         <div>Headache, Fever</div>
