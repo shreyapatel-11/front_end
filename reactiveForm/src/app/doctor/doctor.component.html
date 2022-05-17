@@ -3,7 +3,7 @@
     <!-- start: row -->
     <div class="row g-4 h-100">
         <!-- start: doctor's-intro -->
-        <div class="col-7">
+        <div class="col-md-7 col-12">
             <div class="d-flex justify-content-between p-3 h-100 shadow rounded">
                 <figure>
                     <img src="assets/image/pexels-marta-dzedyshko-2067396 (1).jpg" style="height: 60px; " alt="">
@@ -24,7 +24,7 @@
         <!-- end: doctor's-intro -->
 
         <!-- start: numbers of pharmacies and patient -->
-        <div class="col-5 ">
+        <div class="col-md-5 col-12">
             <div class="shadow d-flex h-100 p-1">
                 <div class="d-flex col-6 align-items-center justify-content-between border-end border-dark p-3">
                     <div class="pe-3">
@@ -51,7 +51,7 @@
         <!-- end: numbers of pharmacies and patient -->
 
         <!-- start: google-chart -->
-        <div class="col-7">
+        <div class="col-md-7 col-12">
             <div class="h-100 shadow rounded">
                 <div class="google-chart">
                     Chart
@@ -61,7 +61,7 @@
         <!-- end: google-chart -->
 
         <!-- start: list of pharmacies -->
-        <div class="col-5 ">
+        <div class="col-md-5 col-12">
             <div class="shadow rounded h-100 p-3">
                 <div class="d-flex justify-content-between border-bottom">
                     <span>Pharmacies</span>
@@ -81,7 +81,7 @@
             </div>
             <!-- end: list of pharmacies -->
         </div>
-        <div class="col-7">
+        <div class="col-md-7 col-12">
             <div class="shadow rounded h-100">
                 <!-- start: view prescription -->
                 <div class="d-flex justify-content-between border-bottom">
@@ -100,9 +100,9 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div
-                            [ngClass]="{'text-success': pre.status == 'Approved', 'text-warning': pre.status == 'Pending', 'text-danger': pre.status == 'Rejected'  } ">
-                            {{pre.status}}</div>
+                        <div [ngClass]="{'text-success': pre.status == 'Approved', 'text-warning': pre.status == 'Pending', 'text-danger': pre.status == 'Rejected'  } ">
+                            {{pre.status}}
+                        </div>
                         <div class="text-gray">by {{pre.medical}}</div>
                     </div>
                     <span class="text-gray">
@@ -155,7 +155,7 @@
         <!-- end: view prescription -->
 
         <!-- start: list of patient -->
-        <div class="col-5">
+        <div class="col-md-5 col-12">
             <div class="shadow rounded h-100">
                 <div class="d-flex justify-content-between border-bottom">
                     <span>My Patient</span>
