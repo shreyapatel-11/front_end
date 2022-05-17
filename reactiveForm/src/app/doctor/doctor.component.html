@@ -2,154 +2,112 @@
 <div class="wrapper h-100">
     <!-- start: row -->
     <div class="row g-4 h-100">
-        <!-- start: practice -->
+        <!-- start: doctor's-intro -->
         <div class="col-7">
-            <div class="d-flex justify-content-between p-3 h-100 shadow">
+            <div class="d-flex justify-content-between p-3 h-100 shadow rounded">
                 <figure>
                     <img src="assets/image/pexels-marta-dzedyshko-2067396 (1).jpg" style="height: 60px; " alt="">
                 </figure>
                 <div>
-                    <h3 class="card-title">
-                        Hello Dr. Virat, <span>Good Morning</span>
+                    <h3 class="">
+                        Hello Dr. {{firstName}}, <span class="text-primary">Good Morning</span>
                     </h3>
-                    <div>Have a nice day and don't forget to take</div>
-                    <div>care of your health!</div>
+                    <p class="text-gray m-0">Have a nice day and don't forget to take</p>
+                    <p class="text-gray">care of your health!</p>
+                    <!-- <span class="hero-text text-gray">Have a nice day and don't forget to take <br> care of your health!</span> -->
                 </div>
                 <figure>
-                    <img src="" alt="">
-                </figure>
-            </div>
-        </div>
-
-        <div class="col-5 ">
-            <div class="shadow d-flex h-100 p-1">
-                <div class="d-flex col-6 pharma align-items-center justify-content-between border-end border-success p-3">
-                    <div class="pe-3">
-                        <img src="assets/image/pexels-marta-dzedyshko-2067396 (1).jpg" style="height: 60px; " alt="">
-
-                    </div>
-                    <div class="">
-                        <div>45</div>
-                        <div class="count">Pharmacies</div>
-                    </div>
-                </div>
-
-                <div class="border-0 col-6 d-flex align-items-center patient justify-content-between p-3">
-                    <div class="pe-3">
-                        <img src="" alt="Pharma-logo">
-                    </div>
-                    <div class="">
-                        <div>58</div>
-                        <div class="count">Patient</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end: practice -->
-
-        <!-- start: doctor-intro -->
-        <div class="col-7">
-            <div class="d-flex rounded justify-content-between shadow-sm">
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <div>
-                    <div class="greeting">
-                        Hello Dr. Virat, <span>Good Morning</span>
-                    </div>
-                    <div class="greeting-quote">
-                        Have a nice day and don't forget to take
-                        <p>care of your health!</p>
-                    </div>
-                </div>
-
-                <div class="">
                     <img src="" alt="Doctor's Image">
-                </div>
+                </figure>
             </div>
         </div>
-        <!-- end: doctor-intro -->
+        <!-- end: doctor's-intro -->
 
         <!-- start: numbers of pharmacies and patient -->
-        <div class="col-5 numbers">
-            <div class="d-flex shadow-sm rounded">
-                <div class="d-flex pharma justify-content-between">
+        <div class="col-5 ">
+            <div class="shadow d-flex h-100 p-1">
+                <div class="d-flex col-6 align-items-center justify-content-between border-end border-dark p-3">
                     <div class="pe-3">
-                        <img src="" alt="Pharma-logo">
+                        <figure>
+                            <img src="assets/image/pexels-marta-dzedyshko-2067396 (1).jpg" style="height: 60px;" alt="Pharma-logo">
+                        </figure>
                     </div>
-                    <div class="">
-                        <div>45</div>
-                        <div class="count">Pharmacies</div>
+                    <div class="d-flex flex-column">
+                        <span class="">45</span>
+                        <span class="text-gray">Pharmacies</span>
                     </div>
                 </div>
-                <div class="d-flex patientn justify-content-between">
+                <div class="border-0 col-6 d-flex align-items-center patient justify-content-between p-3">
                     <div class="pe-3">
                         <img src="" alt="Patient-logo">
                     </div>
-                    <div class="">
-                        <div>45</div>
-                        <div class="count">Patient</div>
+                    <div class="d-flex flex-column">
+                        <span class="">58</span>
+                        <span class="text-gray">Patient</span>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end: numbers of pharmacies and patient -->
 
-        <!-- trial -->
-        <div class="col-7 shadow-sm rounded">
-            <!-- start: google-chart -->
-            <div class="google-chart">
-                Chart
+        <!-- start: google-chart -->
+        <div class="col-7">
+            <div class="h-100 shadow rounded">
+                <div class="google-chart">
+                    Chart
+                </div>
             </div>
-            <!-- end: google-chart -->
         </div>
+        <!-- end: google-chart -->
 
-        <div class="col-5 shadow-sm rounded">
-            <!-- start: list of pharmacies -->
-            <div class="pharmacyList ">
-                <div class="d-flex pharmaTitle justify-content-between">
-                    <div>Pharmacies</div>
-                    <div><a href="#">View all</a></div>
+        <!-- start: list of pharmacies -->
+        <div class="col-5 ">
+            <div class="shadow rounded h-100 p-3">
+                <div class="d-flex justify-content-between border-bottom">
+                    <span>Pharmacies</span>
+                    <a href="#">View all</a>
                 </div>
-            </div>
-
-            <div class="d-flex justify-content-between" *ngFor="let catch of data">
-                <div class="d-flex">
-                    <div><img src="assets/image/pexels-photo-2762942.jpeg" class="image" alt="Medical-Image"></div>
-                    <div class="d-flex align-items-center">{{catch.medical}}</div>
-                </div>
-                <div class="pharma-contact text-end">
-                    <div>{{catch.number}}</div>
-                    <div>{{catch.address}}</div>
+                <div class="d-flex justify-content-between pt-3" *ngFor="let catch of data">
+                    <div class="d-flex mb-3">
+                        <figure class="m-0 pe-3"><img src="assets/image/pexels-photo-2762942.jpeg" class="image"
+                                alt="Medical-Image"></figure>
+                        <span class="d-flex align-items-center">{{catch.medical}}</span>
+                    </div>
+                    <div class="text-gray text-end d-flex flex-column">
+                        <span>{{catch.mobile}}</span>
+                        <span>{{catch.address}}</span>
+                    </div>
                 </div>
             </div>
             <!-- end: list of pharmacies -->
         </div>
-        <div class="col-7 shadow-sm rounded">
-            <!-- start: view prescription -->
-            <div class="prescription">
-                <div class="d-flex justify-content-between">
-                    <div>View Prescription</div>
-                    <div><a href="#">View all</a></div>
+        <div class="col-7">
+            <div class="shadow rounded h-100">
+                <!-- start: view prescription -->
+                <div class="d-flex justify-content-between border-bottom">
+                    <span>View Prescription</span>
+                    <a href="#">View all</a>
                 </div>
-            </div>
-            <!-- start: view-prescription-1 -->
-            <div class="d-flex justify-content-between" *ngFor="let pre of preData">
-                <div class="d-flex img">
-                    <figure class="pe-3">
-                        <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
-                    </figure>
-                    <div class="">
-                        <div>{{pre.name}}</div>
-                        <div class="disease">{{pre.disease}}</div>
+                <!-- start: view-prescription-1 -->
+                <div class="d-flex justify-content-between" *ngFor="let pre of preData">
+                    <div class="d-flex img">
+                        <figure class="pe-3">
+                            <img src="/assets/image/logo-img.png" class="image" alt="Patient's Picture">
+                        </figure>
+                        <div class="d-flex flex-column">
+                            <span>{{pre.name}}</span>
+                            <span class="text-gray">{{pre.disease}}</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="text-warning">{{pre.status}}</div>
-                    <div class="medical-name">by {{pre.medical}}</div>
-                </div>
-                <div class="time">
-                    {{pre.time}}
+                    <div class="col-4">
+                        <div
+                            [ngClass]="{'text-success': pre.status == 'Approved', 'text-warning': pre.status == 'Pending', 'text-danger': pre.status == 'Rejected'  } ">
+                            {{pre.status}}</div>
+                        <div class="text-gray">by {{pre.medical}}</div>
+                    </div>
+                    <span class="text-gray">
+                        {{pre.time}}
+                    </span>
                 </div>
             </div>
             <!-- end: view-prescription-1 -->
@@ -197,58 +155,63 @@
         <!-- end: view prescription -->
 
         <!-- start: list of patient -->
-        <div class="col-5 shadow-sm rounded">
-            <div class="patientList">
-                <div class="d-flex patientTitle justify-content-between">
-                    <div>My Patient</div>
-                    <div><a href="#">View all</a></div>
+        <div class="col-5">
+            <div class="shadow rounded h-100">
+                <div class="d-flex justify-content-between border-bottom">
+                    <span>My Patient</span>
+                    <a href="#">View all</a>
                 </div>
-            </div>
 
-            <div class="d-flex justify-content-between">
-                <div class="d-flex">
-                    <div><img src="assets/image/logo-img.png" class="image" alt="Image"></div>
-                    <div class="patientName">
-                        <div>Sara Paul</div>
-                        <div class="gender">Female,28 yrs</div>
+                <div class="d-flex justify-content-between" *ngFor="let patient of patientData">
+                    <div class="d-flex">
+                        <figure>
+                            <img src="assets/image/logo-img.png" class="image" alt="Image">
+                        </figure>
+                        <div class="d-flex flex-column">
+                            <span>{{patient.name}}</span>
+                            <span class="gender text-gray">{{patient.gender}} • {{patient.age}} yrs</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column patient-contact text-gray text-end">
+                        <span>{{patient.time}}</span>
+                        <span>{{patient.mobile}}</span>
                     </div>
                 </div>
-                <div class="patient-contact text-end">
-                    <div>12:35 AM</div>
-                    <div>9999988888</div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex">
-                    <div><img src="assets/image/logo-img.png" class="image" alt="Image"></div>
-                    <div class="patientName">
-                        <div>Ammy Richard</div>
-                        <div>Male,58 yrs</div>
+
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex">
+                        <figure>
+                            <img src="assets/image/logo-img.png" class="image" alt="Image">
+                        </figure>
+                        <div class="patientName">
+                            <span>Ammy Richard</span>
+                            <span>Male,58 yrs</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <div>1:00 AM</div>
+                        <div>9999988888</div>
                     </div>
                 </div>
-                <div class="text-end">
-                    <div>1:00 AM</div>
-                    <div>9999988888</div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex">
-                    <div><img src="assets/image/logo-img.png" class="image" alt="Image"></div>
-                    <div class="patientName">
-                        <div>Ammy Richard</div>
-                        <div>Male,58 yrs</div>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex">
+                        <figure>
+                            <img src="assets/image/logo-img.png" class="image" alt="Image">
+                        </figure>
+                        <div class="patientName">
+                            <div>Ammy Richard</div>
+                            <div>Male,58 yrs</div>
+                        </div>
                     </div>
-                </div>
-                <div class="text-end">
-                    <div>1:00 AM</div>
-                    <div>9999988888</div>
+                    <div class="text-end">
+                        <div>1:00 AM</div>
+                        <div>9999988888</div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- end: list of patient -->
     </div>
     <!-- end: row -->
-
-
 </div>
 <!-- end: wrapper -->

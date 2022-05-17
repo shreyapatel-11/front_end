@@ -8,9 +8,18 @@
 }
 
 // 1st card- Hello Dr. Good Morning
-.greeting span{
-    color: $medify-primary;
-}
-.greeting-quote, .pharma-contact, .disease, .medical-name, .time, .patient-contact, .gender, .count{
+
+.text-gray{
     color: $medify-secondary;
 }
+
+// // status 
+// .pending{
+//     color: yellow;
+// }
+// .approved{
+
+// }
+// .rejected{
+
+// }

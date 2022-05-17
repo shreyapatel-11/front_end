@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Prescription } from './medical.model';
+import { Patient, Prescription } from './medical.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,9 @@ export class DoctorService {
 
   getPrescription(): Observable<Prescription[]>{
     return this.http.get<Prescription[]> (`http://localhost:3000/prescription`);
+  }
+  
+  getPatient(): Observable<Patient[]>{
+    return this.http.get<Patient[]> (`http://localhost:3000/patient`);
   }
 }

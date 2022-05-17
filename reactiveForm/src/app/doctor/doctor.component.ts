@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorService } from './doctor.service';
-import { Medical, Prescription } from './medical.model';
+import { Medical, Patient, Prescription } from './medical.model';
 
 @Component({
   selector: 'app-doctor',
@@ -13,22 +13,25 @@ export class DoctorComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPrescriptionData();
+    this.getPatient();
   }
+
+  public firstName: String = 'Virat';
 
   public data: Medical[] = [
     {
       medical: "Medicare Pharmacy 1",
-      number: 99999999998,
+      mobile: 99999999998,
       address: "Valsad,Gujarat"
     },
     {
       medical: "Medicare Pharmacy 2",
-      number: 99999999988,
+      mobile: 99999999988,
       address: "Valsad,Gujarat"
     },
     {
       medical: "Medicare Pharmacy 3",
-      number: 99999999999,
+      mobile: 99999999999,
       address: "Valsad,Gujarat"
     }
   ]
@@ -42,4 +45,12 @@ export class DoctorComponent implements OnInit {
     })
   }
 
+  public patientData: Patient[];
+
+  getPatient() {
+    this.doctorService.getPatient().subscribe(data => {
+      this.patientData = data;
+      console.log(data);
+    })
+  }
 }
