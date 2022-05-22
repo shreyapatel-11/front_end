@@ -1,0 +1,79 @@
+<!-- start: wrapper -->
+<div class="wrapper p-3 h-100">
+    <!-- start: row -->
+    <div class="row g-4 px-0">
+        <!-- start: doctor's-intro -->
+        <div class="col-md-7 col-12">
+            <div class="d-flex justify-content-between h-100 bg-light rounded">
+                <figure class="m-0 position-relative overflow-hidden img-clip-container">
+                    <img class=" img-clip" src="assets/image/freepik--background-simple--inject-131.svg">
+                </figure>
+                <div>
+                    <h3 class="">
+                        <!-- Hello Dr. {{firstName}}, <span class="text-primary">{{this.greetMsg}}</span> -->
+                    </h3>
+                    <span class="hero-text text-gray">Have a nice day and don't forget to take care of your health!</span>
+                </div>
+                <figure class="m-0 position-relative">
+                    <img class="medicine-bro" src="assets/image/Medicine-bro (1).svg" alt="Doctor's Image">
+                </figure>
+            </div>
+        </div>
+        <!-- end: doctor's-intro -->
+
+        <!-- start: numbers of pharmacies and patient -->
+        <div class="col-md-5 col-12">
+            <div class="d-flex bg-light h-100 rounded">
+                <div class="d-flex col-6 align-items-center border-end border-dark content-padding">
+                    <div class="pe-3">
+                        <figure class="m-0 ">
+                            <img src="assets/image/Pharmacies.svg" alt="Pharma-logo">
+                        </figure>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <span class="">45</span>
+                        <span class="text-gray">Pharmacies</span>
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center content-padding">
+                    <div class="pe-3">
+                        <figure class="m-0 mt-n2">
+                            <img src="assets/image/Patient.svg" alt="Patient-logo">
+                        </figure>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <span class="">58</span>
+                        <span class="text-gray">Patient</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: numbers of pharmacies and patient -->
+
+        <!-- start: google-chart -->
+        <div class="col-md-7 col-12">
+            
+        </div>
+        <!-- end: google-chart -->
+
+        <!-- start: list of pharmacies -->
+        <div class="col-md-5 col-12">
+            <app-pharmacy-list-presentation></app-pharmacy-list-presentation>
+        </div>
+        <!-- end: list of pharmacies -->
+        
+        <!-- start: view prescription -->
+        <div class="col-md-7 col-12">
+            <app-view-prescription-presentation></app-view-prescription-presentation>
+        </div>
+        <!-- end: view prescription -->
+
+        <!-- start: list of patient -->
+        <div class="col-md-5 col-12">
+            <app-my-patient-presentation></app-my-patient-presentation>
+        </div>
+        <!-- end: list of patient -->
+    </div>
+    <!-- end: row -->
+</div>
+<!-- end: wrapper -->

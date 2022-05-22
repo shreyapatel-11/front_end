@@ -1,0 +1,28 @@
+<div class="shadow rounded h-100 p-4">
+    <div class="d-flex justify-content-between border-bottom pb-3">
+        <span>My Patient</span>
+        <a href="#">View all</a>
+    </div>
+
+    <div class="d-flex justify-content-between pt-2" *ngFor="let patient of patientData">
+        <div class="d-flex">
+            <figure class="mb-md-4 mb-3">
+                <img src="assets/image/logo-img.png" class="image" alt="Image">
+            </figure>
+            <div class="d-flex flex-column">
+                <span>{{patient.name}}</span>
+                <span class="gender text-gray">{{patient.gender}} • {{patient.age}} yrs</span>
+            </div>
+        </div>
+        <div class="d-flex flex-column patient-contact text-gray text-end">
+            <span>{{patient.time}}</span>
+            <span>{{patient.mobile}}</span>
+        </div>
+    </div>
+    <div *ngIf="!patientData?.length">
+        <figure class="mb-5">
+            <img src="assets/image/Medicine-bro (1).svg" alt="">
+        </figure>
+        <p>No Record Found</p>
+    </div>
+</div>
